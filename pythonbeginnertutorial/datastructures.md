@@ -178,6 +178,7 @@ List Comprehensions können komplexe Ausdrücke und verschachtelte Funktionen en
 >>> from math import pi
 >>> [str(round(pi, i)) for i in range(1, 6)]
 ['3.1', '3.14', '3.142', '3.1416', '3.14159']
+```
 
 List Comprehensions gelten im allgemeinen als "pythonisch" und werden entsprechend häufig verwendet bzw. es gilt allgemein als empfehlenswert, List Comprehensions an passenden Stellen im Code zu verwenden.
 
@@ -191,10 +192,11 @@ Der Anfangsausdruck einer List Comprehension kann ein beliebiger Ausdruck sein, 
 ...     [5, 6, 7, 8],
 ...     [9, 10, 11, 12],
 ... ]
+```
 
-Die folgende List Comprehension transformiert die Liste, d.h. es werden Spalten und Reihen vertauscht.
+Die folgende List Comprehension transformiert die Liste, d.h. es werden Spalten und Reihen vertauscht:
 
-```pycom
+```pycon
 >>> [[row[i] for row in matrix] for i in range(4)]
 [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 ```
@@ -577,7 +579,7 @@ Es ist möglich, das Ergebnis eines Vergleichs oder eines anderen booleschen Aus
 
 Zu beachten ist, dass in Python, anders als in C, Zuweisungen innerhalb von Ausdrücken explizit mit dem [walrus](https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression) Operator `:=` erfolgen müssen. Dies vermeidet eine häufige Klasse von Problemen, die in C-Programmen auftreten: die Eingabe von ``=`` in einem Ausdruck, obwohl ``==`` beabsichtigt war.
 
-Vergleiche von Sequenzen und anderen Datentypen
+## Vergleiche von Sequenzen und anderen Datentypen
 
 Sequenzobjekte können normalerweise mit anderen Objekten desselben Sequenztyps verglichen werden. Der Vergleich verwendet eine *lexikografische* Reihenfolge: zuerst werden die ersten beiden Elemente verglichen, und wenn sie sich unterscheiden, bestimmt dies das Ergebnis des Vergleichs. Wenn sie gleich sind, werden die nächsten beiden Elemente verglichen, und so weiter, bis eine der beiden Sequenzen erschöpft ist. Sind zwei zu vergleichende Elemente selbst Sequenzen desselben Typs, wird der lexikografische Vergleich rekursiv durchgeführt. Wenn alle Elemente zweier Sequenzen gleich sind, werden die Sequenzen als gleich betrachtet. Ist eine Sequenz eine anfängliche Untersequenz der anderen, so ist die kürzere Sequenz die kleinere (geringere). Die lexikografische Ordnung für Zeichenketten verwendet die Unicode-Codepunktnummer, um die einzelnen Zeichen zu ordnen. Einige Beispiele für Vergleiche zwischen Sequenzen desselben Typs:
 
