@@ -13,4 +13,7 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
 3. [den Python-Interprter nutzen](pythonbeginnertutorial/interpreter.md): kurze Einführung in die Nutzung des interaktiven Python-Interpreters
 4. [eine lockere Einführung in Python](pythonbeginnertutorial/introduction.md): erste Schritte mit Python, Python als Taschenrechner benutzen, Einführung in die Datentypen int, str und list, die ersten Schritte zum ersten Programm
 5. [weitere Werkzeuge zur Steuerung des Programmflusses](pythonbeginnertutorial/controlflow.md): if-Bedingen, Schleifen mit for, die range-Funktion, break, continue und else für Schleifen, Definition von und Umgang mit Funktionen, Lambda Ausdrücke, Doc Strings und Funktionsannotation
-6. (weitere Kapitel folgen...)
+6. [Datenstrukturen und Datentypen](datastructures.md): mehr Informationen zu Datentypen und -strukturen: Listen und deren Methoden, List Comprehensions, Wörterbücher (Dictionaries), Tupel, Sets, mehr zur if-Bedingung und while-Schleifen
+7. [Module](modules.md): was sind Module in Python, wie erstellt man diese, wie importiert man diese, die `dir()` Funktion zur Anzeige von Informationen zu Modulen, Einführung in die Struktur von Paketen (für größere Programmierprojekte)
+8. [Ein- und Ausgabe](inputoutput.md): Ein- und Ausgabe mit print besser und flexibler formatieren, Lesen und Schreiben von Dateien, Daten strukturiert als JSON speichern
+9. (weitere Kapitel folgen)
