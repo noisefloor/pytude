@@ -17,4 +17,5 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
 7. [Module](modules.md): was sind Module in Python, wie erstellt man diese, wie importiert man diese, die `dir()` Funktion zur Anzeige von Informationen zu Modulen, Einführung in die Struktur von Paketen (für größere Programmierprojekte)
 8. [Ein- und Ausgabe](inputoutput.md): Ein- und Ausgabe mit print besser und flexibler formatieren, Lesen und Schreiben von Dateien, Daten strukturiert als JSON speichern
 9. [Fehler und Ausnahmen (Exceptions)](errors.md): wie Python Fehler und Ausnahmen im Programmcode meldet, Umgang und Abfangen von Ausnahmen, eigene Ausnahmen definieren
-10. (weitere Kapitel folgen)
+10. [Klassen](classes.md): wie man Klassen in Python erstellt und nutzt
+11. (weitere Kapitel folgen)
