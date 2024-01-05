@@ -1,6 +1,6 @@
 # weitere Werkzeuge zur Steuerung des Programmflusses
 
-Neben der im vorherigen Kapitel vorgestellten `while`-Anweisung verwendet Python noch einige weitere, die hier in diesem Kapitel erläutert werden.
+Neben der im vorherigen Kapitel vorgestellten `while`-Anweisung gibt es Python noch einige weitere Anweisungen zur Steuerung des Programmflusses, die hier in diesem Kapitel erläutert werden.
 
 ## if Bedingung
 
@@ -22,15 +22,15 @@ Bitte einen Integerwert eingeben: 42
 Mehr
 ```
 
-Es kann kein, eins oder mehr `elif` Teile geben. Der `else` Teil ist optional.  Das Schlüsselwort `elif` ist die Abkürzung für "else if" und ist nützlich, um eine übermäßige Einrückung zu vermeiden.  Eine `if ... elif ... elif` ...` Sequenz ist ein Ersatz für die `switch` oder `case` Anweisungen, die man in anderen Sprachen findet.
+Es kann keinen, einen oder mehr `elif` Teile geben. Der `else` Teil ist optional. Das Schlüsselwort `elif` ist die Abkürzung für "else if" und ist nützlich, um eine übermäßige Einrückung zu vermeiden. Eine `if ... elif ... elif` ...` Sequenz ist ein Ersatz für die `switch` oder `case` Anweisungen, die man in anderen Sprachen findet.
 
 Der Ausdruck hinter `if` und `elif` muss immer einen Wahrheitswert ergeben, also [True oder False](https://docs.python.org/3/library/stdtypes.html#boolean-type-bool). Ist der Ausdruck wahr, wird der `if` bzw. `elif` Block betreteten und ausgeführt. Wenn nicht wird er übersprungen und das nächste `if` oder `elif` überprüft. Ist ein Block mit `else` vorhanden wird dieser nur dann ausgeführt, wenn vorher der Wahrheitswert für den `if` und alle `elif` Ausdrücke falsch (=nicht wahr) war.
 
-Wenn man denselben Wert mit mehreren Konstanten vergleichen oder nach bestimmten Typen oder Attributen suchen will, kann auch die Anweisung `match` nützlich sein, was weiter unten noch erläutert wird.
+Wenn man denselben Wert mit mehreren Konstanten vergleichen oder nach bestimmten Typen oder Attributen suchen will, kann auch die Anweisung `match` nützlich sein, welche weiter unten noch erläutert wird.
 
 ## for-Anweisung - Schleifen mit for
 
-Die [for](https://docs.python.org/3/reference/compound_stmts.html#for)-Anweisung in Python unterscheidet sich ein wenig von dem, was man vielleicht von anderen Programmiersprachen wie C oder Pascal gewohnt ist.  Anstatt immer über eine arithmetische Folge von Zahlen zu iterieren (wie in Pascal) oder dem Benutzer die Möglichkeit zu geben, sowohl den Iterationsschritt als auch die Haltebedingung zu definieren (wie in C), iteriert Pythons `for`-Anweisung über die Elemente einer beliebigen Sequenz (wie eine Liste oder eine Zeichenkette) in der Reihenfolge, in der sie in der Sequenz erscheinen. Zum Beispiel:
+Die [for](https://docs.python.org/3/reference/compound_stmts.html#for) Anweisung von Python unterscheidet sich ein wenig von dem, was man vielleicht von anderen Programmiersprachen wie C oder Pascal gewohnt ist. Anstatt immer über eine arithmetische Folge von Zahlen zu iterieren (wie in Pascal) oder dem Benutzer die Möglichkeit zu geben, sowohl den Iterationsschritt als auch die Haltebedingung zu definieren (wie in C), iteriert Pythons `for` Anweisung über die Elemente einer beliebigen Sammlung (wie eine Liste oder eine Zeichenkette) in der Reihenfolge, in der sie in der Sammlung vorkommen. Zum Beispiel:
 
 ```pycon
 >>> words = ['cat', 'window', 'defenestrate']
@@ -62,7 +62,7 @@ Code, der eine Sammlung ändert, während er über dieselbe Sammlung iteriert, k
 {'Hans': 'active', '景太郎': 'active'}
 ```
 
-Das Iterieren über eine Sequenz, im englisch auch als "iterable" bezeichnet, kommt sehr oft vor und ist "typisch pythonisch". Man iteriert dabei, wenn möglich, immer direkt über die Sequenz, und nicht per Indexzugriff. Auch wenn letzteres das gleiche Ergebnis liefert, gilt es als unpythonisch, als Anti-Pattern und schlechter Still. Beispiel:
+Das Iterieren über eine Sammlung, im englischen auch als "iterable" bezeichnet, kommt sehr oft vor und ist "typisch pythonisch". Man iteriert dabei, wenn möglich, immer direkt über die Sammlung, und nicht per Indexzugriff. Auch wenn letzteres das gleiche Ergebnis liefert, gilt es als unpythonisch, als Anti-Pattern und schlechter Still. Beispiel:
 
 ```pycon
 >>> primes = [2, 3, 5, 7]
@@ -74,7 +74,7 @@ Das Iterieren über eine Sequenz, im englisch auch als "iterable" bezeichnet, ko
 3
 5
 7
->>> # schlechtes iterieren, macht man so in der Regel ich
+>>> # schlechtes iterieren, macht man so in der Regel nicht
 >>> for i in range(len(primes)):
 ...     print(primes[i])
 ...
@@ -86,7 +86,7 @@ Das Iterieren über eine Sequenz, im englisch auch als "iterable" bezeichnet, ko
 
 ## range-Funktion
 
-Wenn über eine Zahlenfolge iteriert werden muss, ist die eingebaute Funktion [range](https://docs.python.org/3/library/stdtypes.html#range) sehr nützlich.  Sie erzeugt arithmetische Progressionen:
+Wenn über eine Zahlenfolge iteriert werden muss, ist die eingebaute Funktion [range](https://docs.python.org/3/library/stdtypes.html#range) sehr nützlich. Sie erzeugt arithmetische Progressionen:
 
 ```pycon
 >>> for i in range(5):
@@ -99,7 +99,7 @@ Wenn über eine Zahlenfolge iteriert werden muss, ist die eingebaute Funktion [r
 4
 ```
 
-`range` beginnt standmäßig mit 0 (Null). Der angegebene Endpunkt ist nie Teil der erzeugten Folge. `range(10)` erzeugt 10 Werte, die Indizes für Elemente einer Folge der Länge 10. Es ist möglich, den Bereich bei einer anderen Zahl beginnen zu lassen, oder eine andere Schrittweite anzugeben. Eine negative Schrittweite ist ebenfalls möglich:
+`range` beginnt standmäßig mit 0 (Null). Der angegebene Endpunkt ist nie Teil der erzeugten Folge. `range(10)` erzeugt 10 Werte, die Indizes für Elemente einer Folge der Länge 10 - also die Zahlen von 0 bis 9. Es ist möglich, den Bereich bei einer anderen Zahl beginnen zu lassen, oder eine andere Schrittweite anzugeben. Eine negative Schrittweite ist ebenfalls möglich:
 
 ```pycon
 >>> list(range(5, 10))
@@ -110,7 +110,7 @@ Wenn über eine Zahlenfolge iteriert werden muss, ist die eingebaute Funktion [r
 [-10, -40, -70]
 ```
 
-Das Iterieren über eine Sequenz kombiniert mit `range` und `len` geht auch, gilt aber als schlechter Stil:
+Das Iterieren über eine Sammlung kombiniert mit `range` und `len` geht auch, gilt aber als schlechter Stil:
 
 ```pycon
 >>> a = ['Mary', 'had', 'a', 'little', 'lamb']
@@ -124,7 +124,7 @@ Das Iterieren über eine Sequenz kombiniert mit `range` und `len` geht auch, gil
 4 lamb
 ```
 
-Bei solchen Anwendungsfällen ist es besser, die eingebaute Funktion [enumerate](https://docs.python.org/3/library/functions.html#enumerate)zu nutzen:
+Bei solchen Anwendungsfällen ist es besser, die eingebaute Funktion [enumerate](https://docs.python.org/3/library/functions.html#enumerate) zu nutzen:
 
 ```pycon
 >>> for counter, word in enumerate(a):
@@ -140,20 +140,20 @@ Bei solchen Anwendungsfällen ist es besser, die eingebaute Funktion [enumerate]
 Wenn man versucht, `print` auf `range` anzuwenden, passiert etwas Unerwartetes:
 
 ```pycon
->>> range(10)
+>>> print(range(10))
 range(0, 10)
 ```
 
-In vielerlei Hinsicht verhält sich das von `range` zurückgegebene Objekt wie eine Liste, aber in Wirklichkeit ist es das nicht. Es ist ein Objekt, das die aufeinanderfolgenden Elemente der gewünschten Sequenz zurückgibt, wenn Sie darüber iterieren, aber es bildet nicht wirklich die Liste und spart so Platz. Die Werte werden erst generiert, wenn tatsächlich darauf zugegriffen wird.
+In vielerlei Hinsicht verhält sich das von `range` zurückgegebene Objekt wie eine Liste, aber in Wirklichkeit ist es das nicht. Es ist ein Objekt, das die aufeinanderfolgenden Elemente der gewünschten Sequenz zurückgibt, wenn man darüber iterieren, aber es bildet nicht wirklich die Liste und spart so Platz. Die Werte werden erst generiert, wenn tatsächlich darauf zugegriffen wird.
 
-Ein solches Objekt ist "iterable", auf Deutsch: iterierbar, d.h. es eignet sich als Ziel für Funktionen und Konstrukte, die etwas erwarten, von dem sie aufeinanderfolgende Elemente erhalten können, bis der Vorrat erschöpft ist.  Die for-Schleife ist ebenfalls ein solches Konstrukt, während ein Beispiel für eine Funktion, die eine Iterable annimmt, die eingebaute Funktion [sum](https://docs.python.org/3/library/functions.html#sum) ist:
+Ein solches Objekt ist "iterable", auf Deutsch: iterierbar, d.h. es eignet sich als Ziel für Funktionen und Konstrukte, die etwas erwarten, von dem sie aufeinanderfolgende Elemente erhalten können, bis der Vorrat erschöpft ist. Die for-Schleife ist ebenfalls ein solches Konstrukt, während ein Beispiel für eine Funktion, die eine Iterable annimmt, die eingebaute Funktion [sum](https://docs.python.org/3/library/functions.html#sum) ist:
 
 ```pycon
 >>> sum(range(4))  # 0 + 1 + 2 + 3
 6
 ```
 
-Später werden noch mehr Funktionen zu sehen sein, die Iterables zurückgeben und Iterables als Argumente annehmen.  Im Kapitel über Datenstrukturen wird z.B ausführlicher über Listen gesprochen.
+Später werden noch mehr Funktionen zu sehen sein, die Iterables zurückgeben und Iterables als Argumente annehmen. Im Kapitel über Datenstrukturen wird z.B ausführlicher über Listen gesprochen.
 
 ## break und continue Anweisungen, else Klauseln in Schleifen
 
@@ -188,7 +188,7 @@ Dies wird in der folgenden `for` Schleife veranschaulicht, die nach Primzahlen s
 
 (Ja, das ist valider Code.  Die `else` Klausel gehört zur `for` Schleife, *nicht* zur `if`-Anweisung.)
 
-Wenn die `else` Klausel mit einer Schleife verwendet wird, hat sie mehr mit der `else` Klausel einer `try`-Anweisung gemeinsam als mit der von der `if` Anweisungen: die `else`-Klausel einer `try` Anweisung wird ausgeführt, wenn keine Ausnahme auftritt, und die `else` Klausel einer Schleife wird ausgeführt, wenn kein `break` auftritt. Mehr über die `try` Anweisung und Ausnahmen sind im Kapitel über Fehlerbehandlung zu finden.
+Wenn die `else` Klausel mit einer Schleife verwendet wird, hat sie mehr mit der `else` Klausel einer `try` Anweisung gemeinsam als mit der von der `if` Anweisungen: die `else` Klausel einer `try` Anweisung wird ausgeführt, wenn keine Ausnahme auftritt, und die `else` Klausel einer Schleife wird ausgeführt, wenn kein `break` auftritt. Mehr über die `try` Anweisung und Ausnahmen sind im Kapitel über Fehlerbehandlung zu finden.
 
 Die ebenfalls aus C entlehnte Anweisung [continue](https://docs.python.org/3/reference/simple_stmts.html#continue) fährt mit der nächsten Iteration der Schleife fort:
 
@@ -219,7 +219,7 @@ Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass)
 ...
 ```
 
-`pass` wird typischerweise verwendet, wenn man eine minimale, leere Klasse benötigt:
+`pass` wird z.B. typischerweise verwendet, wenn man eine minimale, leere Klasse benötigt:
 
 ```pycon
 >>> class MyEmptyClass:
@@ -227,7 +227,7 @@ Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass)
 ...
 ```
 
-Ein anderer Ort, an dem `pass` verwendet werden kann, ist als Platzhalter für eine Funktion oder einen Bedingungskörper, wenn man an neuem Code arbeitet. Dies ermöglicht, auf einer abstrakteren Ebene zu denken.  Das `pass` wird stillschweigend ignoriert:
+Ein anderer Fall, an dem `pass` verwendet werden kann, ist als Platzhalter für eine Funktion oder einen Bedingungskörper, wenn man an neuem Code arbeitet. Dies ermöglicht, auf einer abstrakteren Ebene zu denken. Das `pass` wird stillschweigend ignoriert:
 
 ```pycon
 >>> def initlog(*args):
@@ -237,7 +237,7 @@ Ein anderer Ort, an dem `pass` verwendet werden kann, ist als Platzhalter für e
 
 ## match Anweisung
 
-Eine [match](https://docs.python.org/3/reference/compound_stmts.html#match) Anweisung nimmt einen Ausdruck und vergleicht dessen Wert mit aufeinanderfolgenden Mustern, die als ein oder mehrere Case-Blöcke angegeben sind. Oberflächlich betrachtet ähnelt dies einer switch-Anweisung in C, Java oder JavaScript (und vielen anderen Sprachen), aber es ähnelt eher dem Mustervergleich in Sprachen wie Rust oder Haskell. Nur das erste Muster, das passt, wird ausgeführt, und es können auch Komponenten (Sequenzelemente oder Objektattribute) aus dem Wert in Variablen extrahiert werden.
+Eine [match](https://docs.python.org/3/reference/compound_stmts.html#match) Anweisung nimmt einen Ausdruck und vergleicht dessen Wert mit aufeinanderfolgenden Mustern, die als ein oder mehrere `case` Blöcke angegeben sind. Oberflächlich betrachtet ähnelt dies einer switch-Anweisung in C, Java oder JavaScript (und vielen anderen Sprachen), aber es ähnelt eher dem Mustervergleich in Sprachen wie Rust oder Haskell. Nur das erste Muster, das passt, wird ausgeführt, und es können auch Komponenten (Sequenzelemente oder Objektattribute) aus dem Wert in Variablen extrahiert werden.
 
 Die `match` Anweisung wurde mit Python 3.10 eingeführt.
 
@@ -258,7 +258,7 @@ def http_error(status):
 
 Zu beachten ist der letzte Block: Der "Variablenname" `_` fungiert als *Wildcard* und führt immer zu einer Übereinstimmung. Wenn kein Fall übereinstimmt, wird keine der Verzweigungen ausgeführt.
 
-Sie können mehrere Literale in einem einzigen Muster mit `|` ("oder") kombinieren:
+Man kann mehrere Literale in einem einzigen Muster mit `|` ("oder") kombinieren:
 
 ```pycon
         case 401 | 403 | 404:
@@ -282,11 +282,11 @@ match point:
         raise ValueError("Not a point")
 ```
 
-Lese dieses Muster sorgfältig!  Das erste Muster besteht aus zwei Literalen und kann als Erweiterung des oben gezeigten Literalmusters betrachtet werden.  Aber die nächsten beiden Muster kombinieren ein Literal und eine Variable, und die Variable *bindet* einen Wert aus dem Wert `point`.  Das vierte Muster erfasst zwei Werte, was es konzeptionell der Entpackungszuweisung `(x, y) = point` ähnlich macht.
+Lese dieses Muster sorgfältig! Das erste Muster besteht aus zwei Literalen und kann als Erweiterung des oben gezeigten Literalmusters betrachtet werden. Aber die nächsten beiden Muster kombinieren ein Literal und eine Variable, und die Variable *bindet* einen Wert aus dem Wert `point`. Das vierte Muster erfasst zwei Werte, was es konzeptionell der Entpackungszuweisung `(x, y) = point` ähnlich macht.
 
 Wenn man Klassen verwendet, um Daten zu strukturieren, kann man den Klassennamen gefolgt von einer Argumentliste verwenden, die einem Konstruktor ähnelt, jedoch mit der Möglichkeit, Attribute in Variablen zu erfassen:
 
-```pycon
+```python
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -308,7 +308,7 @@ class Point:
 
 Man kann Positionsparameter mit einigen eingebauten Klassen verwenden, die eine Reihenfolge für die Attribute vorgeben (z.B. Datenklassen). Man kann auch eine bestimmte Position für Attribute in Mustern definieren, indem man das spezielle Attribut `__match_args__` in der Klasse setzt. Wenn es auf ("x", "y") gesetzt ist, sind die folgenden Muster alle gleichwertig (und binden alle das Attribut `y` an die Variable `var`):
 
-```pycon
+```python
 Point(1, var)
 Point(1, y=var)
 Point(x=1, y=var)
@@ -319,7 +319,7 @@ Es empfiehlt sich, die Muster als eine erweiterte Form dessen zu betrachten, was
 
 Muster können beliebig verschachtelt werden.  Wenn man zum Beispiel eine kurze Liste von Punkten hat, die mit ``__match_args__`` ergänzt wurde, kann man sie wie folgt abgleichen:
 
-```pycon
+```python
 class Point:
     __match_args__ = ('x', 'y')
 
@@ -340,9 +340,9 @@ match points:
         print("Something else")
 ```
 
-Man kann eine `if`Klausel zu einem Muster hinzufügen, die als "guard" (auf Deutsch: Wächter) bekannt ist.  Wenn die Schutzklausel falsch ist, fährt `match` mit dem nächsten Fallblock fort.  Zu beachten ist, dass die Werteerfassung vor der Auswertung des Guards erfolgt:
+Man kann eine `if`Klausel zu einem Muster hinzufügen, die als "guard" (auf Deutsch: Wächter) bekannt ist. Wenn die Schutzklausel falsch ist, fährt `match` mit dem nächsten Fallblock fort. Zu beachten ist, dass die Werteerfassung vor der Auswertung des Guards erfolgt:
 
-```pycon
+```python
 match point:
     case Point(x, y) if x == y:
         print(f"Y=X at {x}")
@@ -352,19 +352,19 @@ match point:
 
 Einige weitere Feature dieser Anweisung sind:
 
- * Wie Entpackungszuweisungen haben Tupel- und Listenmuster genau dieselbe Bedeutung und passen tatsächlich zu beliebigen Sequenzen.  Eine wichtige   Ausnahme ist, dass sie nicht auf Iteratoren oder Zeichenketten passen.
- * Sequenzmuster unterstützen erweitertes Entpacken: `[x, y, *rest]` und `(x, y, *rest)` funktionieren ähnlich wie Entpackungszuweisungen.  Der   Name nach `*` kann auch `_` sein, so dass `(x, y, *_)` mit einer Folge von mindestens zwei Elementen übereinstimmt, ohne die restlichen Elemente zu binden.
- * Mapping patterns: `{"bandwidth": b, "latency": l}` erfasst die "bandwidth" und "latency" Werte aus einem Wörterbuch. Anders als bei Sequenzmustern werden zusätzliche Schlüssel ignoriert.  Ein Entpacken wie `**rest` wird ebenfalls unterstützt (aber `**_` wäre redundant, daher ist es nicht erlaubt.)
+ * Wie Entpackungszuweisungen haben Tupel- und Listenmuster genau dieselbe Bedeutung und passen tatsächlich zu beliebigen Sequenzen. Eine wichtige Ausnahme ist, dass sie nicht auf Iteratoren oder Zeichenketten passen.
+ * Sequenzmuster unterstützen erweitertes Entpacken: `[x, y, *rest]` und `(x, y, *rest)` funktionieren ähnlich wie Entpackungszuweisungen. Der Name nach `*` kann auch `_` sein, so dass `(x, y, *_)` mit einer Folge von mindestens zwei Elementen übereinstimmt, ohne die restlichen Elemente zu binden.
+ * Mapping patterns: `{"bandwidth": b, "latency": l}` erfasst die "bandwidth" und "latency" Werte aus einem Wörterbuch. Anders als bei Sequenzmustern werden zusätzliche Schlüssel ignoriert. Ein Entpacken wie `**rest` wird ebenfalls unterstützt (aber `**_` wäre redundant, daher ist es nicht erlaubt.)
  * Unterpattern (englisch: subpattern) können über das Schlüsselwort `as` erfasst werden. Im folgenden Beispiel wird das zweite Element der Eingabe als `p2` erfassen (solange die Eingabe eine Folge von zwei Punkten ist)
 
-```pycon
+```python
     case (Point(x1, y1), Point(x2, y2) as p2): ...
 ```
 
  * Die meisten Literale werden durch Gleichheit verglichen, aber die Singletons `True`, `False` und `None` werden durch Identität verglichen.
  * Muster können benannte Konstanten verwenden. Diese müssen gepunktete Namen sein, damit sie nicht als Capture-Variable interpretiert werden können:
 
-```pycon
+```python
 from enum import Enum
 
 class Color(Enum):
@@ -387,7 +387,7 @@ Für weitere Details kann man die [PEP 636](https://peps.python.org/pep-0636/) l
 
 ## Funktionen definieren
 
-Im Folgenden wird eine Funktion erstellen, die die Fibonacci-Reihe bis zu einem beliebigen Wert berechnet:
+Im Folgenden wird eine Funktion erstellen, die die [Fibonacci-Reihe](https://de.wikipedia.org/wiki/Fibonacci-Folge) bis zu einem beliebigen Wert berechnet:
 
 ```pycon
 >>> def fib(n):    # write Fibonacci series up to n
@@ -411,7 +411,7 @@ Die *Ausführung* einer Funktion führt eine neue Symboltabelle ein, die für di
 
 Die eigentlichen Parameter (Argumente) eines Funktionsaufrufs werden in die lokale Symboltabelle der aufgerufenen Funktion eingeführt, wenn diese aufgerufen wird. Argumente werden also mit *Aufruf durch Wert* übergeben, wobei der *Wert* immer ein Objekt *Referenz* ist, nicht der Wert des Objekts. Wenn eine Funktion eine andere Funktion aufruft oder sich selbst rekursiv aufruft, wird eine neue lokale Symboltabelle für diesen Aufruf erstellt.
 
-Eine Funktionsdefinition verknüpft den Funktionsnamen mit dem Funktionsobjekt in der aktuellen Symboltabelle.  Der Interpreter erkennt das Objekt, auf das dieser Name verweist, als eine benutzerdefinierte Funktion.  Andere Namen können ebenfalls auf dasselbe Funktionsobjekt verweisen und für den Zugriff auf die Funktion verwendet werden:
+Eine Funktionsdefinition verknüpft den Funktionsnamen mit dem Funktionsobjekt in der aktuellen Symboltabelle. Der Interpreter erkennt das Objekt, auf das dieser Name verweist, als eine benutzerdefinierte Funktion. Andere Namen können ebenfalls auf dasselbe Funktionsobjekt verweisen und für den Zugriff auf die Funktion verwendet werden:
 
 ```pycon
 >>> fib
@@ -421,7 +421,7 @@ Eine Funktionsdefinition verknüpft den Funktionsnamen mit dem Funktionsobjekt i
 0 1 1 2 3 5 8 13 21 34 55 89
 ```
 
-Wenn man aus anderen Sprachen kommt, wird man vielleicht einwenden, dass `fib` keine Funktion, sondern eine Prozedur ist, da sie keinen Wert zurückgibt. In der Tat geben auch Funktionen ohne eine[return](https://docs.python.org/3/reference/simple_stmts.html#return) Anweisung einen Wert zurück, wenn auch einen ziemlich langweiligen.  Dieser Wert ist `None`, welche in Python ein gültiges Objekt ist.  Das Schreiben des Wertes `None` wird normalerweise vom Interpreter unterdrückt, wenn es der einzige Wert ist, der geschrieben wird. Dies kann man sehen, wenn man es wirklich will, indem man `print` verwenden:
+Wenn man aus anderen Sprachen kommt, wird man vielleicht einwenden, dass `fib` keine Funktion, sondern eine Prozedur ist, da sie keinen Wert zurückgibt. In der Tat geben auch Funktionen ohne eine[return](https://docs.python.org/3/reference/simple_stmts.html#return) Anweisung einen Wert zurück, wenn auch einen ziemlich langweiligen. Dieser Wert ist `None`, welche in Python ein gültiges Objekt ist. Das Schreiben des Wertes `None` wird normalerweise vom Interpreter unterdrückt, wenn es der einzige Wert ist, der geschrieben wird. Dies kann man sehen, wenn man es wirklich will, indem man `print` verwenden:
 
 ```pycon
 >>> fib(0)
@@ -497,7 +497,7 @@ Es ist auch möglich, Funktionen mit einer variablen Anzahl von Argumenten zu de
 
 Die nützlichste Form ist die Angabe eines Standardwerts (Defaultwert) für ein oder mehrere Argumente. Dadurch wird eine Funktion geschaffen, die mit weniger Argumenten aufgerufen werden kann, als für sie definiert sind. Zum Beispiel:
 
-```pycon
+```python
 def ask_ok(prompt, retries=4, reminder='Please try again!'):
     while True:
         reply = input(prompt)
@@ -531,7 +531,7 @@ Die Standardwerte werden an der Stelle der Funktionsdefinition im *definierenden
 5
 ```
 
-***Wichtiger Hinweis:*** Der Standardwert wird nur einmal ausgewertet. Es macht einen Unterschied, wenn der Standardwert ein veränderbares Objekt wie eine Liste, ein Wörterbuch oder Instanzen der meisten Klassen ist.  Die folgende Funktion akkumuliert zum Beispiel die Argumente, die ihr bei nachfolgenden Aufrufen übergeben werden:
+***Wichtiger Hinweis:*** Der Standardwert wird nur einmal ausgewertet. Es macht einen Unterschied, wenn der Standardwert ein veränderbares Objekt wie eine Liste, ein Wörterbuch oder Instanzen der meisten Klassen ist. Die folgende Funktion akkumuliert zum Beispiel die Argumente, die ihr bei nachfolgenden Aufrufen übergeben werden:
 
 ```pycon
 >>> def f(a, L=[]):
@@ -566,7 +566,7 @@ Wenn man nicht möchte, dass der Standardwert von nachfolgenden Aufrufen gemeins
 
 Funktionen können auch mit [Schlüsselwortargumente](https://docs.python.org/3/glossary.html#term-keyword-argument) in der Form `kwarg=Wert` aufgerufen werden. Zum Beispiel:
 
-```pycon
+```python
 def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
     print("-- This parrot wouldn't", action, end=' ')
     print("if you put", voltage, "volts through it.")
@@ -576,7 +576,7 @@ def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
 
 Die Funktion akzeptiert ein erforderliches Argument (`voltage`) und drei optionale Argumente (`state`, `action` und `type`).  Diese Funktion kann auf eine der folgenden Arten aufgerufen werden:
 
-```pycon
+```python
 parrot(1000)                                          # 1 positional argument
 parrot(voltage=1000)                                  # 1 keyword argument
 parrot(voltage=1000000, action='VOOOOOM')             # 2 keyword arguments
@@ -587,14 +587,14 @@ parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
 
 Die folgenden Aufrufe sind nicht gültig und führen zu einem Fehler:
 
-```pycon
+```python
 parrot()                     # required argument missing
 parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument
 parrot(110, voltage=220)     # duplicate value for the same argument
 parrot(actor='John Cleese')  # unknown keyword argument
 ```
 
-In einem Funktionsaufruf müssen die Schlüsselwortargumente auf die Positionsargumente folgen. Alle übergebenen Schlüsselwortargumente müssen mit der der Argumente der Funktion übereinstimmen (z.B. `actor` ist kein gültiges Argument für die Funktion `parrot`) und ihre Reihenfolge ist egal.  Dies schließt auch nicht-optionale Argumente ein (z.B. `parrot(voltage=1000)` ist ebenfalls gültig). Kein Argument darf mehr als einmal einen Wert erhalten. Hier ein Beispiel, das an dieser Einschränkung scheitert:
+In einem Funktionsaufruf müssen die Schlüsselwortargumente auf die Positionsargumente folgen. Alle übergebenen Schlüsselwortargumente müssen mit der der Argumente der Funktion übereinstimmen (z.B. `actor` ist kein gültiges Argument für die Funktion `parrot`) und ihre Reihenfolge ist egal. Dies schließt auch nicht-optionale Argumente ein (z.B. `parrot(voltage=1000)` ist ebenfalls gültig). Kein Argument darf mehr als einmal einen Wert erhalten. Hier ein Beispiel, das an dieser Einschränkung scheitert:
 
 ```pycon
 >>> def function(a):
@@ -606,7 +606,7 @@ In einem Funktionsaufruf müssen die Schlüsselwortargumente auf die Positionsar
    TypeError: function() got multiple values for argument 'a'
 ```
 
-Wenn ein endgültiger formaler Parameter der Form `**name` vorhanden ist, erhält er ein Wörterbuch (siehe [Datentyp Mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping)), das alle Schlüsselwortargumente mit Ausnahme derjenigen enthält, die einem formalen Parameter entsprechen.  Dies kann mit einem formalen Parameter der Form `*name` (beschrieben im nächsten Abschnitt) kombiniert werden, der ein [Tupel](https://docs.python.org/3/library/stdtypes.html#tuple) erhält, dass die Positionsargumente jenseits der formalen Parameterliste enthält. Dabei muss `*name` immer vor `**name` stehen.  Im folgenden Beispiel ist eine Funktion wie diese definieren:
+Wenn ein endgültiger formaler Parameter der Form `**name` vorhanden ist, erhält er ein Wörterbuch (siehe [Datentyp Mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping)), das alle Schlüsselwortargumente mit Ausnahme derjenigen enthält, die einem formalen Parameter entsprechen. Dies kann mit einem formalen Parameter der Form `*name` (beschrieben im nächsten Abschnitt) kombiniert werden, der ein [Tupel](https://docs.python.org/3/library/stdtypes.html#tuple) erhält, dass die Positionsargumente jenseits der formalen Parameterliste enthält. Dabei muss `*name` immer vor `**name` stehen.  Im folgenden Beispiel ist eine Funktion wie diese definieren:
 
 ```python
 def cheeseshop(kind, *arguments, **keywords):
@@ -648,7 +648,7 @@ Zu beachten ist, dass die Reihenfolge, in der die Schlüsselwortargumente ausgeg
 
 Standardmäßig können Argumente an eine Python-Funktion entweder nach Position oder explizit nach Schlüsselwort übergeben werden. Aus Gründen der Lesbarkeit und der Leistung ist es sinnvoll, die Art und Weise, wie Argumente übergeben werden können, einzuschränken, so dass ein Entwickler nur einen Blick auf die Funktionsdefinition werfen muss, um festzustellen, ob Elemente per Position, per Position oder Schlüsselwort oder per Schlüsselwort übergeben werden.
 
-Ein Funktionsdefinition kann so aussehen:
+Eine Funktionsdefinition kann so aussehen:
 
 ```
 def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
@@ -659,7 +659,7 @@ def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
         -- Positional only
 ```
 
-Hierbei sind `/` und `*` optional. Falls verwendet, geben diese Symbole die Art des Parameters an, wie die Argumente an die Funktion übergeben werden können: nur Positionsparameter, Positions- oder Schlüsselwortparameter und nur Schlüsselwortparameter.  Schlüsselwort-Parameter werden auch als "benannte Parameter" bezeichnet.
+Hierbei sind `/` und `*` optional. Falls verwendet, geben diese Symbole die Art des Parameters an, wie die Argumente an die Funktion übergeben werden können: nur Positionsparameter, Positions- oder Schlüsselwortparameter und nur Schlüsselwortparameter. Schlüsselwort-Parameter werden auch als "benannte Parameter" bezeichnet.
 
 Wenn `/` und `*` in der Funktionsdefinition nicht vorhanden sind, können Argumente an eine Funktion durch Position oder durch Schlüsselwort übergeben werden.
 
@@ -739,7 +739,7 @@ Und die letzte verwendet alle drei Aufrufkonventionen in der gleichen Funktionsd
    TypeError: combined_example() got some positional-only arguments passed as keyword arguments: 'pos_only'
 ```
 
-Zu guter Letzt noch diese Funktionsdefinition, die eine potentielle Kollision zwischen dem Positionsargument `name` und `**kwds` aufweist, welche `name`` als Schlüssel hat:
+Zu guter Letzt noch diese Funktionsdefinition, die eine potentielle Kollision zwischen dem Positionsargument `name` und `**kwds` aufweist, welche `name` als Schlüssel hat:
 
 ```pycon
 >>> def foo(name, **kwds):
@@ -785,7 +785,7 @@ Als Richtlinie:
 
 ### beliebige Argumentlisten
 
-Die am seltensten verwendete Option ist schließlich die Angabe, dass eine Funktion mit einer beliebigen Anzahl von Argumenten aufgerufen werden kann. Diese Argumente werden in ein Tupel verpackt.  Vor der variablen Anzahl von Argumenten können null oder mehr normale Argumente auftreten.
+Die am seltensten verwendete Option ist schließlich die Angabe, dass eine Funktion mit einer beliebigen Anzahl von Argumenten aufgerufen werden kann. Diese Argumente werden in ein Tupel verpackt. Vor der variablen Anzahl von Argumenten können null oder mehr normale Argumente auftreten.
 
 ```python
 def write_multiple_items(file, separator, *args):
@@ -816,7 +816,7 @@ Die umgekehrte Situation tritt ein, wenn die Argumente bereits in einer Liste od
 [3, 4, 5]
 ```
 
-Auf die gleiche Weise können Wörterbücher Schlüsselwortargumente mit dem ``**``-Operator:'' liefern:
+Auf die gleiche Weise können Wörterbücher Schlüsselwortargumente mit dem `**` Operator liefern:
 
 ```pycon
 >>> def parrot(voltage, state='a stiff', action='voom'):
@@ -899,9 +899,9 @@ Arguments: spam eggs
 
 ## Coding Style - immer wichtig
 
-Jetzt, wo wir im Begriff sind, längere, komplexere Stücke in Python schreiben zu können, ist es ein guter Zeitpunkt, um über den *Coding Style* zu sprechen.  Die meisten Sprachen können in verschiedenen Stilen geschrieben (oder besser gesagt, *formatiert*) werden. Einige sind besser lesbar als andere. Es ist immer eine sehr gute Idee, es anderen leicht zu machen, den eigenen Code zu lesen - und ein guter Programmierstil hilft dabei enorm.
+Jetzt, man schon gut längere und komplexere Pythonprogramme schreiben könnte, ist es ein guter Zeitpunkt gekommen, um über den *Coding Style* zu sprechen. Die meisten Sprachen können in verschiedenen Stilen geschrieben (oder besser gesagt, *formatiert*) werden. Einige sind besser lesbar als andere. Es ist immer eine sehr gute Idee, es anderen leicht zu machen, den eigenen Code zu lesen - und ein guter Programmierstil hilft dabei enorm.
 
-Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-Welt maßgebliche Coding Style (quasi der "heilige Gral" für gut lesbaren Code). Er fördert einen sehr lesbaren und angenehmen Programmierstil.  eder Python-Entwickler sollte ihn irgendwann einmal lesen. Im Folgenden sind die wichtigsten Punkte herausgezogen:
+Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-Welt maßgebliche Coding Style (quasi der "heilige Gral" für gut lesbaren Code). Er fördert einen sehr lesbaren und angenehmen Programmierstil.  eder Python-Entwickler sollte ihn irgendwann einmal lesen. Im Folgenden sind die wichtigsten Punkte aus der PEP8 aufgelistet:
 
  * Man verwendet zur Einrückung 4 Leerzeichen und *keine* Tabulatoren! 4 Leerzeichen sind ein guter Kompromiss zwischen kleinem Einzug (ermöglicht größere Verschachtelungstiefe) und großem Einzug (leichter zu lesen). Tabulatoren stiften Verwirrung und sollten daher weggelassen werden.
  * Die Zeilenlänge sollte nicht mehr als 79 Zeichen betragen. Dies hilft Benutzern mit kleinen Bildschirmen und ermöglicht es, mehrere Code-Dateien nebeneinander auf größeren Bildschirmen.
@@ -914,5 +914,5 @@ Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-
  * Man verwendet ebenfalls keine Nicht-ASCII-Zeichen in Bezeichnern, wenn auch nur die geringste Chance besteht, dass Menschen, die eine andere Sprache sprechen, den Code lesen oder pflegen werden.
 
 
- * nächstes Kapitel: [eine lockere Einführung in Python](introduction.md)
- * vorheriges Kapitel: [Datentypen und -strukturen](datastructures.md)
+ * nächstes Kapitel: [Datentypen und -strukturen](datastructures.md)
+ * vorheriges Kapitel: [eine lockere Einführung in Python](introduction.md)
