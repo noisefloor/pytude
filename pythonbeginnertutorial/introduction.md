@@ -1,8 +1,8 @@
 # eine lockere Einführung in Python
 
-In den folgenden Beispielen werden Eingabe und Ausgabe durch das Vorhandensein oder Fehlen von Prompts `>>>` und `...` unterschieden.  Um das Beispiel zu wiederholen, muss alles nach dem Prompt eingeben werden, wenn der Prompt erscheint. Zeilen, die nicht mit einem Prompt beginnen, werden vom Interpreter ausgegeben. Zu beachten ist, dass ein zweiter Prompt in einer eigenen Zeile im Beispiel bedeutet, dass eine Leerzeile eingegeben werden muss. Dies wird verwendet, um einen mehrzeiligen Befehl zu beenden.
+In den folgenden Beispielen werden Eingabe und Ausgabe durch das Vorhandensein oder Fehlen von den Prompts `>>>` und `...` unterschieden. Um das Beispiel zu wiederholen, muss alles nach dem Prompt eingeben werden, wenn der Prompt erscheint. Zeilen, die nicht mit einem Prompt beginnen, werden vom Interpreter ausgegeben. Zu beachten ist, dass ein zweiter Prompt in einer eigenen Zeile im Beispiel bedeutet, dass eine Leerzeile eingegeben werden muss. Dies wird verwendet, um einen mehrzeiligen Befehl zu beenden.
 
-Viele der Beispiele in diesem Tutorial, auch solche, die in die interaktiven Eingabeaufforderung eingegeben werden, enthalten Kommentare.  Kommentare in Python beginnen mit dem Rautezeichen `#` und reichen bis physischen Zeilenende.  Ein Kommentar kann am Anfang einer Zeile oder nach einem Leerzeichen oder im Code stehen, aber nicht innerhalb eines Stringliterals.  Ein Rautenzeichen innerhalb eines Zeichenkettenliterales ist einfach ein Rautenzeichen. Da Kommentare zur Verdeutlichung des Codes dienen und von Python nicht interpretiert werden, können sie bei der Eingabe von Beispielen weggelassen werden.
+Viele der Beispiele in diesem Tutorial, auch solche, die in die interaktiven Eingabeaufforderung eingegeben werden, enthalten Kommentare. Kommentare in Python beginnen mit dem Rautezeichen `#` und reichen bis physischen Zeilenende. Ein Kommentar kann am Anfang einer Zeile oder nach einem Leerzeichen oder im Code stehen, aber nicht innerhalb eines Stringliterals. Ein Rautenzeichen innerhalb eines Zeichenkettenliterales ist einfach ein Rautenzeichen. Da Kommentare zur Verdeutlichung des Codes dienen und von Python nicht interpretiert werden, können sie bei der Eingabe von Beispielen weggelassen werden.
 
 Einige Beispiele:
 
@@ -19,7 +19,7 @@ Es ist an der Zeit, ein paar einfache Pythonbefehle auszuprobieren. Dazu ruft ma
 
 ### Zahlen
 
-Der Interpreter funktioniert wie ein einfacher Taschenrechner: Man kann einen Ausdruck eingeben und der Interpreter berechnet den Wert.  Die Syntax des Ausdrucks ist einfach: die Operatoren `+`, `-`, `*` und `/` können zum Rechnen verwendet werden. Klammern (`()`) können zur Gruppierung verwendet werden - also alles, wie man es von der Mathematik her gewohnt ist.
+Der Interpreter funktioniert wie ein einfacher Taschenrechner: Man kann einen Ausdruck eingeben und der Interpreter berechnet den Wert. Die Syntax des Ausdrucks ist einfach: die Operatoren `+`, `-`, `*` und `/` können zum Rechnen verwendet werden. Klammern `()` können zur Gruppierung verwendet werden - also alles, wie man es von der Mathematik her gewohnt ist.
 
 Beispiel:
 
@@ -34,7 +34,7 @@ Beispiel:
 1.6
 ```
 
-Die ganzen Zahlen wie z.B. `2`, `4`, `20` haben den Typ [int](https://docs.python.org/3/library/functions.html#int) (ausgeschrieben: Integer), die mit Nachkommastellen wie z.B. `5.0`, `1.6` den Typ [float](https://docs.python.org/3/library/functions.html#float) (= Gleitkommazahlen). Später werden in diesem Tutorial noch mehr Informationen über numerische Typen zu sehen sein. Die normale Division mit `/` liefert immer einen Float.  Um *floor divison* durchzuführen und ein ganzzahliges Ergebnis zu erhalten, kann man den Operator `//` benutzen. Um den Rest zu berechnen, kann man `%` benutzen:
+Die ganzen Zahlen wie z.B. `2`, `4`, `20` haben den Typ [int](https://docs.python.org/3/library/functions.html#int) (ausgeschrieben: Integer), die mit Nachkommastellen wie z.B. `5.0`, `1.6` haben den Typ [float](https://docs.python.org/3/library/functions.html#float) (= Gleitkommazahlen). Später werden in diesem Tutorial noch mehr Informationen über numerische Typen zu finden sein. Die normale Division mit `/` liefert immer einen Float als Ergebnis - auch, wenn zwei Integer-Werte dividiert werden.  Um *floor divison* durchzuführen und ein ganzzahliges Ergebnis zu erhalten, kann der Operator `//` benutzet werden. Um den Rest zu berechnen, kann man `%` benutzen:
 
 ```pycon
 >>> 17 / 3  # normale Division, liefert eine Kommazahl
@@ -68,7 +68,7 @@ Potenzieren hat in Python Vorrang vor dem Vorzeichen, d.h. möchte man eine nega
 9
 ```
 
-Das Gleichheitszeichen (`=`) wird verwendet, um einer Variablen einen Wert zuzuweisen. Danach wird vor der nächsten interaktiven Eingabeaufforderung kein Ergebnis mehr angezeigt:
+Das Gleichheitszeichen `=` wird verwendet, um einer Variablen einen Wert zuzuweisen. Danach wird vor der nächsten interaktiven Eingabeaufforderung kein Ergebnis / Bestätigung angezeigt:
 
 ```pycon
 >>> width = 20
@@ -81,7 +81,7 @@ Wenn eine Variable nicht definiert ist, d.h. ihr kein Wert zugewiesen wurde, fü
 
 
 ```pycon
->>> n  # try to access an undefined variable
+>>> n  # Aufruf einer undefinierten Variabel
    Traceback (most recent call last):
      File "<stdin>", line 1, in <module>
    NameError: name 'n' is not defined
@@ -94,7 +94,7 @@ Es gibt volle Unterstützung für Gleitkommazahl. Operatoren mit gemischten Oper
 14.0
 ```
 
-Im interaktiven Modus wird der zuletzt gedruckte Ausdruck der Variablen ``_`` zugewiesen.  Das bedeutet, dass es z.B. bei der Verwendung von Python als Taschenrechner etwas einfacher ist, Berechnungen fortzusetzen:
+Im interaktiven Modus wird der zuletzt gedruckte Ausdruck der Variablen `_` zugewiesen. Das bedeutet, dass es z.B. bei der Verwendung von Python als Taschenrechner etwas einfacher ist, Berechnungen fortzusetzen:
 
 ```pycon
 >>> tax = 12.5 / 100
@@ -107,20 +107,20 @@ Im interaktiven Modus wird der zuletzt gedruckte Ausdruck der Variablen ``_`` zu
 113.06
 ```
 
-Diese Variable sollte vom Benutzer als schreibgeschützt behandelt werden.  Es sollte nie explizit ein Wert zugewiesen werden - es würden eine unabhängige lokale Variable mit demselben Namen erstellt, die die eingebaute Variable mit ihrem magischen Verhalten maskiert!
+Diese Variable sollte vom Benutzer als schreibgeschützt behandelt werden. Es sollte `_`nie explizit ein Wert zugewiesen werden - es würden eine unabhängige lokale Variable mit dem gleichen Namen erstellt, die die eingebaute Variable mit ihrem magischen Verhalten maskiert!
 
 Zusätzlich zu `int` und `float` unterstützt Python auch andere Zahlentypen, wie [decimal.Decimal](https://docs.python.org/3/library/decimal.html#decimal.Decimal) (=Dezimalzahlen mit einer festen Anzahl von Nachkommastellen) und [fractions.Fraction](https://docs.python.org/3/library/fractions.html#fractions.Fraction) (zur Darstellung von Brüchen). Python hat auch eine eingebaute Unterstützung für [komplexe Zahlen](https://docs.python.org/3/library/stdtypes.html#typesnumeric) und verwendet dafür das Suffix `j` oder `J`, um den Imaginärteil anzugeben (z.B. `3+5j`).
 
 ### Text
 
-Python kann sowohl Text, dargestellt durch den Typ [str](https://docs.python.org/3/library/stdtypes.html#str) (=Strings, auf Deutsch: Zeichenkette) als auch Zahlen verarbeiten.  Dazu gehören Zeichen "`!`", Wörter "`Kaninchen``, Namen "`Paris`", Sätze "`Ich halte dir den Rücken frei :-) Juhu!`" etc. Strings werden entweder in einfache Anführungszeichen `'...'` oder doppelte Anführungszeichen `"..."` eingeschlossen. Beide sind werden von Python gleichwertig behandelt.
+Python kann sowohl Text, dargestellt durch den Typ [str](https://docs.python.org/3/library/stdtypes.html#str) (=Strings, auf Deutsch: Zeichenkette) als auch Zahlen verarbeiten. Dazu gehören Zeichen "`!`", Wörter wie "`Kaninchen``, Namen wie "`Paris`", Sätze wie "`Ich halte dir den Rücken frei :-) Juhu!`" etc. Strings werden entweder in einfache Anführungszeichen `'...'` (auf Englisch: single quotes) oder doppelte Anführungszeichen `"..."` (auf Englisch: double quotes) eingeschlossen. Beide werden von Python gleichwertig behandelt.
 
 ```pycon
->>> 'spam eggs'  # single quotes
+>>> 'spam eggs'  # einfache Anführungszeichen
 'spam eggs'
->>> "Ich halte dir den Rücken frei :-) Juhu!"  # double quotes
+>>> "Ich halte dir den Rücken frei :-) Juhu!"  # doppelte Anführungszeichen
 'Ich halte dir den Rücken frei :-) Juhu!'
->>> '1975'  # digits and numerals enclosed in quotes are also strings
+>>> '1975'  # Zahlen in Anführungsstrichen werden als String behandelt
    '1975'
 ```
 
@@ -129,7 +129,7 @@ Um Anführungszeichen auszugeben, müssen diese entweder mit dem Backslash `\` m
 ```pycon
 >>> 'doesn\'t'  # nutzt \' zum Escapen des einfachen Anführungszeichens
 "doesn't"
->>> "doesn't"  # ...oder stattdessen doppelt Anführungszeichnen verwenden
+>>> "doesn't"  # ...oder stattdessen doppelte Anführungszeichnen verwenden
 "doesn't"
 >>> '"Yes," they said.'
 '"Yes," they said.'
@@ -160,9 +160,9 @@ ame
 C:\some\name
 ```
 
-Es gibt einen subtilen Aspekt bei raw strings, der zu beachten ist: ein raw string darf nicht mit einer ungeraden Anzahl von Zeichen enden, siehe [diesen FAQ-Eintrag](https://docs.python.org/3/faq/programming.html#faq-programming-raw-string-backslash) für weitere Informationen und Umgehungsmöglichkeiten.
+Es gibt einen subtilen Aspekt bei raw strings zu beachten: ein raw string darf nicht mit einer ungeraden Anzahl von `\` Zeichen enden, siehe [diesen FAQ-Eintrag](https://docs.python.org/3/faq/programming.html#faq-programming-raw-string-backslash) für weitere Informationen und Möglichkeiten zum Umgehen.
 
-String-Literale können sich über mehrere Zeilen erstrecken.  Eine Möglichkeit ist die Verwendung von dreifachen Anführungszeichen: `"""..."""` oder `'''...'''`.  Zeilenenden werden automatisch in die Zeichenkette aufgenommen. Aber es ist möglich, dies zu verhindern, indem man ein `\` am Ende der Zeile hinzufügt. Das folgende Beispiel:
+String-Literale können sich über mehrere Zeilen erstrecken. Eine Möglichkeit ist die Verwendung von dreifachen Anführungszeichen: `"""..."""` oder `'''...'''`.  Zeilenenden werden automatisch in die Zeichenkette aufgenommen. Aber es ist möglich, dies zu verhindern, indem man ein `\` am Ende der Zeile hinzufügt. Das folgende Beispiel:
 
 ```python
 print("""\
@@ -172,7 +172,7 @@ Usage: thingy [OPTIONS]
 """)
 ```
 
-erzeugt folgende Ausgabe. Der ersten Zeilenumbruch nach den öffnenden `"""` ist nicht mehr enthalten:
+erzeugt die folgende Ausgabe. Der ersten Zeilenumbruch nach den öffnenden `"""` ist nicht mehr enthalten:
 
 ```
 Usage: thingy [OPTIONS]
@@ -183,7 +183,6 @@ Usage: thingy [OPTIONS]
 Strings können mit `+` zusammengefügt und mit `*` wiederholt werden:
 
 ```pycon
->>> # 3 times 'un', followed by 'ium'
 >>> 3 * 'un' + 'ium'
 'unununium'
 ```
@@ -204,11 +203,11 @@ Diese Funktion ist besonders nützlich, wenn man lange Zeichenfolgen umbrechen w
 'Put several strings within parentheses to have them joined together.'
 ```
 
-Dies funktioniert allerdings nur mit zwei Literalen, nicht mit Variablen oder Ausdrücken:
+Dies funktioniert allerdings nur mit zwei String-Literalen, nicht mit Variablen oder Ausdrücken:
 
 ```pycon
 >>> prefix = 'Py'
->>> prefix 'thon'  # can't concatenate a variable and a string literal
+>>> prefix 'thon'  # man keine Variable und ein String-Literal verketten
   File "<stdin>", line 1
     prefix 'thon'
            ^^^^^^
@@ -227,7 +226,7 @@ Wenn man Variablen oder eine Variable und ein Literal aneinanderhängen will kan
 'Python'
 ```
 
-*Hinweis*: Das Zusammenfügen von Strings mit `+` gilt aber als schlechter Stil und sollte normalerweise nicht verwendet werden. Zur Formatierung von Strings gibt es die später in diesem Tutorial auch noch behandelten f-Strings oder alternativ die format-Methode von Strings.
+***Hinweis***: Das Zusammenfügen von Strings mit `+` gilt als schlechter Stil und sollte normalerweise nicht verwendet werden. Zur Formatierung von Strings gibt es die später in diesem Tutorial auch noch behandelten f-Strings oder alternativ die format-Methode von Strings, siehe Kapitel [Eingabe und Ausgabe](inputoutput.md).
 
 Zeichenketten können auch über einen *Index* angesprochen werden, wobei das erste Zeichen den Index 0 hat, das zweite Zeichen den Index 1 usw. Der Indexzugriff funktioniert wie folgt:
 
@@ -250,7 +249,7 @@ Der Index kann auch eine negative Zahl sein, dann beginnt die Zählung von der r
 'P'
 ```
 
-Da 0 dasselbe wie 0 ist beginnen negative Indizes bei -1.
+Da 0 dasselbe wie -0 ist beginnen negative Indizes bei -1.
 
 Außerdem wird *Slicing* unterstützt. "Slicing" heißt auf Deutsch frei übersetzt so viel wie "in Scheiben schneiden" oder "in Stücke aufteilen". Mittels Slicing kann man einen Bereich eines Strings auswählen, wie im folgenden Beispiel gezeigt:
 
@@ -260,7 +259,8 @@ Außerdem wird *Slicing* unterstützt. "Slicing" heißt auf Deutsch frei überse
 >>> word[2:5]  # Zeichen von Position 2 (inklusive) bis Position 5 (exklusive)
 'tho'
 ```
-Die Indizes beim Slicing haben sinnvolle Vorgabewerte. Wenn der Startindex weggelassen wird, wird dieser automatisch als `0` (Null) angekommen. Wird der Endindex angenommen, wird dieser automatisch als die Länge des Strings angenommen. Beispiel:
+
+Die Indizes beim Slicing haben sinnvolle Vorgabewerte. Wenn der Startindex weggelassen wird, wird dieser automatisch als 0 (Null) angekommen. Wird der Endindex weggelassen, wird dieser automatisch als die Länge des Strings angenommen. Beispiel:
 
 ```pycon
 >>> word[:2]   # Zeichen vom Beginn bis Position 2 (exklusive)
@@ -361,7 +361,7 @@ Weiterführende Informationen hierzu:
 
 ### Listen
 
-Python kennt eine Reihe von *zusammengesetzten* Datentypen, die dazu dienen, andere Werte zusammenzufassen.  Der vielseitigste ist *list* (auf Deutsch: Liste), der als eine Liste von durch Komma getrennten Werten ("items") zwischen eckigen Klammern geschrieben werden kann. Listen können Elemente unterschiedlichen Typs enthalten, aber in der Regel ist es sinnvoll, dass die Elemente alle denselben Typ haben. Außerdem können Listen verschachtelt werden (dazu später weiter unten mehr):
+Python kennt eine Reihe von *zusammengesetzten* Datentypen, die dazu dienen, andere Werte zusammenzufassen. Der vielseitigste ist *list* (auf Deutsch: Liste), der als eine Liste von durch Komma getrennten Werten ("items") zwischen eckigen Klammern geschrieben werden kann. Listen können Elemente unterschiedlichen Typs enthalten, aber in der Regel ist es sinnvoll, dass die Elemente alle denselben Typ haben. Außerdem können Listen verschachtelt werden (dazu später weiter unten mehr):
 
 ```pycon
 >>> squares = [1, 4, 9, 16, 25]
@@ -385,7 +385,7 @@ Wie Strings (und alle anderen eingebauten Datenstrukturen vom Typ [sequence](htt
 [9, 16, 25]
 ```
 
-Alle Slice-Operationen geben eine neue Liste zurück, die die angeforderten Elemente enthält.  Das bedeutet, dass das folgende Slice eine [flache Kopie](https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy) der Liste ist:
+Alle Slice-Operationen geben eine neue Liste zurück, die die angeforderten Elemente enthält. Das bedeutet, dass das folgende Slice eine [flache Kopie](https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy) der Liste ist:
 
 ```pycon
 >>> squares[:]
@@ -403,9 +403,9 @@ Im Gegensatz zu Strings sind Listen [mutable](https://docs.python.org/3/glossary
 
 ```pycon
 >>> cubes = [1, 8, 27, 65, 125]  # hier ist wohl etwas falsch...
->>> 4 ** 3  #  4 hoch 3 ist 64, nicht 65!
+>>> 4 ** 3   # 4 hoch 3 ist 64, nicht 65!
 64
->>> cubes[3] = 64  # Ersetzen des falschen Werts
+>>> cubes[3] = 64   # Ersetzen des falschen Werts
 >>> cubes
 [1, 8, 27, 64, 125]
 ```
@@ -463,7 +463,7 @@ Es ist möglich, Listen zu verschachteln, also Listen zu erstellen, die andere L
 
 ## Erste Schritte Richtung Programmierung
 
-Natürlich kann man Python auch für kompliziertere Aufgaben verwenden, als zwei und zwei zusammenzuzählen.  Zum Beispiel kann man eine anfängliche Teilfolge der [Fibonacci-Folge](https://de.wikipedia.org/wiki/) wie folgt schreiben:
+Natürlich kann man Python auch für kompliziertere Aufgaben verwenden, als zwei und zwei zusammenzuzählen. Zum Beispiel kann man eine anfängliche Teilfolge der [Fibonacci-Folge](https://de.wikipedia.org/wiki/) wie folgt schreiben:
 
 ```pycon
 >>> # Fibonacci series:
@@ -486,7 +486,7 @@ Dieses Beispiel zeigt einige neue Features:
 
  * Die erste Zeile enthält eine *Mehrfachzuweisung*: die Variablen `a` und `b` erhalten gleichzeitig die neuen Werte 0 und 1. In der letzten Zeile wird dies erneut verwendet, um zu zeigen, dass die Ausdrücke auf der rechten Seite alle zuerst ausgewertet werden, bevor eine der Zuweisungen stattfindet. Die Ausdrücke der rechten Seite werden von links nach rechts ausgewertet.
  * Die [while-Schleife](https://docs.python.org/3/reference/compound_stmts.html#while) wird so lange ausgeführt, wie die Bedingung (hier: `a < 10`) wahr bleibt. In Python ist, wie in C, jeder Ganzzahlwert ungleich Null wahr und Null ist falsch. Die Bedingung kann auch eine Zeichenkette oder eine Liste sein, eigentlich eine beliebige Sequenz. Alles mit einer Länge ungleich Null ist wahr, leere Sequenzen sind falsch. Der in diesem Beispiel verwendete Test ist ein einfacher Vergleich. Die Standard-Vergleichsoperatoren sind die gleichen wie in C: `<` (kleiner als), `>` (größer als), `==` (gleich), `<=` (kleiner oder gleich), `>=` (größer oder gleich) und `!=` (ungleich).
- * Der *Körper* der Schleife ist *eingerückt*: Die Einrückung ist Pythons Art, Anweisungen zu gruppieren. An der interaktiven Eingabeaufforderung muss man für jede eingerückte Zeile einen Tabulator oder ein Leerzeichen eingeben. In der Praxis wird man kompliziertere Eingaben für Python mit einem Editor oder eine IDE machen. Alle guten Texteditoren haben eine automatische Einrückungsfunktion. Wenn eine zusammengesetzte Anweisung interaktiv eingegeben wird, muss ihr eine Leerzeile folgen, um die Fertigstellung anzuzeigen (da der Parser nicht erraten kann, wann die letzte Zeile eingegeben wird). Zu beachten ist, dass jede Zeile innerhalb eines Basisblocks um die gleiche Tiefe eingerückt werden muss. Es gilt als "best practice" für Python, dass die Einrückung pro Ebene immer mit vier Leerzeichen gemacht wird.
+ * Der *Körper* der Schleife ist *eingerückt*: Die Einrückung ist Pythons Art, Anweisungen zu gruppieren. An der interaktiven Eingabeaufforderung muss man für jede eingerückte Zeile einen Tabulator oder ein Leerzeichen eingeben. In der Praxis wird man kompliziertere Eingaben für Python mit einem Editor oder einer IDE machen. Alle guten Texteditoren haben eine automatische Einrückungsfunktion. Wenn eine zusammengesetzte Anweisung interaktiv eingegeben wird, muss ihr eine Leerzeile folgen, um die Fertigstellung anzuzeigen (da der Parser nicht erraten kann, wann die letzte Zeile eingegeben wird). Zu beachten ist, dass jede Zeile innerhalb eines Basisblocks um die gleiche Tiefe eingerückt werden muss. Es gilt als "best practice" für Python, dass die Einrückung pro Ebene immer mit vier Leerzeichen gemacht wird.
  * Die Funktion `print` schreibt den Wert des Arguments /der Argumente, die sie erhält. Sie unterscheidet sich von der einfachen Ausgabe des gewünschten Ausdrucks (wie in den Taschenrechner-Beispielen zuvor) durch die Art und Weise, wie sie mit mehreren Argumenten, Fließkommazahlen und Zeichenketten umgeht. Zeichenketten werden ohne Anführungszeichen gedruckt, und zwischen den Elementen wird ein Leerzeichen eingefügt, so dass man die Dinge schön formatieren können, etwa so:
 
 ```pycon
