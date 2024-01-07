@@ -1,4 +1,4 @@
-# Virtual Environments und Paketverwaltung
+# virtuelle Umgebungen und Paketverwaltung mit pip
 
 ## Einführung
 
