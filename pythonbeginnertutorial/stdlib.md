@@ -171,6 +171,13 @@ Hinweis: Das Modul heißt "datetime" und enthält ein Submodul mit dem Namen "da
 >>> now = datetime.now()
 ```
 
+## pathlib - Umgang mit Pfaden und Verzeichnissen
+Das Modul [pathlib](https://docs.python.org/3/library/pathlib.html) bietet eine Reihe von Klassen und Methoden zum Umgang mit Dateipfaden. Eine zentralle Klasse ist `Path`, welche einen Dateipfad darstellt.
+
+Das Modul bietet unter anderem das Zusammensetzen von neuen Pfaden aus mehreren Path-Objekte, die Extraktion von Pfad, Dateiname und Dateiendung aus einem Path-Objekt sowie das Iterieren über den Inhalt eines Path-Ojekts, sofern es sich dabei um einen Verzeichnis handelt.
+
+`pathlib` ist das Standardmodul für die Umgang mit Dateipfaden und hat die älteren Methoden aus dem `os` Modul weitesgehend ersetzt.
+
 ## Performance Messung
 
 Einige Python-Benutzer sind sehr daran interessiert, die relative Leistung verschiedener Ansätze für dasselbe Problem zu kennen. Python bietet ein Messwerkzeug, das diese Fragen sofort beantwortet. So kann es zum Beispiel von Interesse sein, die Funktion zum Packen und Entpacken von Tupeln anstelle des traditionellen Ansatzes zum Vertauschen von Argumenten zu verwenden. Das [timeit](https://docs.python.org/3/library/timeit.html#module-timeit) Modul kann zur Messung der Ausführungsdauer eingesetzt werden:
