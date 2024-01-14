@@ -595,5 +595,7 @@ Sequenzobjekte können normalerweise mit anderen Objekten desselben Sequenztyps 
 
 Zu beachten ist, dass der Vergleich von Objekten unterschiedlichen Typs mit `<` oder `>` zulässig ist, sofern die Objekte über geeignete Vergleichsmethoden verfügen. Zum Beispiel werden gemischte numerische Typen entsprechend ihrem numerischen Wert verglichen, so dass 0 gleich 0.0 ist, usw. Andernfalls wird der Interpreter eine `TypeError` Ausnahme auslösen, anstatt eine beliebige Reihenfolge zu liefern.
 
+***
+
  * nächstes Kapitel: [Module](modules.md)
  * vorheriges Kapitel: [weitere Werkzeuge zur Steuerung des Programmflusses](controlflow.md)

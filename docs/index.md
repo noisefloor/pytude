@@ -1,7 +1,5 @@
 # PyTuDe - Python Tutorial auf Deutsch
 
-Mehr Information zu PyTuDe: [Startseite von PyTuDe](../README.md)
-
 Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge der Kapitel ist wie folgt:
 
  1. [Startseite](start.md): Startseite des Tutorials
@@ -16,6 +14,7 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
  10. [Klassen](classes.md): wie man Klassen in Python erstellt und nutzt
  11. [eine (kurze) Tour durch die Standardbibliothek](stdlib.md): kurze Vorstellung einiger gängiger und häufiger genutzter Module aus der Python Standardbibliothek
  12. [virtuelle Umgebungen und Paketverwaltung mit pip](venv.md): wie man virtellen Umgebungen (Virtual Environments) erstellt und nutzt sowie Python Pakete mit Hilfe von pip installiert
- 13. [was kommt als nächstes?](whatnow.md)
- 14. (weitere Kapitel folgen)
+ 13. [Was kommt als nächstes?](whatnow.md): hilfreiche Links und weiterführende Webseiten
+ 14. [Tipps und Anmerkungen](remarks.md): ein paar Tipps und Anmerkungen zu den ersten Projekten, GUI-Programmierung, nebenläufiger Programmierung und alternativen Python-Implementierung
+ 15. [externe Module](externallibs.md): ein kurzer Überblick über einige viel genutzte und populäre externe Python-Module
 

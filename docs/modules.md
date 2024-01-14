@@ -471,6 +471,7 @@ Pakete unterstützen ein weiteres spezielles Attribut, `__path__`.  Dieses wird 
 
 Obwohl diese Funktion nicht oft benötigt wird, kann sie verwendet werden, um die Menge der in einem Paket gefundenen Module zu erweitern.
 
+***
 
  * nächstes Kapitel: [Eingabe und Ausgabe](inputoutput.md)
  * vorheriges Kapitel: [Datenstrukturen und Datentypen](datastructures.md)

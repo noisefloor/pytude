@@ -366,5 +366,7 @@ Python hat standardmäßig noch drei weitere Module für nebenläufige Programmi
  * XML: Die XML-Verarbeitung wird durch die Pakete [xml.etree.ElementTree](https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree), [xml.dom](https://docs.python.org/3/library/xml.dom.html#module-xml.dom) und [xml.sax](https://docs.python.org/3/library/xml.sax.html#module-xml.sax) unterstützt. Zusammen vereinfachen diese Module und Pakete den Datenaustausch zwischen Python-Anwendungen und anderen Tools erheblich
  * [tkinter](https://docs.python.org/3/library/tkinter.html): Mit Hilfe des tkinter-Moduls können grafische Benutzeroberflächen erstellt werden. tkinter ist nicht so umfangreich wie "große" Frameworks wie z.B. Qt, GTK oder Kivy, ist aber relativ einfach zu Lernen und ist durchaus für nicht allzu komplexe GUIs geeignet. Um sauber und strukturiert mit tkinter programmieren zu können sollte man Klassen und deren Nutzung verstanden haben, da man für die GUI in der Regel immer in einer Klasse kapseln möchte (und nicht also lose Sammlung von Funktionen erstellt).
 
+***
+
  * nächstes Kapitel: [venv - virtuelle Umgebungen für Python](venv.md)
  * vorheriges Kapitel: [Klassen](classes.md)

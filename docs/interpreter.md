@@ -123,5 +123,7 @@ Eine Ausnahme von der ersten Zeile Regel besteht, wenn der Quellcode mit einer U
 
 Sofern es keinen triffigen Grund gibt, eine anderen Codierung als UTF-8 zu nutzen, sollte man immer bei diesem Standard-Encoding von Python bleiben.
 
+***
+
  * nächste Seite: [eine ungezwungene Einführung in Python](introduction.md)
  * vorherige Seite: [ein kleiner Appetitanreger auf Python](appetite.md)

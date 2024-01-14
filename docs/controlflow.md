@@ -913,6 +913,7 @@ Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-
  * Man verwendet keine ausgefallenen Kodierungen, wenn der Code in internationalen Umgebungen verwendet werden soll. Pythons Standard UTF-8 oder sogar einfaches ASCII funktionieren in jedem Fall am besten.
  * Man verwendet ebenfalls keine Nicht-ASCII-Zeichen in Bezeichnern, wenn auch nur die geringste Chance besteht, dass Menschen, die eine andere Sprache sprechen, den Code lesen oder pflegen werden.
 
+***
 
  * nächstes Kapitel: [Datentypen und -strukturen](datastructures.md)
  * vorheriges Kapitel: [eine lockere Einführung in Python](introduction.md)

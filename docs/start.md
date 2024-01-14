@@ -22,4 +22,6 @@ Eine Übersicht über alle in der Standardinstallation von Python enthaltenen Mo
 
 Dieses Tutorial erhebt nicht den Anspruch, umfassend oder vollumfänglich zu sein. Es wird nicht jede einzelne Funktion oder auch nicht jede häufig verwendete Funktion behandelt. Stattdessen werden viele der erwähnenswerten Funktionen von Python vorgestellt, die man bei der späteren Programmierung mit Python auch häufig brauchen wird. Es soll ein guter Einstieg in die Sprache vermittelt werden. Nach dem Durcharbeiten dieses Tutorials sollte man dazu in der Lage sein, Python-Programme und -Module zu lesen und zu schreiben. Außerdem sollte man dazu bereit sein, mehr über die verschiedenen in Python enthaltenen [Module](https://docs.python.org/3/library/index.html#library-index) zu erfahren und diese für eigene Programmierprojekte zu nutzen.
 
+***
+
 Nächste Seite: [Ein kleiner Appetitanreger](appetite.md) für Python

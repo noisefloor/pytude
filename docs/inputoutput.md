@@ -382,5 +382,7 @@ Im Gegensatz zu JSON ist [pickle](https://docs.python.org/3/library/pickle.html)
 
 CSV-Dateien erlauben es, Daten strukturiert abzulegen mit einer Struktur ähnlich einer Tabellenkalkulation. Allerdings sind CSV-Dateien auch nur normale Textdateien, d.h. in der Datei ist alles ein String. CSV kennt keine Datentypen wie Zahlen etc. Je nach zu speichernden Daten kann die Nutzung von CSV aber sinnvoll sein. Python hat ein Standardmodul zum Lesen und Schreiben von CSV an Bord, Details sind [in der Python-Dokumentation](https://docs.python.org/3/library/csv.html)
 
+***
+
  * nächstes Kapitel: [Fehler und Ausnahmen](errors.md)
  * vorheriges Kapitel: [Module](modules.md)

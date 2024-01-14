@@ -30,5 +30,7 @@ Im nächsten Kapitel wird die Installation des Python-Interpreters kurz erklärt
 
 Im weiteren Verlauf des Tutorials werden verschiedene Funktionen der Sprache und des Systems Python anhand von Beispielen vorgestellt, angefangen bei einfachen Ausdrücken, Anweisungen und Datentypen über Funktionen und Module bis hin zu fortgeschrittenen Konzepten wie Ausnahmen und benutzerdefinierten Klassen.
 
+***
+
  * nächste Seite: [den Python-Interpreter nutzen](interpreter.md)
  * vorherige Seite: [Startseite](start.md)

@@ -678,5 +678,7 @@ Beispiele:
 ['f', 'l', 'o', 'g']
 ```
 
+***
+
  * nächstes Kapitel: [kurze Tour durch die Standardbibliothek](stdlib.md)
  * vorheriges Kapitel: [Fehler und Ausnahmen](errors.md)

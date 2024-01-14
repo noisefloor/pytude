@@ -173,5 +173,7 @@ Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
 
 Wenn man selber ein Python Modul im Python Packge Index veröffentlichen möchte findet man auf der Seite [Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/) in der Python-Dokumentation.
 
+***
+
  * nächstes Kapitel: [Was kommt als nächstes?](whatnow.md)
  * vorheriges Kapitel: [eine (kurze) Tour durch die Standardbibliothek](stdlib.md)

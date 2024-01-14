@@ -36,5 +36,7 @@ Dies Tutorial ist auf Deutsch geschrieben, aber viele (bzw. genau gekommen fast 
 
 Das heißt auch, dass man eher früher als später auch englischsprachige Dokumentationen lesen muss. Davon sollte man sich auf keinen Fall abschrecken lassen, auch wenn man vielleicht sonst wenig mit der englischen Sprache zu tun hat. Zum einem muss man nur lesen - man muss nicht laut lesen, man muss sprechen oder gar schreiben. Was das Ganze deutlich entspannter macht. Zum andern weiß man, um welche Themenbereiche es geht, was das Verständnis in der Regel vereinfacht. Und außerdem hilft es in der Regel, wenn man Codebeispiele auf der Seite hat, aus den hervorgeht, wie man z.B. ein Python-Modul verwendet, so dass man nicht unbedingt zwingend den Text vollumfänglich verstehen muss.
 
- * nächste Seite:
- * vorheriges Seite: [virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
+***
+
+ * nächste Seite: [Tipps und Anmerkungen](remarks.md)
+ * vorherige Seite: [virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
