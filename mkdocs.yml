@@ -9,3 +9,19 @@ plugins:
   - search
 markdown_extensions:
   - admonition
+nav:
+  - 'start.md'
+  - 'appetite.md'
+  - 'interpreter.md'
+  - 'introduction.md'
+  - 'controlflow.md'
+  - 'datastructures.md'
+  - 'modules.md'
+  - 'inputoutput.md'
+  - 'errors.md'
+  - 'classes.md'
+  - 'stdlib.md'
+  - 'venv.md'
+  - 'whatnow.md'
+  - 'remarks.md'
+  - 'externallibs.md'
