@@ -22,9 +22,9 @@ Bitte einen Integerwert eingeben: 42
 Mehr
 ```
 
-Es kann keinen, einen oder mehr `elif` Teile geben. Der `else` Teil ist optional. Das Schlüsselwort `elif` ist die Abkürzung für "else if" und ist nützlich, um eine übermäßige Einrückung zu vermeiden. Eine `if ... elif ... elif` ...` Sequenz ist ein Ersatz für die `switch` oder `case` Anweisungen, die man in anderen Sprachen findet.
+Es kann keinen, einen oder mehr `elif` Teile geben. Der `else` Teil ist optional. Das Schlüsselwort `elif` ist die Abkürzung für "else if" und ist nützlich, um eine übermäßige Einrückung zu vermeiden. Eine `if ... elif ... elif ...` Sequenz ist ein Ersatz für die `switch` oder `case` Anweisungen, die man in anderen Sprachen findet.
 
-Der Ausdruck hinter `if` und `elif` muss immer einen Wahrheitswert ergeben, also [True oder False](https://docs.python.org/3/library/stdtypes.html#boolean-type-bool). Ist der Ausdruck wahr, wird der `if` bzw. `elif` Block betreteten und ausgeführt. Wenn nicht wird er übersprungen und das nächste `if` oder `elif` überprüft. Ist ein Block mit `else` vorhanden wird dieser nur dann ausgeführt, wenn vorher der Wahrheitswert für den `if` und alle `elif` Ausdrücke falsch (=nicht wahr) war.
+Der Ausdruck hinter `if` und `elif` muss immer einen Wahrheitswert ergeben, also [True oder False](https://docs.python.org/3/library/stdtypes.html#boolean-type-bool). Ist der Ausdruck wahr, wird der `if` bzw. `elif` Block betreteten und ausgeführt. Wenn nicht, wird er übersprungen und das nächste `if` oder `elif` überprüft. Ist ein Block mit `else` vorhanden wird dieser nur dann ausgeführt, wenn vorher der Wahrheitswert für den `if` und alle `elif` Ausdrücke falsch (=nicht wahr) waren.
 
 Wenn man denselben Wert mit mehreren Konstanten vergleichen oder nach bestimmten Typen oder Attributen suchen will, kann auch die Anweisung `match` nützlich sein, welche weiter unten noch erläutert wird.
 
@@ -62,7 +62,7 @@ Code, der eine Sammlung ändert, während er über dieselbe Sammlung iteriert, k
 {'Hans': 'active', '景太郎': 'active'}
 ```
 
-Das Iterieren über eine Sammlung, im englischen auch als "iterable" bezeichnet, kommt sehr oft vor und ist "typisch pythonisch". Man iteriert dabei, wenn möglich, immer direkt über die Sammlung, und nicht per Indexzugriff. Auch wenn letzteres das gleiche Ergebnis liefert, gilt es als unpythonisch, als Anti-Pattern und schlechter Still. Beispiel:
+Das Iterieren über eine Sammlung, im Englischen auch als "iterable" bezeichnet, kommt sehr oft vor und ist "typisch pythonisch". Man iteriert dabei, wenn möglich, immer direkt über die Sammlung, und nicht per Indexzugriff. Auch wenn letzteres das gleiche Ergebnis liefert, gilt es als unpythonisch, als Anti-Pattern und schlechter Still. Beispiel:
 
 ```pycon
 >>> primes = [2, 3, 5, 7]
@@ -153,7 +153,7 @@ Ein solches Objekt ist "iterable", auf Deutsch: iterierbar, d.h. es eignet sich 
 6
 ```
 
-Später werden noch mehr Funktionen zu sehen sein, die Iterables zurückgeben und Iterables als Argumente annehmen. Im Kapitel über Datenstrukturen wird z.B ausführlicher über Listen gesprochen.
+Später werden noch mehr Funktionen zu sehen sein, die Iterables zurückgeben und Iterables als Argumente annehmen. Im Kapitel über Datenstrukturen wird z.B. ausführlicher über Listen gesprochen.
 
 ## break und continue Anweisungen, else Klauseln in Schleifen
 
@@ -185,8 +185,9 @@ Dies wird in der folgenden `for` Schleife veranschaulicht, die nach Primzahlen s
    7 is a prime number
    8 equals 2 * 4
    9 equals 3 * 3
+```
 
-(Ja, das ist valider Code.  Die `else` Klausel gehört zur `for` Schleife, *nicht* zur `if`-Anweisung.)
+Ja, das ist valider Code. Die `else` Klausel gehört zur `for` Schleife, *nicht* zur `if`-Anweisung.
 
 Wenn die `else` Klausel mit einer Schleife verwendet wird, hat sie mehr mit der `else` Klausel einer `try` Anweisung gemeinsam als mit der von der `if` Anweisungen: die `else` Klausel einer `try` Anweisung wird ausgeführt, wenn keine Ausnahme auftritt, und die `else` Klausel einer Schleife wird ausgeführt, wenn kein `break` auftritt. Mehr über die `try` Anweisung und Ausnahmen sind im Kapitel über Fehlerbehandlung zu finden.
 
@@ -211,7 +212,8 @@ Found an odd number 9
 
 ## pass Anweisung
 
-Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass) bewirkt: nichts. Sie kann verwendet werden, wenn eine Anweisung syntaktisch erforderlich ist, das Programm aber keine Aktion verlangt. Zum Beispiel:
+Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass) bewirkt: nichts. 
+Sie kann verwendet werden, wenn eine Anweisung syntaktisch erforderlich ist, das Programm aber keine Aktion verlangt. Zum Beispiel:
 
 ```pycon
 >>> while True:
@@ -317,7 +319,7 @@ Point(y=var, x=1)
 
 Es empfiehlt sich, die Muster als eine erweiterte Form dessen zu betrachten, was man links von einer Zuweisung schreiben würde, um zu verstehen, welche Variablen auf was gesetzt werden würden. Nur die eigenständigen Namen (wie `var` oben) werden durch eine `match` Anweisung zugewiesen. Gepunktete Namen (wie `foo.bar`), Attributnamen (wie `x=` und `y=` oben) oder Klassennamen (erkennbar an dem "(...)" neben ihnen wie `Point` oben) werden niemals zugewiesen.
 
-Muster können beliebig verschachtelt werden.  Wenn man zum Beispiel eine kurze Liste von Punkten hat, die mit ``__match_args__`` ergänzt wurde, kann man sie wie folgt abgleichen:
+Muster können beliebig verschachtelt werden. Wenn man zum Beispiel eine kurze Liste von Punkten hat, die mit ``__match_args__`` ergänzt wurde, kann man sie wie folgt abgleichen:
 
 ```python
 class Point:
@@ -350,10 +352,10 @@ match point:
         print(f"Not on the diagonal")
 ```
 
-Einige weitere Feature dieser Anweisung sind:
+Einige weitere Features dieser Anweisung sind:
 
  * Wie Entpackungszuweisungen haben Tupel- und Listenmuster genau dieselbe Bedeutung und passen tatsächlich zu beliebigen Sequenzen. Eine wichtige Ausnahme ist, dass sie nicht auf Iteratoren oder Zeichenketten passen.
- * Sequenzmuster unterstützen erweitertes Entpacken: `[x, y, *rest]` und `(x, y, *rest)` funktionieren ähnlich wie Entpackungszuweisungen. Der Name nach `*` kann auch `_` sein, so dass `(x, y, *_)` mit einer Folge von mindestens zwei Elementen übereinstimmt, ohne die restlichen Elemente zu binden.
+ * Sequenzmuster unterstützen erweitertes Entpacken: `[x, y, *rest]` und `(x, y, *rest)` funktionieren ähnlich wie Entpackungszuweisungen. Der Name nach `*` kann auch `_` sein, sodass `(x, y, *_)` mit einer Folge von mindestens zwei Elementen übereinstimmt, ohne die restlichen Elemente zu binden.
  * Mapping patterns: `{"bandwidth": b, "latency": l}` erfasst die "bandwidth" und "latency" Werte aus einem Wörterbuch. Anders als bei Sequenzmustern werden zusätzliche Schlüssel ignoriert. Ein Entpacken wie `**rest` wird ebenfalls unterstützt (aber `**_` wäre redundant, daher ist es nicht erlaubt.)
  * Unterpattern (englisch: subpattern) können über das Schlüsselwort `as` erfasst werden. Im folgenden Beispiel wird das zweite Element der Eingabe als `p2` erfassen (solange die Eingabe eine Folge von zwei Punkten ist)
 
@@ -387,7 +389,7 @@ Für weitere Details kann man die [PEP 636](https://peps.python.org/pep-0636/) l
 
 ## Funktionen definieren
 
-Im Folgenden wird eine Funktion erstellen, die die [Fibonacci-Reihe](https://de.wikipedia.org/wiki/Fibonacci-Folge) bis zu einem beliebigen Wert berechnet:
+Im Folgenden wird eine Funktion erstellt, die die [Fibonacci-Reihe](https://de.wikipedia.org/wiki/Fibonacci-Folge) bis zu einem beliebigen Wert berechnet:
 
 ```pycon
 >>> def fib(n):    # write Fibonacci series up to n
@@ -403,11 +405,11 @@ Im Folgenden wird eine Funktion erstellen, die die [Fibonacci-Reihe](https://de.
    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
 ```
 
-Das Schlüsselwort [def](https://docs.python.org/3/reference/compound_stmts.html#def) leitet eine *Funktionsdefinition* ein. Diese muss vom eine Funktionsnamen und der in Klammern gesetzten Liste der formalen Parameter gefolgt werden, wobei auch eine leere Liste (=keine Parameter) erlaubt ist. Die Anweisungen, die den Körper der Funktion bilden, beginnen in der nächsten Zeile und müssen eingerückt werden. Als Einrückung werden wie unter Python üblich vier Leerzeichen empfohlen.
+Das Schlüsselwort [def](https://docs.python.org/3/reference/compound_stmts.html#def) leitet eine *Funktionsdefinition* ein. Diese muss vom Funktionsnamen und der in Klammern gesetzten Liste der formalen Parameter gefolgt werden, wobei auch eine leere Liste (=keine Parameter) erlaubt ist. Die Anweisungen, die den Körper der Funktion bilden, beginnen in der nächsten Zeile und müssen eingerückt werden. Als Einrückung werden wie unter Python üblich vier Leerzeichen empfohlen.
 
 Die erste Anweisung des Funktionskörpers kann optional ein Zeichenkettenliteral sein. Dieses Zeichenkettenliteral ist die Dokumentationszeichenkette der Funktion, genannt "docstring". Mehr über docstrings ist weiter unten in diesem Kapitel zu finden. Es gibt Werkzeuge, die docstrings verwenden, um automatisch Online- oder gedruckte Dokumentation zu erzeugen, oder um den Benutzer interaktiv durch den Code blättern zu lassen. Es gilt als gute Praxis, docstrings in den eigenen Code einzuschließen - sollte man sich am besten direkt zur Gewohnheit machen.
 
-Die *Ausführung* einer Funktion führt eine neue Symboltabelle ein, die für die lokalen Variablen der Funktion verwendet wird. Genauer gesagt speichern alle Variablenzuweisungen in einer Funktion den Wert in der lokalen Symboltabelle, während Variablenreferenzen zuerst in der lokalen Symboltabelle, dann in den lokalen Symboltabellen der umschließenden Funktionen, dann in der globalen Symboltabelle und schließlich in der Tabelle der eingebauten Namen nachsehen.  Globalen Variablen und Variablen von umschließenden Funktionen kann also innerhalb einer Funktion nicht direkt ein Wert zugewiesen werden - es sei denn, globale Variablen werden in einer `global`-Anweisung oder Variablen von umschließenden Funktionen in einer `nonlocal` aufgeführt, obwohl sie referenziert werden können. Die Verwendung von `global` ist aber in den allermeisten Fällen in einem sauber strukturierten Programm überflüssig und sollte von daher vermieden werden. Außerdem kann `global` den Zustand eines Programms schwer nachvollziehbar machen.
+Die *Ausführung* einer Funktion führt eine neue Symboltabelle ein, die für die lokalen Variablen der Funktion verwendet wird. Genauer gesagt speichern alle Variablenzuweisungen in einer Funktion den Wert in der lokalen Symboltabelle, während Variablenreferenzen zuerst in der lokalen Symboltabelle, dann in den lokalen Symboltabellen der umschließenden Funktionen, dann in der globalen Symboltabelle und schließlich in der Tabelle der eingebauten Namen nachsehen. Globalen Variablen und Variablen von umschließenden Funktionen kann also innerhalb einer Funktion nicht direkt ein Wert zugewiesen werden - es sei denn, globale Variablen werden in einer `global`-Anweisung oder Variablen von umschließenden Funktionen in einer `nonlocal` aufgeführt, obwohl sie referenziert werden können. Die Verwendung von `global` ist aber in den allermeisten Fällen in einem sauber strukturierten Programm überflüssig und sollte von daher vermieden werden. Außerdem kann `global` den Zustand eines Programms schwer nachvollziehbar machen.
 
 Die eigentlichen Parameter (Argumente) eines Funktionsaufrufs werden in die lokale Symboltabelle der aufgerufenen Funktion eingeführt, wenn diese aufgerufen wird. Argumente werden also mit *Aufruf durch Wert* übergeben, wobei der *Wert* immer ein Objekt *Referenz* ist, nicht der Wert des Objekts. Wenn eine Funktion eine andere Funktion aufruft oder sich selbst rekursiv aufruft, wird eine neue lokale Symboltabelle für diesen Aufruf erstellt.
 
@@ -429,7 +431,7 @@ Wenn man aus anderen Sprachen kommt, wird man vielleicht einwenden, dass `fib` k
 None
 ```
 
-Es ist einfach, eine Funktion zu schreiben, die eine Liste der Zahlen der Fibonacci-Reihe zurückgibt, anstatt sie zu auszugeben:
+Es ist einfach, eine Funktion zu schreiben, die eine Liste der Zahlen der Fibonacci-Reihe zurückgibt, anstatt sie auszugeben:
 
 ```pycon
 >>> def fib2(n):  # return Fibonacci series up to n
@@ -446,14 +448,14 @@ Es ist einfach, eine Funktion zu schreiben, die eine Liste der Zahlen der Fibona
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 ```
 
-Dies Beispiel zeigt auch einige Feature von Python, die bisher noch nicht behandelt wurden:
+Dieses Beispiel zeigt auch einige Features von Python, die bisher noch nicht behandelt wurden:
 
  * Die Anweisung `return` liefert einen Wert aus einer Funktion zurück. `return` ohne einen Wert gibt automatisch `None` zurück. Wird eine Funktion ohne abschließendes `return` beendet wird ebenfalls `None` zurück geliefert.
- * Die Anweisung `result.append(a)` ruft eine *Methode* des Listenobjekts `result` auf. Eine Methode ist eine Funktion, die zu einem Objekt "gehört" und den Namen `obj.Methodenname` trägt, wobei `obj` ein Objekt ist (dies kann ein Ausdruck sein) und `Methodenname` der Name einer Methode ist, die durch den Typ des Objekts definiert ist. Verschiedene Typen definieren verschiedene Methoden.  Methoden verschiedener Typen können denselben Namen haben, ohne dass dies zu Mehrdeutigkeit führt. Es ist möglich, eigene Objekttypen und Methoden zu definieren, indem man *Klassen* verwendet, dazu später mehr im Kapitel über Klassen. Die im Beispiel gezeigte Methode `append` ist für Listenobjekte definiert. Sie fügt ein neues Element am Ende der Liste hinzu. In diesem Beispiel ist sie äquivalent zu ``Ergebnis = Ergebnis + [a]`, aber effizienter.
+ * Die Anweisung `result.append(a)` ruft eine *Methode* des Listenobjekts `result` auf. Eine Methode ist eine Funktion, die zu einem Objekt "gehört" und den Namen `obj.Methodenname` trägt, wobei `obj` ein Objekt ist (dies kann ein Ausdruck sein) und `Methodenname` der Name einer Methode ist, die durch den Typ des Objekts definiert ist. Verschiedene Typen definieren verschiedene Methoden. Methoden verschiedener Typen können denselben Namen haben, ohne dass dies zu Mehrdeutigkeit führt. Es ist möglich, eigene Objekttypen und Methoden zu definieren, indem man *Klassen* verwendet, dazu später mehr im Kapitel über Klassen. Die im Beispiel gezeigte Methode `append` ist für Listenobjekte definiert. Sie fügt ein neues Element am Ende der Liste hinzu. In diesem Beispiel ist sie äquivalent zu `Ergebnis = Ergebnis + [a]`, aber effizienter.
 
 ### Hinweis zu Funktionsnamen
 
-Bei der Benennung von Funktionen sollte man darauf achten, dass diese aussagekräftige Namen haben. Dies kommt der Verständlichkeit des geschrieben Codes zugute. Des Weiteren sollte man darauf achten, dass der Funktionsnamen *nicht* einen Namen einer [built-in Funktion](https://docs.python.org/3/library/functions.html) oder einer importierten Funktion überschreibt. Dies kann zu unerwünschten Nebeneffekten und schwer nachzuvollziehenden Fehlern führen.
+Bei der Benennung von Funktionen sollte man darauf achten, dass diese aussagekräftige Namen haben. Dies kommt der Verständlichkeit des geschriebenen Codes zugute. Des Weiteren sollte man darauf achten, dass der Funktionsname *nicht* einen Namen einer [built-in Funktion](https://docs.python.org/3/library/functions.html) oder einer importierten Funktion überschreibt. Dies kann zu unerwünschten Nebeneffekten und schwer nachzuvollziehenden Fehlern führen.
 
 Im folgenden Beispiel wird die eingebaute Funktion [sum](https://docs.python.org/3/library/functions.html#sum) überschrieben:
 
@@ -519,7 +521,7 @@ Diese Funktion kann mit verschiedenen Argumenten aufgerufen werden:
 
 In diesem Beispiel wird das Schlüsselwort [in](https://docs.python.org/3/reference/expressions.html#in) verwendet. Damit wird überprüft, ob eine Sequenz einen bestimmten Wert enthält.
 
-Die Standardwerte werden an der Stelle der Funktionsdefinition im *definierenden* Bereich ausgewertet, so dass das folgende Beispiel 5 ausgibt:
+Die Standardwerte werden an der Stelle der Funktionsdefinition im *definierenden* Bereich ausgewertet, sodass das folgende Beispiel 5 ausgibt:
 
 ```pycon
 >>> i = 5
@@ -574,7 +576,7 @@ def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
     print("-- It's", state, "!")
 ```
 
-Die Funktion akzeptiert ein erforderliches Argument (`voltage`) und drei optionale Argumente (`state`, `action` und `type`).  Diese Funktion kann auf eine der folgenden Arten aufgerufen werden:
+Die Funktion akzeptiert ein erforderliches Argument (`voltage`) und drei optionale Argumente (`state`, `action` und `type`). Diese Funktion kann auf eine der folgenden Arten aufgerufen werden:
 
 ```python
 parrot(1000)                                          # 1 positional argument
@@ -594,7 +596,7 @@ parrot(110, voltage=220)     # duplicate value for the same argument
 parrot(actor='John Cleese')  # unknown keyword argument
 ```
 
-In einem Funktionsaufruf müssen die Schlüsselwortargumente auf die Positionsargumente folgen. Alle übergebenen Schlüsselwortargumente müssen mit der der Argumente der Funktion übereinstimmen (z.B. `actor` ist kein gültiges Argument für die Funktion `parrot`) und ihre Reihenfolge ist egal. Dies schließt auch nicht-optionale Argumente ein (z.B. `parrot(voltage=1000)` ist ebenfalls gültig). Kein Argument darf mehr als einmal einen Wert erhalten. Hier ein Beispiel, das an dieser Einschränkung scheitert:
+In einem Funktionsaufruf müssen die Schlüsselwortargumente auf die Positionsargumente folgen. Alle übergebenen Schlüsselwortargumente müssen mit den Argumenten der Funktion übereinstimmen (z.B. `actor` ist kein gültiges Argument für die Funktion `parrot`) und ihre Reihenfolge ist egal. Dies schließt auch nicht-optionale Argumente ein (z.B. `parrot(voltage=1000)` ist ebenfalls gültig). Kein Argument darf mehr als einmal einen Wert erhalten. Hier ein Beispiel, das an dieser Einschränkung scheitert:
 
 ```pycon
 >>> def function(a):
@@ -606,7 +608,7 @@ In einem Funktionsaufruf müssen die Schlüsselwortargumente auf die Positionsar
    TypeError: function() got multiple values for argument 'a'
 ```
 
-Wenn ein endgültiger formaler Parameter der Form `**name` vorhanden ist, erhält er ein Wörterbuch (siehe [Datentyp Mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping)), das alle Schlüsselwortargumente mit Ausnahme derjenigen enthält, die einem formalen Parameter entsprechen. Dies kann mit einem formalen Parameter der Form `*name` (beschrieben im nächsten Abschnitt) kombiniert werden, der ein [Tupel](https://docs.python.org/3/library/stdtypes.html#tuple) erhält, dass die Positionsargumente jenseits der formalen Parameterliste enthält. Dabei muss `*name` immer vor `**name` stehen.  Im folgenden Beispiel ist eine Funktion wie diese definieren:
+Wenn ein endgültiger formaler Parameter der Form `**name` vorhanden ist, erhält er ein Wörterbuch (siehe [Datentyp Mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping)), das alle Schlüsselwortargumente mit Ausnahme derjenigen enthält, die einem formalen Parameter entsprechen. Dies kann mit einem formalen Parameter der Form `*name` (beschrieben im nächsten Abschnitt) kombiniert werden, der ein [Tupel](https://docs.python.org/3/library/stdtypes.html#tuple) erhält, dass die Positionsargumente jenseits der formalen Parameterliste enthält. Dabei muss `*name` immer vor `**name` stehen. Im folgenden Beispiel ist eine Funktion wie diese definieren:
 
 ```python
 def cheeseshop(kind, *arguments, **keywords):
@@ -646,7 +648,7 @@ Zu beachten ist, dass die Reihenfolge, in der die Schlüsselwortargumente ausgeg
 
 ### spezielle Parameter
 
-Standardmäßig können Argumente an eine Python-Funktion entweder nach Position oder explizit nach Schlüsselwort übergeben werden. Aus Gründen der Lesbarkeit und der Leistung ist es sinnvoll, die Art und Weise, wie Argumente übergeben werden können, einzuschränken, so dass ein Entwickler nur einen Blick auf die Funktionsdefinition werfen muss, um festzustellen, ob Elemente per Position, per Position oder Schlüsselwort oder per Schlüsselwort übergeben werden.
+Standardmäßig können Argumente an eine Python-Funktion entweder nach Position oder explizit nach Schlüsselwort übergeben werden. Aus Gründen der Lesbarkeit und der Leistung ist es sinnvoll, die Art und Weise, wie Argumente übergeben werden können, einzuschränken, sodass ein Entwickler nur einen Blick auf die Funktionsdefinition werfen muss, um festzustellen, ob Elemente per Position, per Position oder Schlüsselwort oder per Schlüsselwort übergeben werden.
 
 Eine Funktionsdefinition kann so aussehen:
 
@@ -659,7 +661,7 @@ def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
         -- Positional only
 ```
 
-Hierbei sind `/` und `*` optional. Falls verwendet, geben diese Symbole die Art des Parameters an, wie die Argumente an die Funktion übergeben werden können: nur Positionsparameter, Positions- oder Schlüsselwortparameter und nur Schlüsselwortparameter. Schlüsselwort-Parameter werden auch als "benannte Parameter" bezeichnet.
+Hierbei sind `/` und `*` optional. Falls verwendet, geben diese Symbole die Art des Parameters an, wie die Argumente an die Funktion übergeben werden können: nur Positionsparameter, Positions- oder Schlüsselwortparameter und nur Schlüsselwortparameter. Schlüsselwortparameter werden auch als "benannte Parameter" bezeichnet.
 
 Wenn `/` und `*` in der Funktionsdefinition nicht vorhanden sind, können Argumente an eine Funktion durch Position oder durch Schlüsselwort übergeben werden.
 
@@ -781,7 +783,7 @@ Als Richtlinie:
 
  * Man verwendet "positional-only", wenn man möchte, dass der Name der Parameter für den Benutzer nicht verfügbar ist. Dies ist nützlich, wenn Parameternamen keine wirkliche Bedeutung haben, wenn man die Reihenfolge der Argumente erzwingen will, wenn die Funktion aufgerufen wird oder wenn man einige Positionsparameter und beliebige Schlüsselwörter verwenden muss.
  * Man verwendet nur Schlüsselwörter, wenn die Namen eine Bedeutung haben und die Funktionsdefinition durch die explizite Angabe von Namen verständlicher ist oder man verhindern will, dass sich Benutzer auf die Position des übergebenen Arguments verlassen.
- * Für eine API sollte man nur Positionsangaben verwensen, um zu verhindern, dass die API kpautt ist, wenn der Name des Parameters in der Zukunft geändert werden sollte.
+ * Für eine API sollte man nur Positionsangaben verwenden, um zu verhindern, dass die API kpautt ist, wenn der Name des Parameters in der Zukunft geändert werden sollte.
 
 ### beliebige Argumentlisten
 
@@ -806,7 +808,7 @@ Normalerweise stehen diese *variablen* Argumente an letzter Stelle in der Liste 
 
 ### Entpacken von Argumentlisten
 
-Die umgekehrte Situation tritt ein, wenn die Argumente bereits in einer Liste oder einem Tupel vorliegen, aber für einen Funktionsaufruf, der separate Positionsargumente erfordert, ausgepackt werden müssen. Zum Beispiel erwartet die eingebaute Funktion `range` separate *start* und *stop* Argumente.  Wenn sie nicht separat verfügbar sind, schreiben man den Funktionsaufruf mit dem `*` Operator, um die Argumente aus einer Liste oder einem Tupel auszupacken:
+Die umgekehrte Situation tritt ein, wenn die Argumente bereits in einer Liste oder einem Tupel vorliegen, aber für einen Funktionsaufruf, der separate Positionsargumente erfordert, ausgepackt werden müssen. Zum Beispiel erwartet die eingebaute Funktion `range` separate *start* und *stop* Argumente. Wenn sie nicht separat verfügbar sind, schreibt man den Funktionsaufruf mit dem `*` Operator, um die Argumente aus einer Liste oder einem Tupel auszupacken:
 
 ```pycon
 >>> list(range(3, 6))            # normal call with separate arguments
@@ -861,7 +863,7 @@ Die erste Zeile sollte immer eine kurze, prägnante Zusammenfassung des Zwecks d
 
 Bei mehrzeiligen docstrings sollte die zweite Zeile leer sein, um die Zusammenfassung optisch vom Rest der Beschreibung zu trennen. Die folgenden Zeilen sollten aus einem oder mehreren Absätzen bestehen, die die Aufrufkonventionen des Objekts, seine Nebeneffekte usw. beschreiben.
 
-Der Python-Parser entfernt keine Einrückung aus mehrzeiligen String-Literalen in Python, so dass Werkzeuge, die Dokumentation verarbeiten, die Einrückung auf Wunsch entfernen müssen. Dies geschieht nach der folgenden Konvention. Die erste nicht leere Zeile *nach* der ersten Zeile der Zeichenkette bestimmt den Grad der Einrückung für die gesamte Dokumentationszeichenkette. Man kann nicht die erste Zeile verwenden, da sie in der Regel an die öffnenden Anführungszeichen der Zeichenkette angrenzt, so dass ihre Einrückung im Zeichenfolgenliteral nicht ersichtlich ist. Leerzeichen, die dieser Einrückung "entsprechen", werden dann vom Anfang aller Zeilen der Zeichenkette entfernt. Zeilen, die weniger eingerückt sind, sollten nicht vorkommen, aber wenn sie vorkommen, sollten alle führenden Leerzeichen entfernt werden.
+Der Python-Parser entfernt keine Einrückung aus mehrzeiligen String-Literalen in Python, sodass Werkzeuge, die Dokumentation verarbeiten, die Einrückung auf Wunsch entfernen müssen. Dies geschieht nach der folgenden Konvention. Die erste nicht leere Zeile *nach* der ersten Zeile der Zeichenkette bestimmt den Grad der Einrückung für die gesamte Dokumentationszeichenkette. Man kann nicht die erste Zeile verwenden, da sie in der Regel an die öffnenden Anführungszeichen der Zeichenkette angrenzt, sodass ihre Einrückung im Zeichenfolgenliteral nicht ersichtlich ist. Leerzeichen, die dieser Einrückung "entsprechen", werden dann vom Anfang aller Zeilen der Zeichenkette entfernt. Zeilen, die weniger eingerückt sind, sollten nicht vorkommen, aber wenn sie vorkommen, sollten alle führenden Leerzeichen entfernt werden.
 
 Im Folgenden ein Beispiel für einen mehrzeiligen docstring:
 
@@ -883,7 +885,7 @@ No, really, it doesn't do anything.
 
 [Funktionsannotationen](https://docs.python.org/3/reference/compound_stmts.html#function) sind vollständig optionale Metadaten-Informationen über die von benutzerdefinierten Funktionen verwendeten Typen (siehe [PEP3107](https://peps.python.org/pep-3107/) und [PEP484](https://peps.python.org/pep-0484) für weitere Informationen).
 
-Annotationen werden im `__annotations__` Attribut der Funktion als Wörterbuch gespeichert und haben keine Auswirkung auf irgendeinen anderen Teil der Funktion. Parameter-Annotationen werden durch einen Doppelpunkt nach dem Parameternamen definiert, gefolgt von einem Ausdruck, der den Wert der Annotation auswertet. Rückgabe-Anmerkungen werden durch ein Literal `->`, gefolgt von einem Ausdruck, zwischen der Parameterliste und dem Doppelpunkt, der das Ende der `def` Anweisung bezeichnet, definiert.  Das folgende Beispiel hat ein erforderliches Argument, ein optionales Argument und den Rückgabewert mit der Anmerkung:
+Annotationen werden im `__annotations__` Attribut der Funktion als Wörterbuch gespeichert und haben keine Auswirkung auf irgendeinen anderen Teil der Funktion. Parameter-Annotationen werden durch einen Doppelpunkt nach dem Parameternamen definiert, gefolgt von einem Ausdruck, der den Wert der Annotation auswertet. Rückgabe-Anmerkungen werden durch ein Literal `->`, gefolgt von einem Ausdruck, zwischen der Parameterliste und dem Doppelpunkt, der das Ende der `def` Anweisung bezeichnet, definiert. Das folgende Beispiel hat ein erforderliches Argument, ein optionales Argument und den Rückgabewert mit der Anmerkung:
 
 ```pycon
 >>> def f(ham: str, eggs: str = 'eggs') -> str:
@@ -899,15 +901,15 @@ Arguments: spam eggs
 
 ## Coding Style - immer wichtig
 
-Jetzt, man schon gut längere und komplexere Pythonprogramme schreiben könnte, ist es ein guter Zeitpunkt gekommen, um über den *Coding Style* zu sprechen. Die meisten Sprachen können in verschiedenen Stilen geschrieben (oder besser gesagt, *formatiert*) werden. Einige sind besser lesbar als andere. Es ist immer eine sehr gute Idee, es anderen leicht zu machen, den eigenen Code zu lesen - und ein guter Programmierstil hilft dabei enorm.
+Jetzt, wo man schon längere und komplexere Pythonprogramme schreiben kann, ist ein guter Zeitpunkt gekommen, um über den *Coding Style* zu sprechen. Die meisten Sprachen können in verschiedenen Stilen geschrieben (oder besser gesagt, *formatiert*) werden. Einige sind besser lesbar als andere. Es ist immer eine sehr gute Idee, es anderen leicht zu machen, den eigenen Code zu lesen - und ein guter Programmierstil hilft dabei enorm.
 
-Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-Welt maßgebliche Coding Style (quasi der "heilige Gral" für gut lesbaren Code). Er fördert einen sehr lesbaren und angenehmen Programmierstil.  eder Python-Entwickler sollte ihn irgendwann einmal lesen. Im Folgenden sind die wichtigsten Punkte aus der PEP8 aufgelistet:
+Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-Welt maßgebliche Coding Style (quasi der "heilige Gral" für gut lesbaren Code). Er fördert einen sehr lesbaren und angenehmen Programmierstil. Jeder Python-Entwickler sollte ihn irgendwann einmal lesen. Im Folgenden sind die wichtigsten Punkte aus der PEP8 aufgelistet:
 
  * Man verwendet zur Einrückung 4 Leerzeichen und *keine* Tabulatoren! 4 Leerzeichen sind ein guter Kompromiss zwischen kleinem Einzug (ermöglicht größere Verschachtelungstiefe) und großem Einzug (leichter zu lesen). Tabulatoren stiften Verwirrung und sollten daher weggelassen werden.
  * Die Zeilenlänge sollte nicht mehr als 79 Zeichen betragen. Dies hilft Benutzern mit kleinen Bildschirmen und ermöglicht es, mehrere Code-Dateien nebeneinander auf größeren Bildschirmen.
  * Man verwendet Leerzeilen, um Funktionen und Klassen sowie größere Codeblöcke innerhalb von Funktionen zu trennen.
- * Wenn möglich setzen man Kommentare in eine eigene Zeile.
- * Man verwenden Docstrings.
+ * Wenn möglich setzt man Kommentare in eine eigene Zeile.
+ * Man verwendt Docstrings.
  * Man verwendet Leerzeichen um Operatoren und nach Kommas, aber nicht direkt innerhalb von Klammerkonstrukten: `a = f(1, 2) + g(3, 4)`.
  * Man benennt seine Klassen und Funktionen einheitlich. Die Konvention ist, `UpperCamelCase` für Klassen und `lowercase_with_underscores` für Funktionen und Methoden zu verwenden. Man verwendet immer `self` als Name für das erste Methodenargument (mehr dazu später im Kapitel über Klassen und Methoden).
  * Man verwendet keine ausgefallenen Kodierungen, wenn der Code in internationalen Umgebungen verwendet werden soll. Pythons Standard UTF-8 oder sogar einfaches ASCII funktionieren in jedem Fall am besten.
