@@ -6,17 +6,17 @@ In diesem Kapitel werden einige Dinge, die bereits in vorherigen Kapiteln beschr
 
 Der Datentyp Liste hat einige weitere Methoden. Im Folgenden alle Methoden von Listenobjekten:
 
-*Hinweis*: in den folgenden Beispielen - und vielen anderen Beispielen in der Python-Dokumentation - kennzeichnen eckige Klammern innerhalb eines Methodenaufrufs ein optionales Argument. So bedeutet z.B. `a.pop([i])`, dass die Methode `pop` von `a` entweder mit einem Argument wie `a.pop(4)` oder ohne `a.pop()` aufgrrufen werden kann.
+*Hinweis*: In den folgenden Beispielen - und vielen anderen Beispielen in der Python-Dokumentation - kennzeichnen eckige Klammern innerhalb eines Methodenaufrufs ein optionales Argument. So bedeutet z.B. `a.pop([i])`, dass die Methode `pop` von `a` entweder mit einem Argument wie `a.pop(4)` oder ohne `a.pop()` aufgerufen werden kann.
 
  * `list.append(x)`: fügt ein Element `x` am Ende der Liste hinzu. Äquivalent zu `a[len(a):] = x`.
  * `list.extend(iterable)`: Erweitert die Liste um alle Elemente aus der Sequenz `iterable`. Äquivalent zu `a[len(a):] = iterable`.
  * `list.insert(i, x)`: Fügt ein Element `x` vor dem Element an Position `i` der Liste hinzu. `list.insert(0, x)` würde also das Elemente `x` an den Anfang der Liste einsetzen. `list.insert(len(list), x)` ist äquivalent zu `list.append(x)`.
- * `list.remove(x)`: Entfernt das erste Element aus der Liste, dessen Wert gleich `x` ist. Wird kein Element gefunden erhält man einen `ValueError`.
+ * `list.remove(x)`: Entfernt das erste Element aus der Liste, dessen Wert gleich `x` ist. Wird kein Element gefunden, erhält man einen `ValueError`.
  * `list.pop([i])`: Entfernt das Element an der Position `i` aus der Liste und liefert es als Rückgabewert zurück. Wenn nur `list.pop()` ohne Index angegeben wird, wird das letzte Element aus der Liste entfernt.
- * `list.clear()`: Entfernt alle Elemente aus der Liste, so dass diese leer ist. Äquivalent zu `del list[:]`.
- * `list.index(x[, start[, end]])`: Gibt den Index des ersten Elements zurück, dessen Wert gleich `x` ist. Wird kein Element gefunden erhält man einen `ValueError`. Gibt man die Optionalen Elemente `start` und `end` an wird nur in dem Abschnitt zwischen den Indizes `start` und `end` gesucht. Wird ein Element in dem Abschnitt gefunden wird dessen Index relativ zur gesamten Liste angegeben, nicht relativ zum Index des Starts.
- * `list.count(x)`: Liefert an Anzahl der Vorkommen von `x` in der Liste zurück.
- * `list.sort(*, key=None, reverse=False)`: Sortiert die Liste in-situ, d.h. es wird keine neue Liste zurück geliefert, sondern die Liste an sich wieder sortiert. Die möglichen Argumente und Optionen sind identisch mit der der Built-In Funktion [sorted](https://docs.python.org/3/library/functions.html#sorted).
+ * `list.clear()`: Entfernt alle Elemente aus der Liste, sodass diese leer ist. Äquivalent zu `del list[:]`.
+ * `list.index(x[, start[, end]])`: Gibt den Index des ersten Elements zurück, dessen Wert gleich `x` ist. Wird kein Element gefunden erhält man einen `ValueError`. Gibt man die optionalen Elemente `start` und `end` an wird nur in dem Abschnitt zwischen den Indizes `start` und `end` gesucht. Wird ein Element in dem Abschnitt gefunden wird dessen Index relativ zur gesamten Liste angegeben, nicht relativ zum Index des Starts.
+ * `list.count(x)`: Liefert die Anzahl der Vorkommen von `x` in der Liste zurück.
+ * `list.sort(*, key=None, reverse=False)`: Sortiert die Liste in-situ, d.h. es wird keine neue Liste zurückgeliefert, sondern die Liste an sich wieder sortiert. Die möglichen Argumente und Optionen sind identisch mit der Built-In Funktion [sorted](https://docs.python.org/3/library/functions.html#sorted).
  * `list.reverse()`: Kehrt die Reihenfolge der Elemente in der Liste um. Die Liste wird direkt umgekehrt, es wird keine neue Liste zurückgegeben.
  * `list.copy()`: Liefert eine flache Kopie der Liste zurück. Äquivalent zu `list[:]`.
 
@@ -45,9 +45,9 @@ Ein Beispiel, das die meisten der Listenmethoden verwendet:
 'pear'
 ```
 
-Wie oben bereits erwähnt sind Methoden wie `insert`, `remove` oder `sort` solche, die die Liste verändern und keinen Rückgabewert ausgeben - sie liefern den Standardwert `None`. Dies ist grundsätzliche Designprinzip für alle veränderbaren Datenstrukturen in Python.
+Wie oben bereits erwähnt sind Methoden wie `insert`, `remove` oder `sort` solche, die die Liste verändern und keinen Rückgabewert ausgeben - sie liefern den Standardwert `None`. Dies ist grundsätzliches Designprinzip für alle veränderbaren Datenstrukturen in Python.
 
-Eine andere Sache, die vielleicht bemerken wurde, ist, dass nicht alle Daten sortiert oder verglichen werden können.  Zum Beispiel kann `[None, 'hello', 10]` nicht sortiert werden, weil Ganzzahlen nicht mit Zeichenketten und `None` nicht mit anderen Typen verglichen werden können. Außerdem gibt es einige Typen, die keine definierte Ordnungsbeziehung haben. Zum Beispiel komplexe Zahlen. So ist `3+4j < 5+7j` kein gültiger Vergleich.
+Eine andere erwähenenswerte Sache ist, dass nicht alle Daten sortiert oder verglichen werden können. Zum Beispiel kann `[None, 'hello', 10]` nicht sortiert werden, weil Ganzzahlen nicht mit Zeichenketten und `None` nicht mit anderen Typen verglichen werden können. Außerdem gibt es einige Typen, die keine definierte Ordnungsbeziehung haben. Zum Beispiel komplexe Zahlen. So ist `3+4j < 5+7j` kein gültiger Vergleich.
 
 ### Listen als Stacks
 
@@ -92,7 +92,7 @@ deque(['Michael', 'Terry', 'Graham'])
 
 ### List Comprehensions
 
-List Comprehensions bieten eine kompakte Möglichkeit, Listen zu erstellen. Übliche Anwendungen sind die Erstellung neuer Listen, bei denen jedes Element das Ergebnis einer oder einiger Operation(en) ist, die auf jedes Element einer anderen Sequenz oder Iterables angewandt werden. Eine weiter Anwendung ist die Erstellung einer Teilfolge von Elementen, die eine bestimmte Bedingung erfüllen.
+List Comprehensions bieten eine kompakte Möglichkeit Listen zu erstellen. Übliche Anwendungen sind die Erstellung neuer Listen bei denen jedes Element das Ergebnis einer oder einiger Operation(en) ist, die auf jedes Element einer anderen Sequenz oder Iterables angewandt werden. Eine weitere Anwendung ist die Erstellung einer Teilfolge von Elementen, die eine bestimmte Bedingung erfüllen.
 
 Wenn z.B. eine Liste mit den Quadratzahlen von 1 bis 9 angelegt werden soll, geht das konventionell so:
 
@@ -119,7 +119,7 @@ Mittels List Comprehension funktioniert das wie folgt:
 
 List Comprehensions sind im Vergleich zu den beiden zuvor genannten Wegen kompakter und besser lesbar.
 
-Eine List Comprehension besteht aus Klammern, die einen Ausdruck enthalten, gefolgt von einer `for` Klausel, dann null oder mehr `for` oder `if` Klauseln. Das Ergebnis ist eine neue Liste, die sich aus der Auswertung des Ausdrucks im Kontext der nachfolgenden `for` und `if` Klauseln ergibt. Zum Beispiel kombiniert dieser List Comprehension die Elemente zweier Listen, wenn sie nicht gleich sind:
+Eine List Comprehension besteht aus Klammern die einen Ausdruck enthalten, gefolgt von einer `for` Klausel, dann null oder mehr `for` oder `if` Klauseln. Das Ergebnis ist eine neue Liste, die sich aus der Auswertung des Ausdrucks im Kontext der nachfolgenden `for` und `if` Klauseln ergibt. Zum Beispiel kombiniert dieser List Comprehension die Elemente zweier Listen, wenn sie nicht gleich sind:
 
 ```pycon
 >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
@@ -180,7 +180,7 @@ List Comprehensions können komplexe Ausdrücke und verschachtelte Funktionen en
 ['3.1', '3.14', '3.142', '3.1416', '3.14159']
 ```
 
-List Comprehensions gelten im allgemeinen als "pythonisch" und werden entsprechend häufig verwendet bzw. es gilt allgemein als empfehlenswert, List Comprehensions an passenden Stellen im Code zu verwenden.
+List Comprehensions gelten im Allgemeinen als "pythonisch" und werden entsprechend häufig verwendet bzw. es gilt allgemein als empfehlenswert, List Comprehensions an passenden Stellen im Code zu verwenden.
 
 ### verschachtelte List Comprehensions
 
@@ -269,7 +269,7 @@ würde `del a` die Referenz von `a` auf den String "Python" aus dem aktuellen Na
 
 ## Tupel und Sequenzen
 
-Es wurde schon gezeigt, dass Listen und Zeichenketten viele gemeinsame Eigenschaften haben, z. B. Index- und Slicing-Operationen. Dies sind zwei Beispiele für *Sequenz*-Datentypen (siehe [Sequenz Typen — list, tuple, range](https://docs.python.org/3/library/stdtypes.html#typesseq)). Da Python eine sich entwickelnde Sprache ist, könnten weitere Sequenz-Datentypen hinzugefügt werden. Es gibt auch einen anderen Standard-Sequenz-Datentyp: das *Tupel* (auf englisch: tuple).
+Es wurde schon gezeigt, dass Listen und Zeichenketten viele gemeinsame Eigenschaften haben, z. B. Index- und Slicing-Operationen. Dies sind zwei Beispiele für *Sequenz*-Datentypen (siehe [Sequenz Typen — list, tuple, range](https://docs.python.org/3/library/stdtypes.html#typesseq)). Da Python eine sich entwickelnde Sprache ist, könnten weitere Sequenz-Datentypen hinzugefügt werden. Es gibt auch einen anderen Standard-Sequenz-Datentyp: das *Tupel* (auf Englisch: tuple).
 
 Ein Tupel besteht aus einer Reihe von Werten, die durch Kommas getrennt sind, zum Beispiel:
 
@@ -295,11 +295,11 @@ TypeError: 'tuple' object does not support item assignment
 ([1, 2, 3], [3, 2, 1])
 ```
 
-Wie zu sehen ist, werden Tupel bei der Ausgabe immer in Klammern eingeschlossen, damit verschachtelte Tupel korrekt interpretiert werden. Sie können mit oder ohne umgebende Klammern eingegeben werden, obwohl Klammern oft ohnehin notwendig sind, z.B wenn das Tupel Teil eines größeren Ausdrucks ist. Es ist nicht möglich, den einzelnen Elementen eines Tupels Zuweisungen zuzuweisen. Es ist jedoch möglich, Tupel zu erstellen, die veränderbare Objekte enthalten, z. B. Listen.
+Wie zu sehen ist, werden Tupel bei der Ausgabe immer in Klammern eingeschlossen, damit verschachtelte Tupel korrekt interpretiert werden. Sie können mit oder ohne umgebende Klammern eingegeben werden, obwohl Klammern oft ohnehin notwendig sind, z.B. wenn das Tupel Teil eines größeren Ausdrucks ist. Es ist nicht möglich, den einzelnen Elementen eines Tupels Zuweisungen zuzuweisen. Es ist jedoch möglich, Tupel zu erstellen, die veränderbare Objekte enthalten, z. B. Listen.
 
 Obwohl Tupel auf den ersten Blick ähnlich wie Listen aussehen, werden sie oft in unterschiedlichen Situationen und für unterschiedliche Zwecke verwendet. Tupel sind "immutable" (=unveränderlich) und enthalten in der Regel eine heterogene Folge von Elementen, auf die durch Entpacken (siehe später in diesem Abschnitt) oder Indizierung (oder sogar durch Attribute im Fall von [namedtuples](https://docs.python.org/3/library/collections.html#collections.namedtuple)) zugegriffen wird. Listen sind "mutable" (=veränderlich), und ihre Elemente sind normalerweise homogen und werden durch Iteration über die Liste angesprochen.
 
-Ein spezielles Problem ist die Konstruktion von Tupeln, die 0 oder 1 Elemente enthalten: Die Syntax hat einige zusätzliche Eigenheiten, um diese zu berücksichtigen. Leere Tupel werden durch ein leeres Klammerpaar konstruiert. Ein Tupel mit einem Element wird konstruiert, indem einem Wert ein Komma folgt - es genügt nicht, einen einzelnen Wert in Klammern zu setzen! Hässlich, aber effektiv.  Zum Beispiel:
+Ein spezielles Problem ist die Konstruktion von Tupeln, die 0 oder 1 Elemente enthalten: Die Syntax hat einige zusätzliche Eigenheiten, um diese zu berücksichtigen. Leere Tupel werden durch ein leeres Klammerpaar konstruiert. Ein Tupel mit einem Element wird konstruiert, indem einem Wert ein Komma folgt - es genügt nicht, einen einzelnen Wert in Klammern zu setzen! Hässlich, aber effektiv. Zum Beispiel:
 
 ```pycon
 >>> empty = ()
@@ -326,7 +326,7 @@ Python enthält auch einen Datentyp für *Sets* (auf Deutsch: Menge). Ein Set is
 
 Geschweifte Klammern oder die Funktion [set](https://docs.python.org/3/library/stdtypes.html#set) können verwendet werden, um Mengen zu erzeugen.
 
-*Hinweis*: Um eine leere Menge zu erzeugen, muss `set()`` verwendet werden, nicht `{}`! Letzteres erzeugt ein leeres Wörterbuch, eine Datenstruktur, die im nächsten Abschnitt behandelt wird.
+*Hinweis*: Um eine leere Menge zu erzeugen, muss `set()` verwendet werden, nicht `{}`! Letzteres erzeugt ein leeres Wörterbuch, eine Datenstruktur, die im nächsten Abschnitt behandelt wird.
 
 Eine kurze Demonstration zu Sets:
 
@@ -363,17 +363,17 @@ Analog zu List Comprehensions gibt es auch Set Comprehensions:
 
 ## Dictionaries - Wörterbücher
 
-Ein weiterer nützlicher Datentyp, der in Python eingebaut und sehr oft verwendet wird, ist das *Dictionary* (auf Deutsch: Wörterbuch). Wörterbücher sind vom Typ [mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping)- Wörterbücher sind zur Zeit die einzige Datenstruktur vom Typ mapping. Für Wörterbücher ist als Bezeichnung auch der Begriff "dict" (Kurzform für Dictionary) gebräuchlich.
+Ein weiterer nützlicher Datentyp, der in Python eingebaut und sehr oft verwendet wird, ist das *Dictionary* (auf Deutsch: Wörterbuch). Wörterbücher sind vom Typ [mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping). Wörterbücher sind gegenwärtig die einzige Datenstruktur vom Typ mapping. Für Wörterbücher ist als Bezeichnung auch der Begriff "dict" (Kurzform für Dictionary) gebräuchlich.
 
 Wörterbücher sind in anderen Sprachen manchmal als "assoziative Speicher" oder "assoziative Arrays" bekannt. Im Gegensatz zu Sequenzen, die durch einen Zahlenbereich indiziert werden, werden Wörterbücher durch *Schlüssel* indiziert, die jeder unveränderliche Typ sein können. Strings und Zahlen können ein Schlüssel sein. Tupel können als Schlüssel verwendet werden, wenn sie nur Strings, Zahlen oder Tupel enthalten. Wenn ein Tupel direkt oder indirekt ein veränderbares Objekt enthält, kann es nicht als Schlüssel verwendet werden. Listen können nicht als Schlüssel verwendet werden, da Listen mit Indexzuweisungen, Slice-Zuweisungen oder Methoden `list.append` und `list.extend` an Ort und Stelle verändert werden können.
 
 Am besten stellt man sich ein Wörterbuch als eine Menge von *Schlüssel-Wert*-Paaren vor, wobei die Schlüssel innerhalb eines Wörterbuchs eindeutig sein müssen. Ein Paar geschweifte Klammern erzeugt ein leeres Wörterbuch: `{}`. Eine kommagetrennte Liste von Schlüssel-Wert Paaren innerhalb der geschweiften Klammern fügt dem Wörterbuch erste Schlüssel-Wert Paare hinzu. Dies ist auch die Art und Weise, wie Wörterbücher bei der Ausgabe geschrieben werden.
 
-Die wichtigsten Operationen mit einem Wörterbuch sind das Speichern eines Wertes mit einem Schlüssel und das Extrahieren des Wertes mit Hilfe des Schlüssels. Es ist auch möglich, ein Schlüssel-Wert-Paar mit `del` zu löschen. Wenn man einen Schlüssel speichert, der bereits in Gebrauch ist, wird der alte Wert, der mit diesem Schlüssel verbunden war, überschrieben. Wenn man auf einen Schlüssel zugreifen will, der nicht existiert, erhält man einen `KeyError`.
+Die wichtigsten Operationen mit einem Wörterbuch sind das Speichern eines Wertes mit einem Schlüssel und das Extrahieren des Wertes mithilfe des Schlüssels. Es ist auch möglich, ein Schlüssel-Wert-Paar mit `del` zu löschen. Wenn man einen Schlüssel speichert, der bereits in Gebrauch ist, wird der alte Wert, der mit diesem Schlüssel verbunden war, überschrieben. Greift man auf einen Schlüssel zu, der nicht existiert, erhält man einen `KeyError`.
 
 Wenn man ``list(d)`` auf ein Wörterbuch anwendet, erhält man eine Liste aller Schlüssel, die in dem Wörterbuch verwendet werden - und zwar in der Reihenfolge, in der die Schlüssel hinzugefügt wurden. Wenn man die SChlüssel aplhapbetisch sortiert haben will, verwendet man stattdessen `sorted(d)`. Um zu prüfen, ob ein einzelner Schlüssel im Wörterbuch enthalten ist, verwendet man das Schlüsselwort `in`.
 
-Im Folgenden ein kleine Beispiel für die Nutzung als Wörterbuch:
+Im Folgenden ein kleines Beispiel für die Nutzung als Wörterbuch:
 
 ```pycon
 >>> tel = {'jack': 4098, 'sape': 4139}   # Anlegen von tel mit zwei Schlüssel-Werte Paaren
@@ -543,11 +543,11 @@ Manchmal ist es verlockend, eine Liste zu ändern, während man sie in einer Sch
 
 Die in `while` und `if` Anweisungen verwendeten Bedingungen können beliebige Operatoren enthalten, nicht nur einfache Vergleiche.
 
-Die Vergleichsoperatoren `in` und `not in` sind Zugehörigkeitstests, die feststellen, ob ein Wert in einem Container wie z.B. einer Sequenz oder einem Wörterbuch ist (oder nicht). Die Operatoren `is` und `is not` vergleichen, ob zwei Objekte wirklich dasselbe Objekt sind.  Alle Vergleichsoperatoren haben die gleiche Priorität, die niedriger ist als die aller numerischen Operatoren.
+Die Vergleichsoperatoren `in` und `not in` sind Zugehörigkeitstests, die feststellen, ob ein Wert in einem Container wie z.B. einer Sequenz oder einem Wörterbuch ist (oder nicht). Die Operatoren `is` und `is not` vergleichen, ob zwei Objekte wirklich dasselbe Objekt ist. Alle Vergleichsoperatoren haben die gleiche Priorität, die niedriger ist als die aller numerischen Operatoren.
 
-Vergleiche können verkettet werden. Zum Beispiel testet `a < b == c`, ob `a`` kleiner als `b`` ist und außerdem `b` gleich `c` ist.
+Vergleiche können verkettet werden. Zum Beispiel testet `a < b == c`, ob `a` kleiner als `b` ist und außerdem `b` gleich `c` ist.
 
-Vergleiche können mit den booleschen Operatoren `and` und `or` kombiniert werden, und das Ergebnis eines Vergleichs (oder jedes anderen booleschen Ausdrucks) kann mit `not` negiert werden. Diese haben eine niedrigere Priorität als Vergleichsoperatoren. Zwischen ihnen hat `not` die höchste Priorität und `or` die niedrigste, so dass `A and not B or C` äquivalent zu `(A and (not B)) or C` ist. Wie immer können Klammern verwendet werden, um die gewünschte Zusammensetzung auszudrücken.
+Vergleiche können mit den booleschen Operatoren `and` und `or` kombiniert werden, und das Ergebnis eines Vergleichs (oder jedes anderen booleschen Ausdrucks) kann mit `not` negiert werden. Diese haben eine niedrigere Priorität als Vergleichsoperatoren. Zwischen ihnen hat `not` die höchste Priorität und `or` die niedrigste, sodass `A and not B or C` äquivalent zu `(A and (not B)) or C` ist. Wie immer können Klammern verwendet werden, um die gewünschte Zusammensetzung auszudrücken.
 
 Beispiel dazu: Im Folgenden Bespiel spielt der Wert von `C` für den Vergleich beim `if` keine Rolle, weil bereits `A and not B` wahr ist und dadurch das `... or C` nicht mehr relevant ist:
 
@@ -566,7 +566,7 @@ ist wahr
 ist wahr
 ```
 
-Die booleschen Operatoren `and` und `or` sind sogenannte *Kurzschluss*-Operatoren: ihre Argumente werden von links nach rechts ausgewertet, und die Auswertung endet, sobald das Ergebnis feststeht. Wenn zum Beispiel `A` und `C` wahr sind, aber `B` falsch ist, wertet `A and B and C` den Ausdruck `C` nicht aus. Wenn er als allgemeiner Wert und nicht als Boolescher Wert verwendet wird, ist der Rückgabewert eines Kurzschlussoperators das zuletzt ausgewertete Argument.
+Die booleschen Operatoren `and` und `or` sind sogenannte *Kurzschluss*-Operatoren: Ihre Argumente werden von links nach rechts ausgewertet, und die Auswertung endet, sobald das Ergebnis feststeht. Wenn zum Beispiel `A` und `C` wahr sind, aber `B` falsch ist, wertet `A and B and C` den Ausdruck `C` nicht aus. Wenn er als allgemeiner Wert und nicht als Boolescher Wert verwendet wird, ist der Rückgabewert eines Kurzschlussoperators das zuletzt ausgewertete Argument.
 
 Es ist möglich, das Ergebnis eines Vergleichs oder eines anderen booleschen Ausdrucks einer Variablen zuzuweisen. Zum Beispiel:
 
@@ -577,7 +577,7 @@ Es ist möglich, das Ergebnis eines Vergleichs oder eines anderen booleschen Aus
 'Trondheim'
 ```
 
-Zu beachten ist, dass in Python, anders als in C, Zuweisungen innerhalb von Ausdrücken explizit mit dem [walrus](https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression) Operator `:=` erfolgen müssen. Dies vermeidet eine häufige Klasse von Problemen, die in C-Programmen auftreten: die Eingabe von ``=`` in einem Ausdruck, obwohl ``==`` beabsichtigt war.
+Zu beachten ist, dass in Python, anders als in C, Zuweisungen innerhalb von Ausdrücken explizit mit dem [walrus](https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression) Operator `:=` erfolgen müssen. Dies vermeidet eine häufige Form von Problemen, die in C-Programmen auftreten: die Eingabe von ``=`` in einem Ausdruck, obwohl ``==`` beabsichtigt war.
 
 ## Vergleiche von Sequenzen und anderen Datentypen
 
@@ -593,7 +593,7 @@ Sequenzobjekte können normalerweise mit anderen Objekten desselben Sequenztyps 
    (1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)
 ```
 
-Zu beachten ist, dass der Vergleich von Objekten unterschiedlichen Typs mit `<` oder `>` zulässig ist, sofern die Objekte über geeignete Vergleichsmethoden verfügen. Zum Beispiel werden gemischte numerische Typen entsprechend ihrem numerischen Wert verglichen, so dass 0 gleich 0.0 ist, usw. Andernfalls wird der Interpreter eine `TypeError` Ausnahme auslösen, anstatt eine beliebige Reihenfolge zu liefern.
+Zu beachten ist, dass der Vergleich von Objekten unterschiedlichen Typs mit `<` oder `>` zulässig ist, sofern die Objekte über geeignete Vergleichsmethoden verfügen. Zum Beispiel werden gemischte numerische Typen entsprechend ihrem numerischen Wert verglichen, sodass 0 gleich 0.0 ist, usw. Andernfalls wird der Interpreter eine `TypeError` Ausnahme auslösen, anstatt eine beliebige Reihenfolge zu liefern.
 
 ***
 
