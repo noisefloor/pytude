@@ -18,7 +18,7 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
  14. [Tipps und Anmerkungen](remarks.md): ein paar Tipps und Anmerkungen zu den ersten Projekten, GUI-Programmierung, nebenläufiger Programmierung und alternativen Python-Implementierung
  15. [externe Module](externallibs.md): ein kurzer Überblick über einige viel genutzte und populäre externe Python-Module
  
- ## Weitere Informationen zu PyTuDe
+## Weitere Informationen zu PyTuDe
 
  * Lizenz: [CC0 1.0 Universell](https://creativecommons.org/publicdomain/zero/1.0/deed.de)
  * Projektseite bei Github: [noisefloor/pytude](https://github.com/noisefloor/pytude)
