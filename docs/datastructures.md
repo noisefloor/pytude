@@ -17,6 +17,7 @@ Der Datentyp Liste hat einige weitere Methoden. Im Folgenden alle Methoden von L
  * `list.index(x[, start[, end]])`: Gibt den Index des ersten Elements zurück, dessen Wert gleich `x` ist. Wird kein Element gefunden erhält man einen `ValueError`. Gibt man die optionalen Elemente `start` und `end` an wird nur in dem Abschnitt zwischen den Indizes `start` und `end` gesucht. Wird ein Element in dem Abschnitt gefunden wird dessen Index relativ zur gesamten Liste angegeben, nicht relativ zum Index des Starts.
  * `list.count(x)`: Liefert die Anzahl der Vorkommen von `x` in der Liste zurück.
  * `list.sort(*, key=None, reverse=False)`: Sortiert die Liste in-situ, d.h. es wird keine neue Liste zurückgeliefert, sondern die Liste an sich wieder sortiert. Die möglichen Argumente und Optionen sind identisch mit der Built-In Funktion [sorted](https://docs.python.org/3/library/functions.html#sorted).
+ * `list.sort(*, key=None, reverse=False)`: Sortiert die Liste in-situ, d.h. es wird keine neue Liste zurückgeliefert, sondern die Liste an sich wieder sortiert. Die möglichen Argumente und Optionen sind identisch mit der der Built-In Funktion [sorted](https://docs.python.org/3/library/functions.html#sorted).
  * `list.reverse()`: Kehrt die Reihenfolge der Elemente in der Liste um. Die Liste wird direkt umgekehrt, es wird keine neue Liste zurückgegeben.
  * `list.copy()`: Liefert eine flache Kopie der Liste zurück. Äquivalent zu `list[:]`.
 
@@ -362,6 +363,7 @@ Analog zu List Comprehensions gibt es auch Set Comprehensions:
 ```
 
 ## Dictionaries - Wörterbücher
+
 
 Ein weiterer nützlicher Datentyp, der in Python eingebaut und sehr oft verwendet wird, ist das *Dictionary* (auf Deutsch: Wörterbuch). Wörterbücher sind vom Typ [mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping). Wörterbücher sind gegenwärtig die einzige Datenstruktur vom Typ mapping. Für Wörterbücher ist als Bezeichnung auch der Begriff "dict" (Kurzform für Dictionary) gebräuchlich.
 
