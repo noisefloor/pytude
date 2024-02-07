@@ -16,6 +16,7 @@ Der Datentyp Liste hat einige weitere Methoden. Im Folgenden alle Methoden von L
  * `list.clear()`: Entfernt alle Elemente aus der Liste, sodass diese leer ist. Äquivalent zu `del list[:]`.
  * `list.index(x[, start[, end]])`: Gibt den Index des ersten Elements zurück, dessen Wert gleich `x` ist. Wird kein Element gefunden erhält man einen `ValueError`. Gibt man die optionalen Elemente `start` und `end` an wird nur in dem Abschnitt zwischen den Indizes `start` und `end` gesucht. Wird ein Element in dem Abschnitt gefunden wird dessen Index relativ zur gesamten Liste angegeben, nicht relativ zum Index des Starts.
  * `list.count(x)`: Liefert die Anzahl der Vorkommen von `x` in der Liste zurück.
+ * `list.sort(*, key=None, reverse=False)`: Sortiert die Liste in-situ, d.h. es wird keine neue Liste zurückgeliefert, sondern die Liste an sich wieder sortiert. Die möglichen Argumente und Optionen sind identisch mit der Built-In Funktion [sorted](https://docs.python.org/3/library/functions.html#sorted).
  * `list.sort(*, key=None, reverse=False)`: Sortiert die Liste in-situ, d.h. es wird keine neue Liste zurückgeliefert, sondern die Liste an sich wieder sortiert. Die möglichen Argumente und Optionen sind identisch mit der der Built-In Funktion [sorted](https://docs.python.org/3/library/functions.html#sorted).
  * `list.reverse()`: Kehrt die Reihenfolge der Elemente in der Liste um. Die Liste wird direkt umgekehrt, es wird keine neue Liste zurückgegeben.
  * `list.copy()`: Liefert eine flache Kopie der Liste zurück. Äquivalent zu `list[:]`.
@@ -45,9 +46,9 @@ Ein Beispiel, das die meisten der Listenmethoden verwendet:
 'pear'
 ```
 
-Wie oben bereits erwähnt sind Methoden wie `insert`, `remove` oder `sort` solche, die die Liste verändern und keinen Rückgabewert ausgeben - sie liefern den Standardwert `None`. Dies ist ein grundsätzliches Designprinzip für alle veränderbaren Datenstrukturen in Python.
+Wie oben bereits erwähnt sind Methoden wie `insert`, `remove` oder `sort` solche, die die Liste verändern und keinen Rückgabewert ausgeben - sie liefern den Standardwert `None`. Dies ist grundsätzliches Designprinzip für alle veränderbaren Datenstrukturen in Python.
 
-Eine andere erwähnenswerte Sache ist, dass nicht alle Daten sortiert oder verglichen werden können.  Zum Beispiel kann `[None, 'hello', 10]` nicht sortiert werden, weil Ganzzahlen nicht mit Zeichenketten und `None` nicht mit anderen Typen verglichen werden können. Außerdem gibt es einige Typen, die keine definierte Ordnungsbeziehung haben. Zum Beispiel komplexe Zahlen. So ist `3+4j < 5+7j` kein gültiger Vergleich.
+Eine andere erwähenenswerte Sache ist, dass nicht alle Daten sortiert oder verglichen werden können. Zum Beispiel kann `[None, 'hello', 10]` nicht sortiert werden, weil Ganzzahlen nicht mit Zeichenketten und `None` nicht mit anderen Typen verglichen werden können. Außerdem gibt es einige Typen, die keine definierte Ordnungsbeziehung haben. Zum Beispiel komplexe Zahlen. So ist `3+4j < 5+7j` kein gültiger Vergleich.
 
 ### Listen als Stacks
 
@@ -92,7 +93,7 @@ deque(['Michael', 'Terry', 'Graham'])
 
 ### List Comprehensions
 
-List Comprehensions bieten eine kompakte Möglichkeit, Listen zu erstellen. Übliche Anwendungen sind die Erstellung neuer Listen bei denen jedes Element das Ergebnis einer oder einiger Operation(en) ist, die auf jedes Element einer anderen Sequenz oder Iterables angewandt werden. Eine weitere Anwendung ist die Erstellung einer Teilfolge von Elementen, die eine bestimmte Bedingung erfüllen.
+List Comprehensions bieten eine kompakte Möglichkeit Listen zu erstellen. Übliche Anwendungen sind die Erstellung neuer Listen bei denen jedes Element das Ergebnis einer oder einiger Operation(en) ist, die auf jedes Element einer anderen Sequenz oder Iterables angewandt werden. Eine weitere Anwendung ist die Erstellung einer Teilfolge von Elementen, die eine bestimmte Bedingung erfüllen.
 
 Wenn z.B. eine Liste mit den Quadratzahlen von 1 bis 9 angelegt werden soll, geht das konventionell so:
 
@@ -363,13 +364,14 @@ Analog zu List Comprehensions gibt es auch Set Comprehensions:
 
 ## Dictionaries - Wörterbücher
 
-Ein weiterer nützlicher Datentyp, der in Python eingebaut und sehr oft verwendet wird, ist das *Dictionary* (auf Deutsch: Wörterbuch). Wörterbücher sind vom Typ [mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping)- Wörterbücher sind gegenwärtig die einzige Datenstruktur vom Typ mapping. Für Wörterbücher ist als Bezeichnung auch der Begriff "dict" (Kurzform für Dictionary) gebräuchlich.
+
+Ein weiterer nützlicher Datentyp, der in Python eingebaut und sehr oft verwendet wird, ist das *Dictionary* (auf Deutsch: Wörterbuch). Wörterbücher sind vom Typ [mapping](https://docs.python.org/3/library/stdtypes.html#typesmapping). Wörterbücher sind gegenwärtig die einzige Datenstruktur vom Typ mapping. Für Wörterbücher ist als Bezeichnung auch der Begriff "dict" (Kurzform für Dictionary) gebräuchlich.
 
 Wörterbücher sind in anderen Sprachen manchmal als "assoziative Speicher" oder "assoziative Arrays" bekannt. Im Gegensatz zu Sequenzen, die durch einen Zahlenbereich indiziert werden, werden Wörterbücher durch *Schlüssel* indiziert, die jeder unveränderliche Typ sein können. Strings und Zahlen können ein Schlüssel sein. Tupel können als Schlüssel verwendet werden, wenn sie nur Strings, Zahlen oder Tupel enthalten. Wenn ein Tupel direkt oder indirekt ein veränderbares Objekt enthält, kann es nicht als Schlüssel verwendet werden. Listen können nicht als Schlüssel verwendet werden, da Listen mit Indexzuweisungen, Slice-Zuweisungen oder Methoden `list.append` und `list.extend` an Ort und Stelle verändert werden können.
 
 Am besten stellt man sich ein Wörterbuch als eine Menge von *Schlüssel-Wert*-Paaren vor, wobei die Schlüssel innerhalb eines Wörterbuchs eindeutig sein müssen. Ein Paar geschweifte Klammern erzeugt ein leeres Wörterbuch: `{}`. Eine kommagetrennte Liste von Schlüssel-Wert Paaren innerhalb der geschweiften Klammern fügt dem Wörterbuch erste Schlüssel-Wert Paare hinzu. Dies ist auch die Art und Weise, wie Wörterbücher bei der Ausgabe geschrieben werden.
 
-Die wichtigsten Operationen mit einem Wörterbuch sind das Speichern eines Wertes mit einem Schlüssel und das Extrahieren des Wertes mithilfe des Schlüssels. Es ist auch möglich, ein Schlüssel-Wert-Paar mit `del` zu löschen. Wenn man einen Schlüssel speichert, der bereits in Gebrauch ist, wird der alte Wert, der mit diesem Schlüssel verbunden war, überschrieben. Greift man auf einen Schlüssel zugreifen zu, der nicht existiert, erhält man einen `KeyError`.
+Die wichtigsten Operationen mit einem Wörterbuch sind das Speichern eines Wertes mit einem Schlüssel und das Extrahieren des Wertes mithilfe des Schlüssels. Es ist auch möglich, ein Schlüssel-Wert-Paar mit `del` zu löschen. Wenn man einen Schlüssel speichert, der bereits in Gebrauch ist, wird der alte Wert, der mit diesem Schlüssel verbunden war, überschrieben. Greift man auf einen Schlüssel zu, der nicht existiert, erhält man einen `KeyError`.
 
 Wenn man ``list(d)`` auf ein Wörterbuch anwendet, erhält man eine Liste aller Schlüssel, die in dem Wörterbuch verwendet werden - und zwar in der Reihenfolge, in der die Schlüssel hinzugefügt wurden. Wenn man die SChlüssel aplhapbetisch sortiert haben will, verwendet man stattdessen `sorted(d)`. Um zu prüfen, ob ein einzelner Schlüssel im Wörterbuch enthalten ist, verwendet man das Schlüsselwort `in`.
 
