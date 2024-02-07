@@ -48,7 +48,7 @@ Ein Beispiel, das die meisten der Listenmethoden verwendet:
 
 Wie oben bereits erwähnt sind Methoden wie `insert`, `remove` oder `sort` solche, die die Liste verändern und keinen Rückgabewert ausgeben - sie liefern den Standardwert `None`. Dies ist grundsätzliches Designprinzip für alle veränderbaren Datenstrukturen in Python.
 
-Eine andere erwähenenswerte Sache ist, dass nicht alle Daten sortiert oder verglichen werden können. Zum Beispiel kann `[None, 'hello', 10]` nicht sortiert werden, weil Ganzzahlen nicht mit Zeichenketten und `None` nicht mit anderen Typen verglichen werden können. Außerdem gibt es einige Typen, die keine definierte Ordnungsbeziehung haben. Zum Beispiel komplexe Zahlen. So ist `3+4j < 5+7j` kein gültiger Vergleich.
+Eine andere erwähnenswerte Sache ist, dass nicht alle Daten sortiert oder verglichen werden können. Zum Beispiel kann `[None, 'hello', 10]` nicht sortiert werden, weil Ganzzahlen nicht mit Zeichenketten und `None` nicht mit anderen Typen verglichen werden können. Außerdem gibt es einige Typen, die keine definierte Ordnungsbeziehung haben. Zum Beispiel komplexe Zahlen. So ist `3+4j < 5+7j` kein gültiger Vergleich.
 
 ### Listen als Stacks
 
