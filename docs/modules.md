@@ -17,7 +17,7 @@ def fib(n):
     a, b = 0, 1
     while a < n:
         print(a, end=' ')
-        a, b = b, a + b
+        a, b = b, a+b
     print()
 
 
@@ -28,7 +28,7 @@ def fib2(n):
     a, b = 0, 1
     while a < n:
         result.append(a)
-        a, b = b, a + b
+        a, b = b, a+b
     return result
 ```
 
@@ -152,7 +152,7 @@ import sys
 def square(number):
     '''Returns the square of a given number'''
 
-    return number ** 2
+    return number**2
 
 
 if len(sys.argv) > 1:
@@ -190,7 +190,7 @@ import sys
 def square(number):
     '''Returns the square of a given number'''
 
-    return number ** 2
+    return number**2
 
 
 if __name__ == "__main__":
@@ -438,14 +438,14 @@ Zu beachten ist, dass Untermodule durch lokal definierte Namen überschattet wer
 
 ```python
 __all__ = [
-    "echo",  # referenziert die 'echo.py' Datei
+    "echo",      # referenziert die 'echo.py' Datei
     "surround",  # referenziert die 'surround.py' Datei
-    "reverse",  # ! referenziert jetzt hier die 'reverse' Funktion !
+    "reverse",   # ! referenziert jetzt hier die 'reverse' Funktion !
 ]
 
 
 def reverse(msg: str):  # <-- dieser Name überschattet das 'reverse.py' Submodul
-    return msg[::-1]  # wenn 'from sound.effects import *' aufgerufen wird
+    return msg[::-1]    # wenn 'from sound.effects import *' aufgerufen wird
 ```
 
 Wenn ``__all__`` nicht definiert ist, importiert die Anweisung `from sound.effects import *` *nicht* alle Untermodule aus dem Paket `sound.effects` in den aktuellen Namensraum. Sie stellt nur sicher, dass das Paket `sound.effects` importiert wurde (und führt möglicherweise jeglichen Initialisierungscode in `__init__.py` aus) und importiert dann alle Namen, die im Paket definiert sind. Dies schließt alle Namen ein, die durch `__init__.py` definiert (und Untermodule explizit geladen) wurden. Es schließt auch alle Untermodule des Pakets ein, die explizit durch vorherige `import` Anweisungen geladen wurden. Betrachtet man den folgenden Code:
