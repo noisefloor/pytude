@@ -1,6 +1,6 @@
 # Fehler und Ausnahmen (Exceptions)
 
-Bisher wurden Fehlermeldungen nur erwähnt. Aber wer schon die ersten eigenen Schritte mit Python gemacht hat wird wahrscheinlich schon die ein oder andere Fehlermeldung "live" zu sehen bekommen haben. Es gibt mindestens zwei unterschiedlichen Arten von Fehlern: Syntaxfehler und Ausnahmen.
+Bisher wurden Fehlermeldungen nur erwähnt. Aber wer schon die ersten eigenen Schritte mit Python gemacht hat, wird wahrscheinlich schon die ein oder andere Fehlermeldung "live" zu sehen bekommen haben. Es gibt mindestens zwei unterschiedlichen Arten von Fehlern: Syntaxfehler und Ausnahmen.
 
 ## Syntaxfehler
 
@@ -18,7 +18,7 @@ Der Parser moniert die Zeile mit dem Fehler und markiert diesen mit einem kleine
 
 ## Ausnahmen
 
-Auch wenn eine Anweisung oder ein Ausdruck syntaktisch korrekt ist, kann es zu einem Fehler kommen, wenn man versucht, den Code auszuführen. Fehler, die während der Ausführung entdeckt werden, werden *Ausnahmen* (auf Englisch: Exception) genannt und sind nicht unbedingt fatal: Man kann (muss aber nicht) Ausnahmen gezielt im Programm abfangen und darauf reagieren, so dass das Programm weiterläuft. Im Folgenden ein paar Beispiele für Ausnahmen:
+Auch wenn eine Anweisung oder ein Ausdruck syntaktisch korrekt ist, kann es zu einem Fehler kommen, wenn man versucht, den Code auszuführen. Fehler, die während der Ausführung entdeckt werden, werden *Ausnahmen* (auf Englisch: Exception) genannt und sind nicht unbedingt fatal: Man kann, muss man aber nicht, Ausnahmen gezielt im Programm abfangen und darauf reagieren, sodass das Programm weiterläuft. Im Folgenden ein paar Beispiele für Ausnahmen:
 
 ```pycon
 >>> 10 * (1/0)
@@ -35,7 +35,7 @@ Traceback (most recent call last):
 TypeError: can only concatenate str (not "int") to str
 ```
 
-Die letzte Zeile der Fehlermeldung gibt an, was passiert ist. Ausnahmen gibt es in verschiedenen Typen, und der Typ wird als Teil der Meldung ausgeben: die Typen im Beispiel sind `ZeroDivisionError` (auf Deutsch: Division durch Null Fehler), `NameError` (frei übersetzt: Fehler durch unbekannten Namen) und `TypeError` (übersetzt: Typenfehler). Die als Ausnahmetyp ausgegebene Zeichenkette ist der Name der aufgetretenen eingebauten Ausnahme.  Dies gilt für alle eingebauten Ausnahmen, muss aber nicht für benutzerdefinierte Ausnahmen gelten (obwohl es eine nützliche Konvention ist). Standardausnahmenamen sind eingebaute Bezeichner aber keine reservierten Schlüsselwörter. Der Rest der Zeile enthält detaillierte Informationen über die Art der Ausnahme und deren Ursache.
+Die letzte Zeile der Fehlermeldung gibt an, was passiert ist. Ausnahmen gibt es in verschiedenen Typen und der Typ wird als Teil der Meldung ausgeben. Die Typen im Beispiel sind `ZeroDivisionError` (auf Deutsch: Division durch Null Fehler), `NameError` (frei übersetzt: Fehler durch unbekannten Namen) und `TypeError` (übersetzt: Typenfehler). Die als Ausnahmetyp ausgegebene Zeichenkette ist der Name der aufgetretenen eingebauten Ausnahme. Dies gilt für alle eingebauten Ausnahmen, muss aber nicht für benutzerdefinierte Ausnahmen gelten (obwohl es eine nützliche Konvention ist). Standardausnahmenamen sind eingebaute Bezeichner aber keine reservierten Schlüsselwörter. Der Rest der Zeile enthält detaillierte Informationen über die Art der Ausnahme und deren Ursache.
 
 Der vorangehende Teil der Fehlermeldung zeigt den Kontext, in dem die Ausnahme aufgetreten ist, in Form eines Stack-Tracebacks (kurz: Stacktrace). Im Allgemeinen enthält der Stacktrace die Zeile des Quelltexts, die die Ausnahme ausgelöst hat. Der Stacktrace zeigt jedoch keine Zeilen an, die von der Standardeingabe gelesen wurden.
 
@@ -43,7 +43,7 @@ Die Seite [Built-In Exceptions](https://docs.python.org/3/library/exceptions.htm
 
 ## Umgang mit Ausnahmen
 
-Es ist möglich, Programme zu schreiben, die Ausnahmen gezielt behandeln. Im folgenden Beispiel wird der Benutzer zu einer Eingabe auffordert, bis eine gültige ganze Zahl eingegeben wurde. Aber dem Benutzer ist erlaubt, das Programm zu unterbrechen (mit der Tastenkombination STRG+c oder was auch immer das Betriebssystem unterstützt). Zu beachten ist, dass eine vom Benutzer erzeugte Unterbrechung durch das Auslösen der Ausnahme `KeyboardInterrupt` signalisiert wird:
+Es ist möglich, Programme zu schreiben, die Ausnahmen gezielt behandeln. Im folgenden Beispiel wird der Benutzer zu einer Eingabe aufgefordert, bis eine gültige ganze Zahl eingegeben wurde. Aber dem Benutzer ist erlaubt, das Programm zu unterbrechen (mit der Tastenkombination STRG+C oder was auch immer das Betriebssystem unterstützt). Zu beachten ist, dass eine vom Benutzer erzeugte Unterbrechung durch das Auslösen der Ausnahme `KeyboardInterrupt` signalisiert wird:
 
 ```pycon
 >>> while True:
@@ -54,14 +54,14 @@ Es ist möglich, Programme zu schreiben, die Ausnahmen gezielt behandeln. Im fol
 ...         print("Oops!  That was no valid number.  Try again...")
 ...
 ```
-The Schlüsselwort [try](https://docs.python.org/3/reference/compound_stmts.html#try) funktioniert wie folgt:
+Das Schlüsselwort [try](https://docs.python.org/3/reference/compound_stmts.html#try) funktioniert wie folgt:
 
- * Als erstes wird der *try Block*, also der auf das `try` folgende, eingerückte Codeblock ausgeführt. Das ist der gesamte Code bis zum folgenden `except` Block.
- * Wenn dieser Code ohne das eine Ausnahme auftritt, fehlerfrei durchläuft wird der `except` Block ignoriert und übersprungen. Der Code wird mit der nächsten regulären Zeile fortgesetzt.
+ * Als Erstes wird der *try Block*, also der auf das `try` folgende, eingerückte Codeblock ausgeführt. Das ist der gesamte Code bis zum folgenden `except` Block.
+ * Wenn dieser Code ohne das eine Ausnahme auftritt, fehlerfrei durchläuft, wird der `except` Block ignoriert und übersprungen. Der Code wird mit der nächsten regulären Zeile fortgesetzt.
  * Wenn im `try` Block eine Ausnahme auftritt wird die Ausführung des Codes im `try` Block abgebrochen und in den `except` Block gesprungen, sofern ein `except` für die aufgetretene Ausnahme definiert ist. Nach Abarbeitung des `except` Blocks wird der darauffolgende Code regulär ausgeführt.
- * Wenn im `try` Block eine Ausnahme auftritt, für die kein `except` Block definiert ist gibt es eine *unhandled exception* (auf Deutsch: unbehandelte Ausnahme) und die Ausführung des Codes wird mit einer Fehlermeldung abgebrochen.
+ * Wenn im `try` Block eine Ausnahme auftritt, für die kein `except` Block definiert ist, gibt es eine *unhandled exception* (auf Deutsch: unbehandelte Ausnahme) und die Ausführung des Codes wird mit einer Fehlermeldung abgebrochen.
 
-Eine `try` Anweisung kann mehr als eine except Klausel enthalten, um Handler für verschiedene Ausnahmen anzugeben. Es wird höchstens ein Handler ausgeführt. Handler behandeln nur Ausnahmen, die in der entsprechenden `try` Klausel vorkommen, nicht in anderen Handlern der gleichen `try` Anweisung.  Eine `except` Klausel kann mehrere Ausnahmen als eingeklammertes Tupel benennen. Zum Beispiel:
+Eine `try` Anweisung kann mehr als eine except Klausel enthalten, um Handler für verschiedene Ausnahmen anzugeben. Es wird höchstens ein Handler ausgeführt. Handler behandeln nur Ausnahmen, die in der entsprechenden `try` Klausel vorkommen, nicht in anderen Handlern der gleichen `try` Anweisung. Eine `except` Klausel kann mehrere Ausnahmen als eingeklammertes Tupel benennen. Zum Beispiel:
 
 ```pycon
 ... except (RuntimeError, TypeError, NameError):
@@ -354,7 +354,7 @@ for line in open("myfile.txt"):
     print(line, end="")
 ```
 
-Das Problem bei diesem Code ist, dass er die Datei für eine unbestimmte Zeit offenlässt, nachdem dieser Teil des Codes ausgeführt wurde. Dies ist bei einfachen Skripten in der Regel kein Problem, kann aber bei größeren Anwendungen ein Problem darstellen. Mit der Anweisung `with` (mehr dazu gab es schon im Kapitel "Eingabe und Ausgabe" dieses Tutorials) können Objekte wie Dateien auf eine Weise verwendet werden, die sicherstellt, dass sie immer rechtzeitig und korrekt aufgeräumt werden, in diesem Fall das die Datei geschlossen wird:
+Das Problem bei diesem Code ist, dass er die Datei für eine unbestimmte Zeit offenlässt, nachdem dieser Teil des Codes ausgeführt wurde. Dies ist bei einfachen Skripten in der Regel kein Problem, kann aber bei größeren Anwendungen ein Problem darstellen. Mit der Anweisung `with` (mehr dazu gab es schon im Kapitel "Eingabe und Ausgabe" dieses Tutorials) können Objekte wie Dateien auf eine Weise verwendet werden, die sicherstellt, dass sie immer rechtzeitig und korrekt aufgeräumt werden, in diesem Fall, dass die Datei geschlossen wird:
 
 ```python
 with open("myfile.txt") as file:
@@ -362,13 +362,13 @@ with open("myfile.txt") as file:
         print(line, end="")
 ```
 
-Nach Ausführung der Anweisung wird die Datei immer geschlossen, auch wenn bei der Verarbeitung der Zeilen ein Problem aufgetreten ist. Mehr Informationen dazu, wie das funktioniert, findet man in der Python Dokumentation im Abschnitt [with-statement context managers](https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers) und sowie zum Modul [contextlib](https://docs.python.org/3/library/contextlib.html), wenn man dies selber im eigenen Code nutzen möchte.
+Nach Ausführung der Anweisung wird die Datei immer geschlossen, auch wenn bei der Verarbeitung der Zeilen ein Problem aufgetreten ist. Mehr Informationen dazu, wie das funktioniert, findet man in der Python Dokumentation im Abschnitt [with-statement context managers](https://docs.python.org/3/reference/datamodel.html#with-statement-context-managers) sowie zum Modul [contextlib](https://docs.python.org/3/library/contextlib.html), wenn man dies selber im eigenen Code nutzen möchte.
 
 ## Auslösen und Behandeln mehrerer unabhängiger Ausnahmen
 
 Es gibt Situationen, in denen es notwendig ist, mehrere aufgetretene Ausnahmen zu behandeln. Dies ist oft der Fall, wenn mehrere Programmteile nebenläufig sind, wenn also mehrere Aufgaben parallel fehlgeschlagen sein können. Aber es gibt auch andere Anwendungsfälle, in denen es wünschenswert ist, die Ausführung fortzusetzen und mehrere Fehler zu sammeln, anstatt die erste Ausnahme auszulösen.
 
-Das Built-In `ExceptionGroup` umschließt eine Liste von Exception-Instanzen, so dass sie zusammen ausgelöst werden können. Es ist selbst eine Ausnahme, so dass es wie jede andere Ausnahme abgefangen werden kann:
+Das Built-In `ExceptionGroup` umschließt eine Liste von Exception-Instanzen, sodass sie zusammen ausgelöst werden können. Es ist selbst eine Ausnahme, die wie jede andere Ausnahme abgefangen werden kann:
 
 ```pycon
 >>> def f():
@@ -511,5 +511,5 @@ Wenn man zum Beispiel Ausnahmen in einer Ausnahmegruppe sammelt, möchten man vi
 
 ***
 
- * nächstest Kapitel: [Klassen](classes.md)
+ * nächstes Kapitel: [Klassen](classes.md)
  * vorheriges Kapitel: [Eingabe und Ausgabe](inputoutput.md)
