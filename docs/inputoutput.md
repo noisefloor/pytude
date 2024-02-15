@@ -1,8 +1,8 @@
 # Eingabe und Ausgabe
 
-Es gibt mehrere Wege, die Ausgabe eines Programms zu gestalten. Diese kann in einer gut lesbaren Form auf einen Bildschirm ausgegeben oder zur Weiterverwendung in eine Datei geschrieben werden. In diesem Kapitel werden einige Möglichkeiten vorgestellt.
+Es gibt mehrere Wege, die Ausgabe eines Programms zu gestalten. Diese kann in einer gut lesbaren Form auf einem Bildschirm ausgegeben oder zur Weiterverwendung in eine Datei geschrieben werden. In diesem Kapitel werden einige Möglichkeiten vorgestellt.
 
-## Schöner Formatierung der Ausgabe
+## Schönere Formatierung der Ausgabe
 
 Bis jetzt sind in diesem Tutorial zwei Wege zur Ausgabe genutzt worden: die `print` Funktion sowie die Ausgabe von Rückgabewerten von Methoden und ähnlichem. Es gibt noch einen dritten Weg über die [write](https://docs.python.org/3/library/io.html#io.TextIOBase.write) Methoden von "Datei-ähnlichen Objekten", wobei die Standardausgabe als Datei-ähnliches Objekt namens `sys.stdout` genutzt wird. Darauf wird im Rahmen dieses Tutorials aber nicht weiter eingegangen.
 
@@ -108,7 +108,7 @@ Weitere Informationen über den `=` Spezifizierer sind [in der Python-Dokumentat
 
 ### die String format() Method
 
-Die grundsätzlich Nutzung der `str.format` Methode sieht wie folgt aus:
+Die grundsätzliche Nutzung der `str.format` Methode sieht wie folgt aus:
 
 ```pycon
 >>> print('We are the {} who say "{}!"'.format('knights', 'Ni'))
@@ -140,7 +140,7 @@ Positions- und Schlüsselwortargumente können beliebig kombiniert werden:
 The story of Bill, Manfred, and Georg.
 ```
 
-Wenn man einen sehr langen Formatierungsstring hat, den man nicht aufteilen will, kann man die zu formatierenden Variablen über den Namen statt über die Position referenzieren.  Dazu übergibt man ein Wörterbuch und eckige Klammern `'[]'`, um auf die Schlüssel zuzugreifen:
+Wenn man einen sehr langen Formatierungsstring hat, den man nicht aufteilen will, kann man die zu formatierenden Variablen über den Namen statt über die Position referenzieren. Dazu übergibt man ein Wörterbuch und eckige Klammern `'[]'`, um auf die Schlüssel zuzugreifen:
 
 ```pycon
 >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
@@ -177,7 +177,7 @@ Dies ist besonders nützlich in Kombination mit der eingebauten Funktion [vars](
 
 Eine vollständige Übersicht über die `string.format` Methode ist in der Python-Dokumentation unter [Format String Syntax](https://docs.python.org/3/library/string.html#formatstrings) zu finden.
 
-### manuellel String Formattierung
+### manuellele String Formattierung
 
 Das folgende Beispiel ist identisch mit dem vorherigen, nutzt aber eine vollständig manuelle Formatierung:
 
@@ -199,7 +199,7 @@ Das folgende Beispiel ist identisch mit dem vorherigen, nutzt aber eine vollstä
 10 100 1000
 ```
 
-Zu beachten ist, dass das eine Leerzeichen zwischen den Spalten durch die Funktionsweise `print` hinzugefügt wurde: es fügt immer Leerzeichen zwischen seinen Argumenten ein.
+Zu beachten ist, dass da ein Leerzeichen zwischen den Spalten durch die Funktionsweise `print` hinzugefügt wurde: es fügt immer Leerzeichen zwischen seinen Argumenten ein.
 
 Die Methode `str.rjust` von String-Objekten richtet eine Zeichenkette in einem Feld mit einer bestimmten Breite rechts aus, indem sie links mit Leerzeichen aufgefüllt wird. Es gibt ähnliche Methoden `str.ljust` und `str.center`. Diese Methoden schreiben nichts, sie geben nur eine neue Zeichenkette zurück. Wenn die Eingabezeichenkette zu lang ist, wird sie nicht abgeschnitten, sondern unverändert zurückgegeben. Das bringt zwar das Spaltenlayout durcheinander, ist aber normalerweise besser als die Alternative, bei der man über einen Wert lügen würde. Wenn man wirklich ein Abschneiden will, kann man immer eine Slice-Operation hinzufügen, wie in z.B. `x.ljust(n)[:n]`.
 
@@ -238,9 +238,9 @@ Mehr Informationen dazu sind in der Python-Dokumentation [printf-style string fo
 <open file 'workfile', mode 'w' at 80a0960>
 ```
 
-Das erste Argument ist ein String, der den Dateinamen enthält. Das zweite Argument ist eine weitere Zeichenkette, die ein oder mehrere Zeichen enthält, die die Art und Weise beschreiben, wie die Datei verwendet werden soll bzw. kann. *mode* kann `'r'` sein, wenn die Datei nur gelesen werden soll. `'r'` steht für "read", auf Deutsch: lesen. `'w'` wird verwendet, wenn in die Datei geschrieben werden soll. `'w'` steht für "write", auf Deutsch "schreiben". Eine existierende Datei mit demselben Namen wird gelöscht dabei. `'a'` öffnet die Datei zum Anhängen, alle Daten, die in die Datei geschrieben werden, werden automatisch am Ende angefügt. `'a'` steht für "append", auf Deutsch: anhängen, anfügen. `'r+'` öffnet die Datei sowohl zum Lesen als auch zum Schreiben. Das Argument *mode* ist optional. Wird es weggelassen, wird automatsisch `'r'`, also nur Lesen, angenommen.
+Das erste Argument ist ein String, der den Dateinamen enthält. Das zweite Argument ist eine weitere Zeichenkette, die ein oder mehrere Zeichen enthält, die die Art und Weise beschreibt, wie die Datei verwendet werden soll bzw. kann. *mode* ist `'r'`, wenn die Datei nur gelesen werden soll. `'r'` steht für "read", auf Deutsch: lesen. `'w'` wird verwendet, wenn in die Datei geschrieben werden soll. `'w'` steht für "write", auf Deutsch "schreiben". Eine existierende Datei mit demselben Namen wird dabei gelöscht. `'a'` öffnet die Datei zum Anhängen, alle Daten, die in die Datei geschrieben werden, werden automatisch am Ende angefügt. `'a'` steht für "append", auf Deutsch: anhängen, anfügen. `'r+'` öffnet die Datei sowohl zum Lesen als auch zum Schreiben. Das Argument *mode* ist optional. Wird es weggelassen, wird automatsisch `'r'`, also nur Lesen, angenommen.
 
-Üblicherweise werden Dateien im Textmodus geöffnet, d.h. man liest und schreiben Zeichenketten von und in die Datei, die in einem bestimmten *encoding* (auf Deutsch: Zeichensatzkodierung) kodiert sind. Wenn *encoding* nicht angegeben wird, ist der Standard plattformabhängig (siehe `open`). Da UTF-8 der moderne de-facto Standard ist, wird `encoding="utf-8"` empfohlen, es sei denn, mann weiß, dass man eine andere Kodierung verwenden muss oder möchte. Beim Lesen muss man das Encoding der Datei korrekt angeben, sonst erhält man eventuell beim Lesen falsche und sonderbare Zeichen. Wenn man eine andere Kodierung als die der Datei angibt, wie z.B. cp-1252 für eine utf-8 kodierte Datei, nimmt Python keine automatische Umwandlung der Kodierung beim Lesen vor.
+Üblicherweise werden Dateien im Textmodus geöffnet, d.h. man liest und schreibt Zeichenketten von und in die Datei, die in einem bestimmten *encoding* (auf Deutsch: Zeichensatzkodierung) kodiert ist. Wenn *encoding* nicht angegeben wird, ist der Standard plattformabhängig (siehe `open`). Da UTF-8 der moderne de-facto Standard ist, wird `encoding="utf-8"` empfohlen, es sei denn, mann weiß, dass man eine andere Kodierung verwenden muss oder möchte. Beim Lesen muss man das Encoding der Datei korrekt angeben, sonst erhält man eventuell beim Lesen falsche und sonderbare Zeichen. Wenn man eine andere Kodierung als die der Datei angibt, wie z.B. cp-1252 für eine utf-8 kodierte Datei, nimmt Python keine automatische Umwandlung der Kodierung beim Lesen vor.
 
 Das Anhängen eines `'b'` an den Modus öffnet die Datei im Binärmodus. Daten im Binärmodus werden als [bytes Objekte](https://docs.python.org/3/library/stdtypes.html#bytes) gelesen und geschrieben. Sie können keine *Kodierung* angeben, wenn eine Datei im Binärmodus geöffnet wird.
 
@@ -257,9 +257,9 @@ Es ist eine empfohlene und gängige Praxis, das Schlüsselwort [with](https://do
 True
 ```
 
-Wenn man das Schlüsselwort `with` nicht verwendet, dann sollte man unbedingt `f.close()` aufrufen, um die Datei zu schließen und sofort alle von ihr verwendeten Systemressourcen freizugeben. Ruft man `close()` nicht auf besteht außerdem das Risiko, dass bei Schreibvorgängen nicht alle Daten in die Datei geschrieben werden,
+Wenn man das Schlüsselwort `with` nicht verwendet, dann sollte man unbedingt `f.close()` aufrufen, um die Datei zu schließen und sofort alle von ihr verwendeten Systemressourcen freizugeben. Ruft man `close()` nicht auf besteht außerdem das Risiko, dass bei Schreibvorgängen nicht alle Daten in die Datei geschrieben werden.
 
-Nachdem ein Dateiobjekt geschlossen wurde, entweder durch eine `with` Anweisung oder durch den Aufruf von `f.close()`, schlagen Versuche, das Dateiobjekt zu benutzen, fehl:
+Nachdem ein Dateiobjekt geschlossen wurde, entweder durch eine `with` Anweisung oder durch den Aufruf von `f.close()`, schlagen Versuche das Dateiobjekt zu benutzen fehl:
 
 ```pycon
 >>> f.close()
@@ -273,7 +273,7 @@ ValueError: I/O operation on closed file.
 
 Die restlichen Beispiele in diesem Abschnitt gehen davon aus, dass ein Dateiobjekt namens `f` bereits erstellt wurde.
 
-Um den Inhalt einer Datei zu lesen, ruft man `f.read(size)` auf, was eine bestimmte Menge an Daten liest und sie als String (im Textmodus) oder Byte-Objekt (im Binärmodus) zurückgibt. *size* ist ein optionales numerisches Argument.  Wenn *size* weggelassen wird oder negativ ist, wird der gesamte Inhalt der Datei gelesen und zurückgegeben. Es ist dann das Problem des Nutzers, wenn die Datei z.B. doppelt so groß ist wie der Speicher des Rechners ist. Ansonsten werden höchstens *size* Zeichen (im Textmodus) oder *size* Bytes (im Binärmodus) gelesen und zurückgegeben. Wenn das Ende der Datei erreicht ist, gibt `.read()` eine leere Zeichenkette (`''`) zurück:
+Um den Inhalt einer Datei zu lesen, ruft man `f.read(size)` auf, was eine bestimmte Menge an Daten liest und sie als String (im Textmodus) oder Byte-Objekt (im Binärmodus) zurückgibt. *size* ist ein optionales numerisches Argument. Wenn *size* weggelassen wird oder negativ ist, wird der gesamte Inhalt der Datei gelesen und zurückgegeben. Es ist dann das Problem des Nutzers, wenn die Datei z.B. doppelt so groß ist wie der Speicher des Rechners ist. Ansonsten werden höchstens *size* Zeichen (im Textmodus) oder *size* Bytes (im Binärmodus) gelesen und zurückgegeben. Wenn das Ende der Datei erreicht ist, gibt `.read()` eine leere Zeichenkette (`''`) zurück:
 
 ```pycon
 >>> f.read()
@@ -323,7 +323,7 @@ Andere Objekttypen müssen vor dem Schreiben entweder in eine Zeichenkette (im T
 
 `f.tell()` gibt eine ganze Zahl zurück, die die aktuelle Position des Zeigers des Dateiobjekts in der Datei angibt. Im Binärmodus ist das die Anzahl von Bytes, gezählt vom Anfang der Datei. Im Textmodus ist es die Anzahl der Zeichen - was aber *nicht* der Anzahl der Buchstaben entsprechen muss, da manche Kodierungen wie z.B. UTF-8 je nach darzustellendem Buchstaben mehr als ein Byte verwenden. Man kann mit `tell()` als nicht gezielt zum X-ten Buchstaben in der Datei springen, wenn man deren Inhalt inkl. Kodierung und Zeichendarstellung nicht 100% exakt kennt.
 
-Um die Position des Dateiobjekts zu ändern, verwendet man `f.seek(offset, whence)`. Die Position wird durch Addition von *offset* zu einem Referenzpunkt berechnet. Der Referenzpunkt wird durch das Argument *whence* ausgewählt.  Ein *whence* Wert von 0 geht vom Anfang der Datei aus, 1 verwendet die aktuelle Dateiposition und 2 verwendet das Ende der Datei als Referenzpunkt. *whence* kann weggelassen werden und hat den Standardwert 0, wobei der Anfang der Datei als Referenzpunkt verwendet wird:
+Um die Position des Dateiobjekts zu ändern, verwendet man `f.seek(offset, whence)`. Die Position wird durch Addition von *offset* zu einem Referenzpunkt berechnet. Der Referenzpunkt wird durch das Argument *whence* ausgewählt. Ein *whence* Wert von 0 geht vom Anfang der Datei aus, 1 verwendet die aktuelle Dateiposition und 2 verwendet das Ende der Datei als Referenzpunkt. *whence* kann weggelassen werden und hat den Standardwert 0, wobei der Anfang der Datei als Referenzpunkt verwendet wird:
 
 ```pycon
 >>> f = open('workfile', 'rb+')
@@ -345,9 +345,9 @@ Datei-Objekte haben einige zusätzliche Methoden, wie [io.IOBase.isatty](https:/
 
 ### JSON zum Speichern von strukturierten Daten
 
-Zeichenketten lassen sich leicht in eine Datei schreiben und aus ihr lesen. Zahlen erfordern etwas mehr Aufwand, da die Methode io.TextIOBase.read` nur Zeichenketten zurückgibt, die an eine Funktion wie `int` übergeben werden müssen, die eine Zeichenkette wie `'123'` nimmt und ihren numerischen Wert 123 zurückgibt. Wenn man komplexere Datentypen wie verschachtelte Listen und Dictionaries speichern will, wird das Parsen und Serialisieren in eine Textdatei von Hand kompliziert.
+Zeichenketten lassen sich leicht in eine Datei schreiben und aus ihr lesen. Zahlen erfordern etwas mehr Aufwand, da die Methode `io.TextIOBase.read` nur Zeichenketten zurückgibt, die an eine Funktion wie `int` übergeben werden müssen, die eine Zeichenkette wie `'123'` nimmt und ihren numerischen Wert `123` zurückgibt. Wenn man komplexere Datentypen wie verschachtelte Listen und Dictionaries speichern will, wird das Parsen und Serialisieren in eine Textdatei von Hand kompliziert.
 
-Anstatt dass die Benutzer ständig Code schreiben und debuggen müssen, um komplizierte Datentypen in Dateien zu speichern, ermöglicht Python die Verwendung des beliebten udn sehr gängigen Datenaustauschformats namens JSON. JSON steht für "JavaScript Object Notation", Details sieht [https://json.org](https://json.org). Das Standardmodul [json](https://docs.python.org/3/library/json.html#module-json) kann Python-Datenhierarchien in String-Darstellungen umwandeln. Dieser Prozess wird "`serializing" (auf Deutsch: Serialisierung) genannt. Die Rekonstruktion der Daten aus der String-Repräsentation wird "deserializing" (auf Deutsch: Deserialisierung) genannt. Zwischen der Serialisierung und der Deserialisierung kann die Zeichenkette, die das Objekt repräsentiert, in einer Datei oder in Daten gespeichert oder über eine Netzwerkverbindung an einen entfernten Rechner gesendet worden sein.
+Anstatt dass die Benutzer ständig Code schreiben und debuggen müssen, um komplizierte Datentypen in Dateien zu speichern, ermöglicht Python die Verwendung des beliebten und sehr gängigen Datenaustauschformats namens JSON (= "JavaScript Object Notation"). Details dazu [https://json.org](https://json.org). Das Standardmodul [json](https://docs.python.org/3/library/json.html#module-json) kann Python-Datenhierarchien in String-Darstellungen umwandeln. Dieser Prozess wird "serializing" (auf Deutsch: Serialisierung) genannt. Die Rekonstruktion der Daten aus der String-Repräsentation wird "deserializing" (auf Deutsch: Deserialisierung) genannt. Zwischen der Serialisierung und der Deserialisierung kann die Zeichenkette, die das Objekt repräsentiert, in einer Datei oder in Daten gespeichert oder über eine Netzwerkverbindung an einen entfernten Rechner gesendet werden.
 
 JSON stammt zwar, wie im Namen bereits enthalten, aus dem JavaScript Umfeld, ist aber in der Welt der Programmierung sehr verbreitet und gängig. Quasi alle modernen Programmiersprachen haben Module zum Lesen und Schreiben von JSON, weswegen es sich sehr gut für den Datenaustausch eignet. Im Python-Kontext ist außerdem praktisch, dass die beiden Hauptdatenstrukturen von JSON quasi 1:1 auf Python übertragbar sind. Ein JSON-Objekt entsprich in Python einem Wörterbuch und ein JSON-Array einer Python Liste.
 
@@ -360,27 +360,27 @@ Wenn man ein Objekt ``x`` hat, kann man seine JSON-String-Repräsentation mit ei
 '[1, "simple", "list"]'
 ```
 
-Eine andere Variante der Funktion `json.dumps`, genannt `json.dump`, serialisiert das Objekt einfach in eine Textdatei.  Wenn also `f` ein Textdatei-Objekt ist, das zum Schreiben geöffnet wurde, können man folgendes tun:
+Eine andere Variante der Funktion `json.dumps`, genannt `json.dump`, serialisiert das Objekt einfach in eine Textdatei. Wenn also `f` ein Textdatei-Objekt ist, das zum Schreiben geöffnet wurde, können man folgendes tun:
 
 ```python
 json.dump(x, f)
 ```
 
-Um das Objekt wieder zu dekodieren, wenn `f` ein Binärdatei oder: Textdatei-Objekt ist, das zum Lesen geöffnet wurde:
+Um das Objekt wieder zu dekodieren, wenn `f` eine Binärdatei oder Textdatei-Objekt ist, das zum Lesen geöffnet wurde:
 
 ```python
 x = json.load(f)
 ```
 
-JSON-Dateien sind standardmäßig Textdateien. Dies müssen UTF-8 kodiert sein, also muss man `encoding="utf-8"` beim Öffnen nutzen.
+JSON-Dateien sind standardmäßig Textdateien die mit UTF-8 kodiert sein müssen. Also muss man `encoding="utf-8"` beim Öffnen nutzen.
 
 Diese einfache Serialisierungstechnik kann mit Listen und Wörterbüchern umgehen, aber die Serialisierung beliebiger Klasseninstanzen in JSON erfordert ein wenig zusätzlichen Aufwand. Die Referenz für das Modul `json` enthält eine Erklärung dazu.
 
 ### weitere Methoden
 
-Im Gegensatz zu JSON ist [pickle](https://docs.python.org/3/library/pickle.html) ein Protokoll, das die die Serialisierung beliebig komplexer Python-Objekte ermöglicht.  Als solches ist es spezifisch für Python und kann nicht für die Kommunikation mit Anwendungen verwendet werden, die in anderen Sprachen geschrieben sind.  Außerdem ist es standardmäßig unsicher:  Die Deserialisierung von Pickle-Daten, die aus einer nicht vertrauenswürdigen Quelle stammen, kann beliebiger Code ausgeführt werden, wenn die Daten von einem geschickten Angreifer manipuliert wurden.
+Im Gegensatz zu JSON ist [pickle](https://docs.python.org/3/library/pickle.html) ein Protokoll, das die Serialisierung beliebig komplexer Python-Objekte ermöglicht. Als solches ist es spezifisch für Python und kann nicht für die Kommunikation mit Anwendungen verwendet werden, die in anderen Sprachen geschrieben sind. Außerdem ist es standardmäßig unsicher. Die Deserialisierung von Pickle-Daten, die aus einer nicht vertrauenswürdigen Quelle stammen, kann beliebiger Code ausgeführt werden, wenn die Daten von einem geschickten Angreifer manipuliert wurden.
 
-CSV-Dateien erlauben es, Daten strukturiert abzulegen mit einer Struktur ähnlich einer Tabellenkalkulation. Allerdings sind CSV-Dateien auch nur normale Textdateien, d.h. in der Datei ist alles ein String. CSV kennt keine Datentypen wie Zahlen etc. Je nach zu speichernden Daten kann die Nutzung von CSV aber sinnvoll sein. Python hat ein Standardmodul zum Lesen und Schreiben von CSV an Bord, Details sind [in der Python-Dokumentation](https://docs.python.org/3/library/csv.html)
+CSV-Dateien erlauben es, Daten strukturiert abzulegen mit einer Struktur ähnlich einer Tabellenkalkulation. Allerdings sind CSV-Dateien auch nur normale Textdateien, d.h. in der Datei ist alles ein String. CSV kennt keine Datentypen wie Zahlen etc. Je nach zu speichernden Daten kann die Nutzung von CSV aber sinnvoll sein. Python hat ein Standardmodul zum Lesen und Schreiben von CSV an Bord. Details stehen [in der Python-Dokumentation](https://docs.python.org/3/library/csv.html).
 
 ***
 
