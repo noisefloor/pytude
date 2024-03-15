@@ -27,3 +27,9 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
 Fehlerkorrekturen u.ä. können gerne als Pull-Request über die Githubseite eingereicht werden!
 
 Das Tutorial orientiert sich stark am englischsprachigen, [offiziellen Tutorial](https://docs.python.org/3/tutorial/index.html) der [Python Software Foundation](https://www.python.org/psf-landing/).
+
+## Weitere Beitragende
+
+ * [Hofei90](https://github.com/Hofei90)
+
+Vielen Dank an alle, die mit Fehlerkorrekturen, Feedback etc. zu PyTuDe beitragen!
