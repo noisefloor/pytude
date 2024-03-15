@@ -1,12 +1,12 @@
 # Klassen
 
-Klassen bieten die Möglichkeit, Daten und Funktionen zu bündeln. Durch das Erstellen einer neuen Klasse wird ein neuer *Typ* eines Objekts erzeugt, so dass neue *Instanzen* dieses Typs erstellt werden können. Jede Klasseninstanz kann mit Attributen versehen werden, um den Zustand der Klasse zu verwalten. Klasseninstanzen können auch über von der Klasse definierte Methoden verfügen, um ihren Zustand zu ändern.
+Klassen bieten die Möglichkeit, Daten und Funktionen zu bündeln. Durch das Erstellen einer neuen Klasse wird ein neuer *Typ* eines Objekts erzeugt, sodass neue *Instanzen* dieses Typs erstellt werden können. Jede Klasseninstanz kann mit Attributen versehen werden, um den Zustand der Klasse zu verwalten. Klasseninstanzen können auch über von der Klasse definierte Methoden verfügen, um ihren Zustand zu ändern.
 
-Im Vergleich zu anderen Programmiersprachen fügt der Klassenmechanismus von Python Klassen mit einem Minimum an neuer Syntax und Semantik hinzu. Er ist eine Mischung aus den Klassenmechanismen von C++ und Modula-3. Python-Klassen bieten alle Standardfunktionen der objektorientierten Programmierung: Der Klassenvererbungsmechanismus erlaubt mehrere Basisklassen, eine abgeleitete Klasse kann beliebige Methoden ihrer Basisklasse(n) außer Kraft setzen, und eine Methode kann die Methode einer Basisklasse mit demselben Namen aufrufen. Klassen können beliebige Mengen und Arten von Daten enthalten. Wie bei den Modulen sind auch die Klassen Teil der dynamischen Natur von Python: sie werden zur Laufzeit erstellt und können danach weiter verändert werden.
+Im Vergleich zu anderen Programmiersprachen fügt der Klassenmechanismus von Python Klassen mit einem Minimum an neuer Syntax und Semantik hinzu. Er ist eine Mischung aus den Klassenmechanismen von C++ und Modula-3. Python-Klassen bieten alle Standardfunktionen der objektorientierten Programmierung: Der Klassenvererbungsmechanismus erlaubt mehrere Basisklassen, eine abgeleitete Klasse kann beliebige Methoden ihrer Basisklasse(n) außer Kraft setzen, und eine Methode kann die Methode einer Basisklasse mit demselben Namen aufrufen. Klassen können beliebige Mengen und Arten von Daten enthalten. Wie bei den Modulen sind auch die Klassen Teil der dynamischen Natur von Python: Sie werden zur Laufzeit erstellt und können danach weiter verändert werden.
 
-In der C++-Terminologie sind Klassenmitglieder (einschließlich der Datenmitglieder) normalerweise *öffentlich* (Ausnahmen werden weiter unten in diesem Kapitel erklärt) und alle Mitgliedsfunktionen sind *virtuell*. Wie in Modula-3 gibt es keine Abkürzungen für die Referenzierung von Objektmitgliedern in den Methoden: die Methodenfunktion wird mit einem expliziten ersten Argument deklariert, das das Objekt repräsentiert, das implizit durch den Aufruf bereitgestellt wird. Wie in Smalltalk sind die Klassen selbst Objekte. Dies bietet eine Semantik für das Importieren und Umbenennen. Im Gegensatz zu C++ und Modula-3 können eingebaute Typen als Basisklassen für Erweiterungen durch den Benutzer verwendet werden. Außerdem können, wie in C++, die meisten eingebauten Operatoren mit spezieller Syntax (arithmetische Operatoren, Indexierung usw.) für Klasseninstanzen neu definiert werden.
+In der C++-Terminologie sind Klassenmitglieder (einschließlich der Datenmitglieder) normalerweise *öffentlich* (Ausnahmen werden weiter unten in diesem Kapitel erklärt) und alle Mitgliedsfunktionen sind *virtuell*. Wie in Modula-3 gibt es keine Abkürzungen für die Referenzierung von Objektmitgliedern in den Methoden: Die Methodenfunktion wird mit einem expliziten ersten Argument deklariert, das das Objekt repräsentiert, das implizit durch den Aufruf bereitgestellt wird. Wie in Smalltalk sind die Klassen selbst Objekte. Dies bietet eine Semantik für das Importieren und Umbenennen. Im Gegensatz zu C++ und Modula-3 können eingebaute Typen als Basisklassen für Erweiterungen durch den Benutzer verwendet werden. Außerdem können, wie in C++, die meisten eingebauten Operatoren mit spezieller Syntax (arithmetische Operatoren, Indexierung usw.) für Klasseninstanzen neu definiert werden.
 
-In Ermangelung einer allgemeingültigen Terminologie für Klassen werden hier gelegentlich Begriffe aus Smalltalk und C++ verwenden. Genauer wäre es, man würde die Begriffe von Modula-3 verwenden, da dessen objektorientierte Semantik näher an der von Python als an der von C++ ist - aber [Modula-3](https://en.wikipedia.org/wiki/Modula-3) gehört zu den - zumindest heutzutage - unbekannten und wenig verwendeten Programmiersprachen.
+In Ermangelung einer allgemeingültigen Terminologie für Klassen werden hier gelegentlich Begriffe aus Smalltalk und C++ verwendet. Genauer wäre es, man würde die Begriffe von Modula-3 verwenden, da dessen objektorientierte Semantik näher an der von Python als an der von C++ ist - aber [Modula-3](https://en.wikipedia.org/wiki/Modula-3) gehört zu den - zumindest heutzutage - unbekannten und wenig verwendeten Programmiersprachen.
 
 ## ein paar Worte zu Namen und Klassen
 
@@ -14,27 +14,27 @@ Objekte haben Individualität, und mehrere Namen (in mehreren Bereichen) können
 
 ## Python Scopes und Namensräume
 
-Bevor Klassen vorgestellt, muss zunächst etwas über die Scopes von Python erzählen. "Scope" heißt auf Deutsch so viel wie Geltungsbereich oder Anwendungsbereich. Aber auch im deutschen Sprachegebrauch zum Thema Python wird üblicherweise das englische Wort "scope" genutzt.  Klassendefinitionen kennen ein paar Tricks zu Namensräumen (auf Englisch: namespace), und man sollte wissen, wie Scopes und Namensräume funktionieren, um zu verstehen, was vor sich geht. Übrigens ist das Wissen über dieses Thema für jeden fortgeschrittenen Python-Programmierer nützlich.
+Bevor die Klassen vorgestellt werden, muss zunächst etwas über die Scopes von Python erklährt werden. "Scope" heißt auf Deutsch so viel wie Geltungsbereich oder Anwendungsbereich. Aber auch im deutschen Sprachegebrauch zum Thema Python wird üblicherweise das englische Wort "scope" genutzt. Klassendefinitionen kennen ein paar Tricks zu Namensräumen (auf Englisch: namespace), und man sollte wissen, wie Scopes und Namensräume funktionieren, um zu verstehen, was vor sich geht. Übrigens ist das Wissen über dieses Thema für jeden fortgeschrittenen Python-Programmierer nützlich.
 
 Zu Beginn ein paar Definitionen:
 
-Ein *Namensraum* (auf Englisch: namespace) ist eine Abbildung von Namen auf Objekte. Die meisten Namensräume sind derzeit bei Python intern als Python-Wörterbücher implementiert, aber ist für den Anwender erstmal sekundär (und könnte sich in zukünftigen Python eventuell ändern, da es ein internes Implementierungsdetail ist). Beispiele für Namensräume sind:
+Ein *Namensraum* (auf Englisch: namespace) ist eine Abbildung von Namen auf Objekte. Die meisten Namensräume sind derzeit bei Python intern als Python-Wörterbücher implementiert, aber das ist für den Anwender erstmal sekundär (und könnte sich in zukünftigen Python eventuell ändern, da es ein internes Implementierungsdetail ist). Beispiele für Namensräume sind:
 
  * die Menge der eingebauten Namen (die Funktionen wie `abs` und eingebaute Ausnahmenamen enthalten)
  * die globalen Namen in einem Modul und die lokalen Namen in einem Funktionsaufruf.
  * In gewissem Sinne bildet auch die Menge der Attribute eines Objekts einen Namensraum.
 
-Eine wichtige Dinge, die man über Namensräume wissen muss, ist, dass es absolut keine Beziehung zwischen Namen in verschiedenen Namensräumen gibt. Zum Beispiel könnten zwei verschiedene Module beide eine Funktion `maximize` definieren, ohne dass es zu Verwechslungen kommt - Benutzer der Module müssen ihr den Modulnamen voranstellen.
+Eine wichtige Sache, die man über Namensräume wissen muss, ist, dass es absolut keine Beziehung zwischen Namen in verschiedenen Namensräumen gibt. Zum Beispiel könnten zwei verschiedene Module beide eine Funktion `maximize` definieren, ohne dass es zu Verwechslungen kommt - Benutzer der Module müssen ihr den Modulnamen voranstellen.
 
-Übrigens wird hier das Wort *Attribut* für jeden Namen, der auf einen Punkt folgt genutzt - zum Beispiel in dem Ausdruck `z.real` ist `real` ein Attribut des Objekts `z`. Streng genommen sind Referenzen auf Namen in Modulen Attributreferenzen: in dem Ausdruck `modname.funcname` ist `modname` ein Modulobjekt und `funcname` ist ein Attribut davon. In diesem Fall gibt es eine direkte Zuordnung zwischen den Attributen des Moduls und den globalen Namen, die im Modul definiert sind: sie teilen sich denselben Namensraum. Bis auf eine Ausnahme: Modulobjekte haben ein geheimes Nur-Lese-Attribut namens `object.__dict__`, das das Wörterbuch zurückgibt, welches zur Implementierung des Namensraums des Moduls genutzt wird. Der Name `object.__dict__` ist ein Attribut, aber kein globaler Name. Offensichtlich verletzt die Verwendung dieses Namens die Abstraktion der Namespace-Implementierung und sollte auf Dinge wie Post-Mortem-Debugger beschränkt werden.
+Übrigens wird hier das Wort *Attribut* für jeden Namen, der auf einen Punkt folgt genutzt - zum Beispiel in dem Ausdruck `z.real` ist `real` ein Attribut des Objekts `z`. Streng genommen sind Referenzen auf Namen in Modulen Attributreferenzen. In dem Ausdruck `modname.funcname` ist `modname` ein Modulobjekt und `funcname` ist ein Attribut davon. In diesem Fall gibt es eine direkte Zuordnung zwischen den Attributen des Moduls und den globalen Namen, die im Modul definiert sind. Sie teilen sich denselben Namensraum, bis auf eine Ausnahme. Modulobjekte haben ein geheimes Nur-Lese-Attribut namens `object.__dict__`, das das Wörterbuch zurückgibt, welches zur Implementierung des Namensraums des Moduls genutzt wird. Der Name `object.__dict__` ist ein Attribut, aber kein globaler Name. Offensichtlich verletzt die Verwendung dieses Namens die Abstraktion der Namespace-Implementierung und sollte auf Dinge wie Post-Mortem-Debugger beschränkt werden.
 
-Attribute können nur-lesbar oder veränderbar sein. Im letzteren Fall ist eine Zuweisung auf Attributen möglich.  Modulattribute sind veränderbar: man kann z.B. `modname.the_answer = 42` schreiben. Änderbare Attribute können auch mit der Anweisung `del` gelöscht werden. Zum Beispiel wird `del modname.the_answer` das Attribut `the_answer` aus dem Objekt mit dem Namen `modname` entfernen.
+Attribute können nur-lesbar oder veränderbar sein. Im letzteren Fall ist eine Zuweisung auf Attributen möglich. Modulattribute sind veränderbar, man kann z.B. `modname.the_answer = 42` schreiben. Änderbare Attribute können auch mit der Anweisung `del` gelöscht werden. Zum Beispiel wird `del modname.the_answer` das Attribut `the_answer` aus dem Objekt mit dem Namen `modname` entfernen.
 
-Namensräume werden zu unterschiedlichen Zeitpunkten erstellt und haben unterschiedliche Lebensdauern. Der Namensraum, der die eingebauten Namen enthält, wird erstellt, wenn der Python-Interpreter startet, und wird im laufenden Interpreter nie gelöscht. Der globale Namensraum für ein Modul wird erstellt, wenn die Moduldefinition eingelesen wird. Normalerweise bleiben die Modulnamensräume auch bestehen, bis der Interpreter beendet wird. Die Anweisungen, die vom obersten Aufruf des Interpreters ausgeführt werden, entweder aus einer Skriptdatei gelesen oder interaktiv, werden als Teil eines Moduls namens `__main__` betrachtet, so dass sie ihren eigenen globalen Namensraum haben. Die eingebauten Namen befinden sich ebenfalls in einem Modul, dieses heißt `builtins`.
+Namensräume werden zu unterschiedlichen Zeitpunkten erstellt und haben unterschiedliche Lebensdauern. Der Namensraum, der die eingebauten Namen enthält, wird erstellt, wenn der Python-Interpreter startet, und wird im laufenden Interpreter nie gelöscht. Der globale Namensraum für ein Modul wird erstellt, wenn die Moduldefinition eingelesen wird. Normalerweise bleiben die Modulnamensräume auch bestehen, bis der Interpreter beendet wird. Die Anweisungen, die vom obersten Aufruf des Interpreters ausgeführt werden, entweder aus einer Skriptdatei gelesen oder interaktiv, werden als Teil eines Moduls namens `__main__` betrachtet, sodass sie ihren eigenen globalen Namensraum haben. Die eingebauten Namen befinden sich ebenfalls in einem Modul, dieses heißt `builtins`.
 
 Der lokale Namensraum für eine Funktion wird erstellt, wenn die Funktion aufgerufen wird, und gelöscht, wenn die Funktion zurückkehrt oder eine Ausnahme auslöst, die nicht innerhalb der Funktion behandelt wird. Eigentlich wäre das Wort "Vergessen" genauer, um zu beschreiben, was tatsächlich passiert. Rekursive Aufrufe haben jeweils ihren eigenen lokalen Namensraum.
 
-Ein *Scope* ist ein textueller Bereich (Anmerkung: "textuell" bedeutet hier so viel wie ein Text- / Code-mäßig zusammengehöriger Bereich, z.B ein Funktionskörper) eines Python-Programms, in dem ein Namensraum direkt zugänglich ist. "Direkt zugänglich" bedeutet hier, dass ein unqualifizierter Verweis reicht. "unqualifiziert" bedeutet hier so viel, dass der Name (der Variablen, der Funktion, ...) direkt angesprochen werden kann, ohne dass man das übergeordnete Objekt (wie den Funktionsname, Klassennamen, Modulnamen etc.) vorangestellt werden muss.
+Ein *Scope* ist ein textueller Bereich (Anmerkung: "textuell" bedeutet hier so viel wie ein Text- / Code-mäßig zusammengehöriger Bereich, z.B. ein Funktionskörper) eines Python-Programms, in dem ein Namensraum direkt zugänglich ist. "Direkt zugänglich" bedeutet hier, dass ein unqualifizierter Verweis reicht. "unqualifiziert" bedeutet hier so viel, dass der Name (der Variablen, der Funktion, ...) direkt angesprochen werden kann, ohne dass man das übergeordnete Objekt (wie den Funktionsnamen, Klassennamen, Modulnamen etc.) vorangestellt werden muss.
 
 Obwohl die Scopes statisch festgelegt werden, werden sie dynamisch verwendet. Zu jedem Zeitpunkt der Ausführung gibt es drei oder vier verschachtelte Bereiche, auf deren Namensraum direkt zugegriffen werden kann:
 
@@ -47,15 +47,15 @@ Wenn ein Name als global deklariert ist, gehen alle Referenzen und Zuweisungen d
 
 Normalerweise verweist der lokale Bereich auf die lokalen Namen der textuell aktuellen Funktion. Außerhalb von Funktionen verweist der lokale Bereich auf denselben Namensraum wie der globale Bereich: den Namensraum des Moduls. Klassendefinitionen legen einen weiteren Namensraum in den lokalen Bereich.
 
-Es ist wichtig zu wissen, dass der Geltungsbereich textuell festgelegt wird: der globale Geltungsbereich einer in einem Modul definierten Funktion ist der Namensraum dieses Moduls, unabhängig davon, von wo oder durch welchen Alias die Funktion aufgerufen wird.  Andererseits erfolgt die eigentliche Suche nach Namen dynamisch, zur Laufzeit - die Sprachdefinition entwickelt sich jedoch in Richtung statischer Namensauflösung, zur "Kompilier"-Zeit, also verlassen Sie sich nicht auf dynamische Namensauflösung! Tatsächlich werden lokale Variablen bereits statisch bestimmt.
+Es ist wichtig zu wissen, dass der Geltungsbereich textuell festgelegt wird. Der globale Geltungsbereich einer in einem Modul definierten Funktion ist der Namensraum dieses Moduls, unabhängig davon, von wo oder durch welchen Alias die Funktion aufgerufen wird. Andererseits erfolgt die eigentliche Suche nach Namen dynamisch, zur Laufzeit - die Sprachdefinition entwickelt sich jedoch in Richtung statischer Namensauflösung, zur "Kompilier"-Zeit, also verlassen Sie sich nicht auf dynamische Namensauflösung! Tatsächlich werden lokale Variablen bereits statisch bestimmt.
 
-Eine besondere Eigenart von Python ist, dass - wenn keine `global` oder `nonlocal` Anweisung in Kraft ist - Zuweisungen an Namen immer in den innersten Bereich gehen. Zuweisungen kopieren keine Daten - sie binden nur Namen an Objekte. Das gleiche gilt für Löschungen: die Anweisung `del x` entfernt die Bindung von `x` aus dem Namensraum, der auf den lokalen Bereich verweist. Das Objekt im Speicher wird dadurch aber nicht automatisch mit gelöscht. Das erledigt zu einem späteren Zeitpunkt der Garbage Collector von Python. Tatsächlich verwenden alle Operationen, die neue Namen einführen, den lokalen Bereich: insbesondere `import` Anweisungen und Funktionsdefinitionen binden den Modul- oder Funktionsnamen im lokalen Bereich.
+Eine besondere Eigenart von Python ist, dass - wenn keine `global` oder `nonlocal` Anweisung in Kraft ist - Zuweisungen an Namen immer in den innersten Bereich gehen. Zuweisungen kopieren keine Daten - sie binden nur Namen an Objekte. Das Gleiche gilt für Löschungen: die Anweisung `del x` entfernt die Bindung von `x` aus dem Namensraum, der auf den lokalen Bereich verweist. Das Objekt im Speicher wird dadurch aber nicht automatisch mit gelöscht. Das erledigt zu einem späteren Zeitpunkt der Garbage Collector von Python. Tatsächlich verwenden alle Operationen, die neue Namen einführen, den lokalen Bereich: insbesondere `import` Anweisungen und Funktionsdefinitionen binden den Modul- oder Funktionsnamen im lokalen Bereich.
 
 Die Anweisung `global` kann verwendet werden, um anzuzeigen, dass bestimmte Variablen im globalen Bereich liegen und dorthin zurückgebunden werden sollen. Die Anweisung `nonlocal` zeigt an, dass bestimmte Variablen in einem umschließenden Bereich liegen und dorthin zurückgebunden werden sollen. Allerdings ist die Verwendung von `global` und `nonlocal` in realem Programmcode sehr selten notwendig und wird oft falsch (falsch im Sinne von überflüssig und stilistisch schlecht) verwendet.
 
 ### Beispiele für Scopes und Namensräume
 
-Das folgende Beispiel, das zeigt, wie man auf die verschiedenen Bereiche und Namensräume verweist und wie sich `global` und `nonlocal` auf die Variablenbindung auswirken:
+Das folgende Beispiel zeigt, wie man auf die verschiedenen Bereiche und Namensräume verweist und wie sich `global` und `nonlocal` auf die Variablenbindung auswirken:
 
 ```python
 def scope_test():
@@ -91,7 +91,7 @@ After global assignment: nonlocal spam
 In global scope: global spam
 ```
 
-Zu beachten ist, dass die Zuweisung *local* (die Standardeinstellung) die Bindung von *scope_test* an *spam* nicht verändert hat.  Die `nonlocal` Zuweisung änderte die Bindung von *scope_test* an *spam*, und die `global` Zuweisung änderte die Bindung auf Modulebene. Man kann auch sehen, dass es vor der Zuweisung von `global` keine vorherige Bindung für *spam* gab.
+Zu beachten ist, dass die Zuweisung *local* (die Standardeinstellung) die Bindung von *scope_test* an *spam* nicht verändert hat. Die `nonlocal` Zuweisung änderte die Bindung von *scope_test* an *spam*, und die `global` Zuweisung änderte die Bindung auf Modulebene. Man kann auch sehen, dass es vor der Zuweisung von `global` keine vorherige Bindung für *spam* gab.
 
 Das folgende Beispiel zeigt, wann auf welchen Namensraum zugegriffen wird:
 
@@ -143,7 +143,7 @@ class ClassName:
     <statement-N>
 ```
 
-Klassendefinitionen müssen vom Prinzip wie Funktionsdefinitionen ausgeführt werden. Dies geschieht mit dem Schlüsselwort `class` gefolgt vom Klassenamen. Klassennamen werden in Python per Konvention PascalCase Schreibweise geschrieben, als wie z.B. `Vehicle`, `ClassName`, `RequestDispatcher` oder `BarGraphCreator`. Grundsätzlich ist es möglich, eine Klassendefinition in einem Zweig einer `if`-Anweisung oder innerhalb einer Funktion zu platzieren- aber das ist extrem unüblich und wird selten benötigt.
+Klassendefinitionen müssen vom Prinzip wie Funktionsdefinitionen ausgeführt werden. Dies geschieht mit dem Schlüsselwort `class` gefolgt vom Klassenamen. Klassennamen werden in Python per Konvention PascalCase Schreibweise geschrieben, als wie z.B. `Vehicle`, `ClassName`, `RequestDispatcher` oder `BarGraphCreator`. Grundsätzlich ist es möglich, eine Klassendefinition in einem Zweig einer `if`-Anweisung oder innerhalb einer Funktion zu platzieren - aber das ist extrem unüblich und wird selten benötigt.
 
 In der Praxis sind die Anweisungen innerhalb einer Klassendefinition in der Regel Funktionsdefinitionen, aber auch andere Anweisungen sind erlaubt und manchmal nützlich - dazu später mehr. Die Funktionsdefinitionen innerhalb einer Klasse haben normalerweise eine besondere Form der Argumentliste, die von den Aufrufkonventionen für Methoden vorgegeben wird - auch dies wird später erklärt.
 
@@ -155,7 +155,7 @@ Wenn eine Klassendefinition normal verlassen wird (über das Ende), wird ein *Kl
 
 Klassenobjekte unterstützen zwei Arten von Operationen: Attributreferenzen und Instanziierung.
 
-*Attributreferenzen* verwenden die Standardsyntax, die für alle Attributreferenzen in Python verwendet wird: ``obj.name``.  Gültige Attributnamen sind alle Namen, die sich im Namensraum der Klasse befanden, als das Klassenobjekt erstellt wurde.  Wenn also die Klassendefinition wie folgt aussieht:
+*Attributreferenzen* verwenden die Standardsyntax, die für alle Attributreferenzen in Python verwendet wird: ``obj.name``.  Gültige Attributnamen sind alle Namen, die sich im Namensraum der Klasse befanden, als das Klassenobjekt erstellt wurde. Wenn also die Klassendefinition wie folgt aussieht:
 
 ```python
 class SomethingSimple:
@@ -166,9 +166,9 @@ class SomethingSimple:
            return 'hello world'
 ```
 
-dann sind `SomethingSimple.i` und `SomethingSimple.f` gültige Attributreferenzen, die eine ganze Zahl bzw. ein Funktionsobjekt zurückgeben. Klassenattribute können auch zugewiesen werden, so dass Sie den Wert von `SomethingSimple.i` durch Zuweisung ändern können. `__doc__` ist ebenfalls ein gültiges Attribut, das den zur Klasse gehörenden docstring zurückgibt: "A simple example class".
+dann sind `SomethingSimple.i` und `SomethingSimple.f` gültige Attributreferenzen, die eine ganze Zahl bzw. ein Funktionsobjekt zurückgeben. Klassenattribute können auch zugewiesen werden, sodass Sie den Wert von `SomethingSimple.i` durch Zuweisung ändern können. `__doc__` ist ebenfalls ein gültiges Attribut, das den zur Klasse gehörenden docstring zurückgibt: "A simple example class".
 
-Bei der *Instantiierung* von Klassen wird die Funktionsnotation verwendet. Man kann sich das einfach so vorstellen, dass das Klassenobjekt sei eine parameterlose Funktion ist, die eine neue Instanz der Klasse zurückgibt. Zum Beispiel unter Annahme der obigen Klasse:
+Bei der *Instanziierung* von Klassen wird die Funktionsnotation verwendet. Man kann sich das einfach so vorstellen, dass das Klassenobjekt sei eine parameterlose Funktion ist, die eine neue Instanz der Klasse zurückgibt. Zum Beispiel unter Annahme der obigen Klasse:
 
 ```python
 x = SomethingSimple()
@@ -204,7 +204,7 @@ Natürlich kann die Methode `object.__init__` mehrere Argumente haben und man di
 (3.0, -4.5)
 ```
 
-Man kann, ähnlich wie bei Funktionen, Argumente auch vorbelegten, so dass die Übergabe von Werten bei der Instanziierung der Klasse optional ist:
+Man kann, ähnlich wie bei Funktionen, Argumente auch vorbelegen, sodass die Übergabe von Werten bei der Instanziierung der Klasse optional ist:
 
 ```pycon
 >>> class Demo:
@@ -245,11 +245,11 @@ Was kann man nun mit Instanzobjekten tun? Die einzigen Operationen, die von Inst
 >>> print(a.counter)
 ```
 
-Zum Entfernen kann man `del a.counter` nutzen. Das nachträgliche Hinzufügen kommt in der realem Programmierpraxis eher sehr selten vor, da man in der Regel mit den in der Klasse bereits definierten Datenattributen arbeitet.
+Zum Entfernen kann man `del a.counter` nutzen. Das nachträgliche Hinzufügen kommt in der realen Programmierpraxis eher sehr selten vor, da man in der Regel mit den in der Klasse bereits definierten Datenattributen arbeitet.
 
-Die andere Art der Instanzattribut-Referenz ist eine *Methode*. Eine Methode ist eine Funktion, die zu einem Objekt gehört.  In Python ist der Begriff Methode nicht nur auf Klasseninstanzen beschränkt: auch andere Objekttypen können Methoden haben.  Zum Beispiel haben Listenobjekte Methoden wie `append`, `insert`, `remove` und so weiter. In der folgenden Diskussion wird der Begriff Methode jedoch ausschließlich für Methoden von Klasseninstanzobjekten verwenden, sofern nicht ausdrücklich anders angegeben.
+Die andere Art der Instanzattribut-Referenz ist eine *Methode*. Eine Methode ist eine Funktion, die zu einem Objekt gehört. In Python ist der Begriff Methode nicht nur auf Klasseninstanzen beschränkt: auch andere Objekttypen können Methoden haben. Zum Beispiel haben Listenobjekte Methoden wie `append`, `insert`, `remove` und so weiter. In der folgenden Diskussion wird der Begriff Methode jedoch ausschließlich für Methoden von Klasseninstanzobjekten verwenden, sofern nicht ausdrücklich anders angegeben.
 
-Gültige Methodennamen eines Instanzobjekts hängen von seiner Klasse ab. Per Definition definieren alle Attribute einer Klasse, die Funktionsobjekte sind, entsprechende Methoden ihrer Instanzen. In dem Beispiel weiter oben mit der `SomethingSimple` Klasse ist also `x.f` eine gültige Methodenreferenz, da `SomethingSimple.f` eine Funktion ist, aber `x.i` ist keine, da `SomethingSimple.i` keine ist.  Aber `x.f` ist nicht dasselbe wie `SomethingSimple.f` - es ist ein *Methodenobjekt*, kein Funktionsobjekt.
+Gültige Methodennamen eines Instanzobjekts hängen von seiner Klasse ab. Per Definition definieren alle Attribute einer Klasse, die Funktionsobjekte sind, entsprechende Methoden ihrer Instanzen. In dem Beispiel weiter oben mit der `SomethingSimple` Klasse ist also `x.f` eine gültige Methodenreferenz, da `SomethingSimple.f` eine Funktion ist, aber `x.i` ist keine, da `SomethingSimple.i` keine ist. Aber `x.f` ist nicht dasselbe wie `SomethingSimple.f` - es ist ein *Methodenobjekt*, kein Funktionsobjekt.
 
 ### Methoden Objekte
 
@@ -269,13 +269,13 @@ Im Beispiel mit der Class `SomethingSimple` wird dies die Zeichenkette "hello wo
 
 "hello world" in einer Endlosschleife ausgeben.
 
-Was genau passiert, wenn eine Methode aufgerufen wird?  Wie schon zu sehen war kann `x.f()` oben ohne ein Argument aufgerufen werden, obwohl die Funktionsdefinition für `f` ein Argument angibt, nämlich "self".  Was ist mit dem Argument passiert? Python löst ja bekanntlich eine Ausnahme aus, wenn eine Funktion, die ein Argument erwartet, ohne ein solches aufgerufen wird - auch wenn das Argument nicht wirklich genutzt wird...
+Was genau passiert, wenn eine Methode aufgerufen wird? Wie schon zu sehen war kann `x.f()` oben ohne ein Argument aufgerufen werden, obwohl die Funktionsdefinition für `f` ein Argument angibt, nämlich "self". Was ist mit dem Argument passiert? Python löst ja bekanntlich eine Ausnahme aus, wenn eine Funktion, die ein Argument erwartet, ohne ein solches aufgerufen wird - auch wenn das Argument nicht wirklich genutzt wird ...
 
 Vielleicht wurde es bereits erahnt: Das Besondere an Methoden ist, dass das Instanzobjekt als erstes Argument der Funktion übergeben wird. In dem Beispiel oben ist der Aufruf `x.f()` genau äquivalent zu `SomethingSimple.f(x)`. Im Allgemeinen ist der Aufruf einer Methode mit einer Liste von *n* Argumenten äquivalent zum Aufruf der entsprechenden Funktion mit einer Argumentliste, die durch Einfügen des Instanzobjekts der Methode vor dem ersten Argument erstellt wird.
 
 Im Allgemeinen funktionieren die Methoden wie folgt: Wenn ein Nicht-Daten-Attribut einer Instanz referenziert wird, wird die Klasse der Instanz durchsucht. Wenn der Name ein gültiges Klassenattribut angibt, das ein Funktionsobjekt ist, werden Verweise auf das Instanzobjekt und das Funktionsobjekt in ein Methodenobjekt gepackt. Wenn das Methodenobjekt mit einer Argumentliste aufgerufen wird, wird eine neue Argumentliste aus dem Instanzobjekt und der Argumentliste konstruiert, und das Funktionsobjekt wird mit dieser neuen Argumentliste aufgerufen.
 
-Kurzfassung: Funktionen, die innerhalb einer Klasse definiert werden, benötigen grundsätzlich `self` als erstes Argument, auch wenn die Funktion an sich gar keine Argumente benötigt. Ein fehlendes `self` führt sonst zu einem Fehler. Dass das Argument `self` heißt ist übrigens eine Pythonkonvetion - an die man sich aber tunlist halten sollte! Grundsätzlich würde auch jeder andere Name wie z.B. "foo" oder "Python" oder "Wurstwasser" funktionieren, der Name muss innerhalb der Klasse nur einheitlich sein.
+Kurzfassung: Funktionen, die innerhalb einer Klasse definiert werden, benötigen grundsätzlich `self` als erstes Argument, auch wenn die Funktion an sich gar keine Argumente benötigt. Ein fehlendes `self` führt sonst zu einem Fehler. Dass das Argument `self` heißt, ist übrigens eine Pythonkonvetion - an die man sich aber tunlist halten sollte! Grundsätzlich würde auch jeder andere Name wie z.B. "foo" oder "Python" oder "Wurstwasser" funktionieren, der Name muss innerhalb der Klasse nur einheitlich sein.
 
 Es gibt zwei Ausnahmen, wo `self` nicht als Argument an eine Funktion in einer Klasse übergeben wird: wenn die Funktion mit dem `@classmethod` oder `@staticmethod` dekoriert wird. Darauf wird im Rahmen dieses Tutorials aber nicht weiter eingegangen.
 
@@ -301,7 +301,7 @@ Im Allgemeinen werden Instanzvariablen für Daten verwendet, die für jede Insta
 'Buddy'
 ```
 
-Wie in im Abschnitt "ein paar Worte zu Namen und Klassen" besprochen, können gemeinsam genutzte Daten möglicherweise überraschende Auswirkungen haben, wenn man `mutable` Objekte wie Listen und Wörterbücher verwendet. Zum Beispiel sollte die ` Liste namens "tricks" im folgenden Code nicht als Klassenvariable verwendet werden, da nur eine einzige Liste von allen Dog-Instanzen gemeinsam genutzt werden würde:
+Wie im Abschnitt "ein paar Worte zu Namen und Klassen" besprochen, können gemeinsam genutzte Daten möglicherweise überraschende Auswirkungen haben, wenn man `mutable` Objekte wie Listen und Wörterbücher verwendet. Zum Beispiel sollte die ` Liste namens "tricks" im folgenden Code nicht als Klassenvariable verwendet werden, da nur eine einzige Liste von allen Dog-Instanzen gemeinsam genutzt werden würde:
 
 ```pycon
 >>> class Dog:
@@ -357,13 +357,13 @@ storage west
 storage east
 ```
 
-Datenattribute können sowohl von Methoden als auch von normalen Benutzern (=den den Nutzern einer Instanz) eines Objekts referenziert werden. Mit anderen Worten: Klassen sind nicht geeignet, um rein abstrakte Datentypen zu implementieren. Tatsächlich gibt es in Python keine Möglichkeit, Daten zu verstecken - alles basiert auf Konventionen.  Andererseits kann die in C geschriebene Python-Implementierung Implementierungsdetails vollständig verbergen und den Zugriff auf ein Objekt kontrollieren, wenn dies erforderlich ist. Dies kann von in C geschriebenen Python-Erweiterungen genutzt werden.
+Datenattribute können sowohl von Methoden als auch von normalen Benutzern (=den Nutzern einer Instanz) eines Objekts referenziert werden. Mit anderen Worten: Klassen sind nicht geeignet, um rein abstrakte Datentypen zu implementieren. Tatsächlich gibt es in Python keine Möglichkeit, Daten zu verstecken - alles basiert auf Konventionen. Andererseits kann die in C geschriebene Python-Implementierung Implementierungsdetails vollständig verbergen und den Zugriff auf ein Objekt kontrollieren, wenn dies erforderlich ist. Dies kann von in C geschriebenen Python-Erweiterungen genutzt werden.
 
 Nutzer von Instanzen sollten Datenattribute mit Vorsicht verwenden - es können die Invarianten, die von den Methoden aufrechterhalten werden, durch Änderungen auf ihren Datenattributen durcheinanderbringen. Zu beachten ist, dass Nutzer eigene Datenattribute zu einem Instanzobjekt hinzufügen können, ohne die Gültigkeit der Methoden zu beeinträchtigen, solange Namenskonflikte vermieden werden - auch hier kann eine Namenskonvention eine Menge Kopfzerbrechen ersparen.
 
-Es gibt keine Abkürzungen für den Verweis auf Datenattribute (oder andere Methoden) innerhalb von Methoden.  Dies erhöht die Lesbarkeit von Methoden: Es gibt keine Möglichkeit, lokale Variablen und Instanzvariablen zu verwechseln, wenn man eine Methode anschaut.
+Es gibt keine Abkürzungen für den Verweis auf Datenattribute (oder andere Methoden) innerhalb von Methoden. Dies erhöht die Lesbarkeit von Methoden: Es gibt keine Möglichkeit, lokale Variablen und Instanzvariablen zu verwechseln, wenn man eine Methode anschaut.
 
-Jedes Funktionsobjekt, das ein Klassenattribut ist, definiert eine Methode für Instanzen dieser Klasse. Es ist nicht notwendig, dass die Funktionsdefinition textuell in die Klassendefinition eingeschlossen ist: die Zuweisung eines Funktionsobjekts an eine lokale Variable in der Klasse funktioniert ebenfalls. Zum Beispiel:
+Jedes Funktionsobjekt, das ein Klassenattribut ist, definiert eine Methode für Instanzen dieser Klasse. Es ist nicht notwendig, dass die Funktionsdefinition textuell in die Klassendefinition eingeschlossen ist: Die Zuweisung eines Funktionsobjekts an eine lokale Variable in der Klasse funktioniert ebenfalls. Zum Beispiel:
 
 ```python
 # Function defined outside the class
@@ -396,12 +396,12 @@ class Bag:
         self.add(x)
 ```
 
-Methoden können auf globale Namen in der gleichen Weise verweisen wie normale Funktionen. Der globale Bereich, der mit einer Methode verbunden ist, ist das Modul, das ihre Definition enthält. Eine Klasse wird nie als globaler Bereich verwendet. Es gibt zwar selten einen guten Grund für die Verwendung globaler Daten in einer Methode, aber es gibt viele legitime Verwendungszwecke für den globalen Bereich: Zum einen können Funktionen und Module, die in den globalen Bereich importiert wurden, von Methoden verwendet werden, ebenso wie Funktionen und Klassen, die in diesem Bereich definiert sind.  Normalerweise ist die Klasse, die die Methode enthält, selbst in diesem globalen Bereich definiert, und im nächsten Abschnitt werden einige gute Gründe zu sehen sein, warum eine Methode die eigene Klasse referenzieren sollte.
+Methoden können auf globale Namen in der gleichen Weise verweisen wie normale Funktionen. Der globale Bereich, der mit einer Methode verbunden ist, ist das Modul, das ihre Definition enthält. Eine Klasse wird nie als globaler Bereich verwendet. Es gibt zwar selten einen guten Grund für die Verwendung globaler Daten in einer Methode, aber es gibt viele legitime Verwendungszwecke für den globalen Bereich: Zum einen können Funktionen und Module, die in den globalen Bereich importiert wurden, von Methoden verwendet werden, ebenso wie Funktionen und Klassen, die in diesem Bereich definiert sind. Normalerweise ist die Klasse, die die Methode enthält, selbst in diesem globalen Bereich definiert, und im nächsten Abschnitt werden einige gute Gründe zu sehen sein, warum eine Methode die eigene Klasse referenzieren sollte.
 
 Jeder Wert ist ein Objekt und hat daher eine *Klasse*, auch *Typ* (auf Englisch: *type*) genannt. Sie wird als `Objekt.__Klasse__` gespeichert.
 
 ### @property für Methoden
-Es gibt Anwendungsfälle, wo man in Klassen eine Methode definiert, aber in den Instanzen der Klasse darauf lieber wie auf ein Datenattribute zugreifen würde. Beispiel:
+Es gibt Anwendungsfälle, wo man in Klassen eine Methode definiert, aber in den Instanzen der Klasse darauf lieber wie auf ein Datenattribut zugreifen würde. Beispiel:
 
 ```pycon
 >>> class Rectangle:
@@ -449,13 +449,14 @@ Die Ausführung einer abgeleiteten Klassendefinition erfolgt auf die gleiche Wei
 
 Die Instanziierung von abgeleiteten Klassen ist nichts Besonderes: `DerivedClassName()` erzeugt eine neue Instanz der Klasse. Methodenreferenzen werden wie folgt aufgelöst: Das entsprechende Klassenattribut wird durchsucht, gegebenenfalls absteigend in der Hierarchie der Basisklassen. Die Methodenreferenz ist gültig, wenn sie ein Funktionsobjekt ist.
 
-Abgeleitete Klassen können Methoden ihrer Basisklassen außer Kraft setzen. Da Methoden keine besonderen Privilegien haben, wenn sie andere Methoden desselben Objekts aufrufen, kann eine Methode einer Basisklasse, die eine andere in derselben Basisklasse definierte Methode aufruft, am Ende eine Methode einer abgeleiteten Klasse aufrufen, die sie außer Kraft setzt.  (Für C++-Programmierer: alle Methoden in Python sind effektiv `virtuell`.)
+Abgeleitete Klassen können Methoden ihrer Basisklassen außer Kraft setzen. Da Methoden keine besonderen Privilegien haben, wenn sie andere Methoden desselben Objekts aufrufen, kann eine Methode einer Basisklasse, die eine andere in derselben Basisklasse definierte Methode aufruft, am Ende eine Methode einer abgeleiteten Klasse aufrufen, die sie außer Kraft setzt. (Für C++-Programmierer: alle Methoden in Python sind effektiv `virtuell`.)
 
-Eine überschreibende Methode in einer abgeleiteten Klasse kann die gleichnamige Methode der Basisklasse nicht einfach ersetzen, sondern erweitern wollen. Es gibt eine einfache Möglichkeit, die Methode der Basisklasse direkt aufzurufen: Einfach `BaseClassName.methodname(self, arguments)` aufrufen.  Dies ist gelegentlich auch für Nutzer nützlich. Zu beachten ist, dass dies nur funktioniert, wenn die Basisklasse als `BaseClassName` im globalen Bereich zugänglich ist.
+Eine überschreibende Methode in einer abgeleiteten Klasse kann die gleichnamige Methode der Basisklasse nicht einfach ersetzen, sondern erweitern wollen. Es gibt eine einfache Möglichkeit, die Methode der Basisklasse direkt aufzurufen: Einfach `BaseClassName.methodname(self, arguments)` aufrufen. Dies ist gelegentlich auch für Nutzer nützlich. Zu beachten ist, dass dies nur funktioniert, wenn die Basisklasse als `BaseClassName` im globalen Bereich zugänglich ist.
 
 Beispiel. Der Code
 
-```pythonclass BaseClass:
+```python
+class BaseClass:
     def greet(self):
         print('Good day')
 
@@ -488,7 +489,7 @@ Goodbye
 Python hat zwei eingebaute Funktionen, die mit Vererbung arbeiten:
 
  * `isinstance` wird verwendet, um den Typ einer Instanz zu prüfen: `isinstance(obj, int)` ist nur `True`, wenn `obj.__class__` `int` oder eine von `int` abgeleitete Klasse ist.
- * `issubclass` wird verwendet, um die Klassenvererbung zu prüfen: `issubclass(bool, int)` ist nur `True`, wenn `bool` eine Unterklasse von `int` ist.  Aber `issubclass(float, int)` ist `False`, da `float` keine Unterklasse von `int` ist.
+ * `issubclass` wird verwendet, um die Klassenvererbung zu prüfen: `issubclass(bool, int)` ist nur `True`, wenn `bool` eine Unterklasse von `int` ist. Aber `issubclass(float, int)` ist `False`, da `float` keine Unterklasse von `int` ist.
 
 ### mehrfache Vererbung
 
@@ -507,11 +508,11 @@ Für die meisten Zwecke und in den einfachsten Fällen kann man sich die Suche n
 
 Tatsächlich ist es etwas komplexer als das. Die Reihenfolge der Methodenauflösung ändert sich dynamisch, um kooperative Aufrufe von `super` zu unterstützen. Dieser Ansatz ist in einigen anderen Sprachen mit Mehrfachvererbung als "call-next-method" bekannt und ist mächtiger als der Superaufruf in Sprachen mit Einfachvererbung.
 
-Dynamische Ordnung ist notwendig, weil alle Fälle von Mehrfachvererbung eine oder mehrere rautenförmige Beziehungen aufweisen, bei denen auf mindestens eine der Elternklassen über mehrere Pfade von der untersten Klasse aus zugegriffen werden kann. Zum Beispiel erben alle Klassen von `object`, so dass jeder Fall von Mehrfachvererbung mehr als einen Pfad bietet, um `object` zu erreichen.  Um zu verhindern, dass auf die Basisklassen mehr als einmal zugegriffen wird, linearisiert der dynamische Algorithmus die Suchreihenfolge so, dass die in jeder Klasse angegebene Reihenfolge von links nach rechts erhalten bleibt, jede übergeordnete Klasse nur einmal aufgerufen wird und der Algorithmus monoton ist (d. h., dass eine Klasse untergeordnet werden kann, ohne die Rangfolge ihrer übergeordneten Klassen zu verändern). Zusammengenommen ermöglichen diese Eigenschaften die Entwicklung zuverlässiger und erweiterbarer Klassen mit Mehrfachvererbung.
+Dynamische Ordnung ist notwendig, weil alle Fälle von Mehrfachvererbung eine oder mehrere rautenförmige Beziehungen aufweisen, bei denen auf mindestens eine der Elternklassen über mehrere Pfade von der untersten Klasse aus zugegriffen werden kann. Zum Beispiel erben alle Klassen von `object`, sodass jeder Fall von Mehrfachvererbung mehr als einen Pfad bietet, um `object` zu erreichen. Um zu verhindern, dass auf die Basisklassen mehr als einmal zugegriffen wird, linearisiert der dynamische Algorithmus die Suchreihenfolge so, dass die in jeder Klasse angegebene Reihenfolge von links nach rechts erhalten bleibt, jede übergeordnete Klasse nur einmal aufgerufen wird und der Algorithmus monoton ist (d. h., dass eine Klasse untergeordnet werden kann, ohne die Rangfolge ihrer übergeordneten Klassen zu verändern). Zusammengenommen ermöglichen diese Eigenschaften die Entwicklung zuverlässiger und erweiterbarer Klassen mit Mehrfachvererbung.
 
 ## private Variablen
 
-"Private" Instanzvariablen, auf die nur innerhalb eines Objekts zugegriffen werden kann, gibt es in Python nicht. Grundsätzlich man auf alles von außerhalb zugreifen. Es gibt jedoch eine Konvention, die von den meisten Python-Programmieren befolgt wird: Ein Name, dem ein Unterstrich vorangestellt ist (z.B. `_spam`), sollte als nicht-öffentlicher Teil einer Klasse / der API behandelt werden (egal ob es sich um eine Funktion, eine Methode oder ein Datenelement handelt). Es sollte als ein Implementierungsdetail betrachtet werden und könnte ohne Vorankündigung geändert werden oder auch verschwinden.
+"Private" Instanzvariablen, auf die nur innerhalb eines Objekts zugegriffen werden kann, gibt es in Python nicht. Grundsätzlich kann man auf alles von außerhalb zugreifen. Es gibt jedoch eine Konvention, die von den meisten Python-Programmierern befolgt wird: Ein Name, dem ein Unterstrich vorangestellt ist (z.B. `_spam`), sollte als nicht-öffentlicher Teil einer Klasse / der API behandelt werden (egal ob es sich um eine Funktion, eine Methode oder ein Datenelement handelt). Es sollte als ein Implementierungsdetail betrachtet werden und könnte ohne Vorankündigung geändert werden oder auch verschwinden.
 
 Da es einen gültigen Anwendungsfall für klassenprivate Mitglieder gibt - nämlich die Vermeidung von Namenskonflikten von Namen mit Namen, die von Unterklassen definiert werden - gibt es eine begrenzte Unterstützung für einen solchen Mechanismus, genannt `name mangling` (auf Deutsch frei übersetzt: Namensverunstaltung). Jeder Bezeichner der Form `__spam` (mindestens zwei führende Unterstriche, höchstens ein nachgestellter Unterstrich) wird textuell durch `_classname__spam` ersetzt, wobei `classname` der aktuelle Klassenname ohne führende(n) Unterstrich(e) ist. Diese Umwandlung erfolgt ohne Rücksicht auf die syntaktische Position des Bezeichners, solange er innerhalb der Definition einer Klasse auftritt.
 
@@ -565,7 +566,7 @@ Manchmal ist es nützlich, einen Datentyp ähnlich dem Pascal-"record" oder C-"s
 
 Python-Code, der einen bestimmten abstrakten Datentyp erwartet, kann oft eine Klasse übergeben werden, die stattdessen die Methoden dieses Datentyps emuliert. Wenn man zum Beispiel eine Funktion hat, die Daten aus einem Dateiobjekt formatiert, kann man eine Klasse mit den Methoden `io.TextIOBase.read` und `io.TextIOBase.readline` definieren, die die Daten stattdessen aus einem String-Puffer holen und als Argument übergeben.
 
-Diese Technik hat aber ihre Grenzen: eine Klasse kann keine Operationen definieren, auf die mit einer speziellen Syntax zugegriffen wird, wie z.B. Indexzugriff auf Sequenzen oder arithmetische Operatoren, und die Zuweisung einer solchen "Pseudodatei" an `sys.stdin` führt nicht dazu, dass der Interpreter weitere Eingaben aus ihr liest.
+Diese Technik hat aber ihre Grenzen: Eine Klasse kann keine Operationen definieren, auf die mit einer speziellen Syntax zugegriffen wird, wie z.B. Indexzugriff auf Sequenzen oder arithmetische Operatoren, und die Zuweisung einer solchen "Pseudodatei" an `sys.stdin` führt nicht dazu, dass der Interpreter weitere Eingaben aus ihr liest.
 
 Instanzmethodenobjekte haben ebenfalls Attribute: `m.__self__` ist das Instanzobjekt mit der Methode `m`, und `m.__func__` ist das Funktionsobjekt, das der Methode entspricht.
 
@@ -586,7 +587,7 @@ for line in open("myfile.txt"):
     print(line, end='')
 ```
 
-Diese Art des Zugriffs ist klar und bequem. Die Verwendung von Iteratoren finden man an vielen Stellen und ist vereinheitlicht für Python. Hinter den Kulissen ruft die Anweisung `for` die Funktion [iter](https://docs.python.org/3/library/functions.html#iter) für das Container-Objekt auf. Die Funktion gibt ein Iterator-Objekt zurück, das die Methode `iterator.__next__`, die auf ein Element im Container nach dem anderen zugreift. Wenn es keine weiteren Elemente mehr gibt, löst `iterator.__next__` eine `StopIteration` Ausnahme aus, die der `for`-Schleife mitteilt, dass sie beendet werden soll.  Man kann die Methode `iterator.__next__` mit der eingebauten Funktion [next](https://docs.python.org/3/library/functions.html#next) aufrufen. Dieses Beispiel zeigt, wie das Ganze funktioniert:
+Diese Art des Zugriffs ist klar und bequem. Die Verwendung von Iteratoren finden man an vielen Stellen und ist vereinheitlicht für Python. Hinter den Kulissen ruft die Anweisung `for` die Funktion [iter](https://docs.python.org/3/library/functions.html#iter) für das Container-Objekt auf. Die Funktion gibt ein Iterator-Objekt zurück, das die Methode `iterator.__next__`, die auf ein Element im Container nach dem anderen zugreift. Wenn es keine weiteren Elemente mehr gibt, löst `iterator.__next__` eine `StopIteration` Ausnahme aus, die der `for`-Schleife mitteilt, dass sie beendet werden soll. Man kann die Methode `iterator.__next__` mit der eingebauten Funktion [next](https://docs.python.org/3/library/functions.html#next) aufrufen. Dieses Beispiel zeigt, wie das Ganze funktioniert:
 
 ```pycon
 >>> s = 'abc'
@@ -606,7 +607,7 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-Nachdem die Funktionsweise des Iterator-Protokolls gezeigt wurde, ist es einfach, Iterator-Verhalten zu eigenen Klassen hinzuzufügen.  Man definieren eine `container.__iter__` Methode, die ein Objekt mit einer `iterator.__next__` Methode zurückgibt. Wenn die Klasse `__next__` definiert, dann kann `__iter__` einfach `self` zurückgeben:
+Nachdem die Funktionsweise des Iterator-Protokolls gezeigt wurde, ist es einfach, Iterator-Verhalten zu eigenen Klassen hinzuzufügen. Man definiert eine `container.__iter__` Methode, die ein Objekt mit einer `iterator.__next__` Methode zurückgibt. Wenn die Klasse `__next__` definiert, dann kann `__iter__` einfach `self` zurückgeben:
 
 ```pycon
 >>> class Reverse:
