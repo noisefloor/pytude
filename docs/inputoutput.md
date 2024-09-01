@@ -21,11 +21,13 @@ Die [format-Methode](https://docs.python.org/3/library/stdtypes.html#str.format)
 
 ```pycon
 >>> yes_votes = 42_572_654
->>> no_votes = 43_132_495
->>> percentage = yes_votes / (yes_votes + no_votes)
+>>> total_votes = 85_705_149
+>>> percentage = yes_votes / total_votes
 >>> '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
-    ' 42572654 YES votes  49.67%'
+' 42572654 YES votes  49.67%'
 ```
+
+Im Beispiel wird `yes_votes` mit Leerstellen aufgefüllt und eine Minus-Zeichen vorangestellt, falls die Zahl negativ ist. Außerdem wird `percentage` mit 100 multipliziert und mit zwei Nachkommastellen sowie folgendem Prozentzeichen ausgegeben
 
 Schließlich kann man die gesamte String-Verarbeitung selbst übernehmen, indem man String-Slicing und Verkettungsoperationen verwenden, um jedes erdenkliche Layout zu erstellen. Der String-Typ verfügt über einige Methoden, die nützliche Operationen zum Auffüllen von Strings auf eine bestimmte Spaltenbreite durchführen. Diese Methode ist die unüblichste und wird - im Vergleich zu f-Strings und der format-Methode - eher selten angewendet.
 
@@ -216,7 +218,7 @@ Es gibt eine weitere Methode, `str.zfill`, die eine numerische Zeichenkette auf 
 
 ### die alte String-Formatierung
 
-Der %-Operator (modulo) kann auch für die Formatierung von Zeichenketten verwendet werden. In `'string' % values` werden Instanzen von `%` in `string` durch null oder mehr Elemente von `values` ersetzt. Diese Operation ist allgemein als String-Interpolation bekannt. Zum Beispiel:
+Der %-Operator (modulo) kann auch für die Formatierung von Zeichenketten verwendet werden. In `format % values` (wobei `format` ein String ist) werden Instanzen von `%` in `format` durch null oder mehr Elemente von `values` ersetzt. Diese Operation ist allgemein als String-Interpolation bekannt. Zum Beispiel:
 
 ```pycon
    >>> import math

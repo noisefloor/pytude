@@ -10,11 +10,11 @@ Syntaxfehler (auf Englisch: Syntax Error) werden auch "Parser Fehler" genannt. D
 >>> while True print('Hello world')
     File "<stdin>", line 1
     while True print('Hello world')
-                      ^
+               ^^^^^
 SyntaxError: invalid syntax
 ```
 
-Der Parser moniert die Zeile mit dem Fehler und markiert diesen mit einem kleinen Pfeil an der ersten Stelle, wo der Fehler auftritt. Der Fehler wird durch das dem Pfeil *vorangestellte* Token verursacht (oder zumindest erkannt): in dem Beispiel wird der Fehler bei der Funktion `print` erkannt, da ein Doppelpunkt (`:`) vor dieser Funktion fehlt. Dateiname und Zeilennummer werden ausgegeben, damit man weiß, wo man suchen muss, falls die Eingabe von einem Skript stammt.
+Der Parser moniert die Zeile mit dem Fehler und markiert diesen mit kleinen Pfeilen an der, wo der Fehler auftritt. Der Fehler wird durch das mit Pfeil markierte Token verursacht (oder zumindest erkannt). Es kann auch sein, dass der Fehler durch ein fehlendes Token vor dem markierten Token verursacht wird. In dem Beispiel wird der Fehler bei der Funktion `print` erkannt, da ein Doppelpunkt (`:`) vor dieser Funktion fehlt. Dateiname und Zeilennummer werden ausgegeben, damit man weiß, wo man suchen muss, falls die Eingabe von einem Skript stammt.
 
 ## Ausnahmen
 

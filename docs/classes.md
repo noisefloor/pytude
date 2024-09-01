@@ -247,7 +247,7 @@ Was kann man nun mit Instanzobjekten tun? Die einzigen Operationen, die von Inst
 
 Zum Entfernen kann man `del a.counter` nutzen. Das nachträgliche Hinzufügen kommt in der realen Programmierpraxis eher sehr selten vor, da man in der Regel mit den in der Klasse bereits definierten Datenattributen arbeitet.
 
-Die andere Art der Instanzattribut-Referenz ist eine *Methode*. Eine Methode ist eine Funktion, die zu einem Objekt gehört. In Python ist der Begriff Methode nicht nur auf Klasseninstanzen beschränkt: auch andere Objekttypen können Methoden haben. Zum Beispiel haben Listenobjekte Methoden wie `append`, `insert`, `remove` und so weiter. In der folgenden Diskussion wird der Begriff Methode jedoch ausschließlich für Methoden von Klasseninstanzobjekten verwenden, sofern nicht ausdrücklich anders angegeben.
+Die andere Art der Instanzattribut-Referenz ist eine *Methode*. Eine Methode ist eine Funktion, die zu einem Objekt gehört.
 
 Gültige Methodennamen eines Instanzobjekts hängen von seiner Klasse ab. Per Definition definieren alle Attribute einer Klasse, die Funktionsobjekte sind, entsprechende Methoden ihrer Instanzen. In dem Beispiel weiter oben mit der `SomethingSimple` Klasse ist also `x.f` eine gültige Methodenreferenz, da `SomethingSimple.f` eine Funktion ist, aber `x.i` ist keine, da `SomethingSimple.i` keine ist. Aber `x.f` ist nicht dasselbe wie `SomethingSimple.f` - es ist ein *Methodenobjekt*, kein Funktionsobjekt.
 
