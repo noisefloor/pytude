@@ -13,7 +13,7 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
  9. [Fehler und Ausnahmen (Exceptions)](errors.md): wie Python Fehler und Ausnahmen im Programmcode meldet, Umgang und Abfangen von Ausnahmen, eigene Ausnahmen definieren
  10. [Klassen](classes.md): wie man Klassen in Python erstellt und nutzt
  11. [Eine (kurze) Tour durch die Standardbibliothek](stdlib.md): kurze Vorstellung einiger gängiger und häufiger genutzter Module aus der Python Standardbibliothek
- 12. [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md): wie man virtellen Umgebungen (Virtual Environments) erstellt und nutzt sowie Python Pakete mit Hilfe von pip installiert
+ 12. [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md): wie man virtelle Umgebungen (Virtual Environments) erstellt und nutzt sowie Python Pakete mit Hilfe von pip installiert
  13. [Was kommt als Nächstes?](whatnow.md): hilfreiche Links und weiterführende Webseiten
  14. [Tipps und Anmerkungen](remarks.md): ein paar Tipps und Anmerkungen zu den ersten Projekten, GUI-Programmierung, nebenläufiger Programmierung und alternativen Python-Implementierung
  15. [Externe Module](externallibs.md): ein kurzer Überblick über einige viel genutzte und populäre externe Python-Module
