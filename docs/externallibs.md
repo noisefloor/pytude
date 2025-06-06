@@ -14,7 +14,7 @@ Ein sehr viel genutztes Python-Modul, sowohl direkt als auch als Basis für ande
 ## Webentwicklung
 Webentwicklung mit Python in der Regel mit Hilfe eines Webframeworks - wovon es reichlich für alle Facetten von Anwendungen gibt. Der allgemeine Standard für Webapplikation mit Python ist [WSGI](https://wsgi.readthedocs.io/en/latest/what.html). WSGI steht für **W**eb **S**tandard **G**ateway **I**nterface und beschreibt den Standardweg, wie eine Applikation mit dem Server kommuniziert - was das Webframework für einen erledigt. Vereinfacht dargestellt ist der Ablauf so, dass man mit Hilfe des Frameworks eine Route / eine URL an eine Python-Funktion bindet. Beim Aufruf der Route wird die Funktion ausgeführt und liefert das Ergebnis wie eine generierte HTML-Seite zurück.
 
-Die beiden bekanntesten - und wahrscheinlich auch meist genutzen - Webframeworks sind (wahscheinlich): Django und Flask
+Die beiden bekanntesten - und wahrscheinlich auch meist genutzen - Webframeworks sind (wahscheinlich): Django, Flask und FastAPI
 
 ### Django
 [Django](https://www.djangoproject.com/) ist ein umfangreiches Framework mit "batteries included" Philosophie, d.h. es bringt etliche Komponenten direkt mit. Dazu gehören eine Datenbankanbindung für relationale Datenbanken in Form des Django-ORM, eine eigene Template-Engine, ein Framework für HTML-Formulare, eine Sicherheitsframework, ein Framework zur Benutzerverwaltung und ein Admin-Backend. Django eignet sich für alle Arten von Anwendungen von klein bis sehr groß und umfangreich. Die besondere Stärke ist dabei - auch für Einsteiger und kleine Projekte - die hohe Integration der Djangokomponenten, wodurch man mit relativ wenig Code viel erreichen kann. Außerdem gibt es unzählige Erweiterungen für Django.
@@ -25,6 +25,11 @@ Django ist sehr umfangreich und detaillierte dokumentiert. Für den Beginn empfi
 [Flask](https://flask.palletsprojects.com) ist ein Framework, mit dem sich mit sehr wenig Code bereits eine (sehr) einfache Webapplikation erstellen lässt. Nichtsdestotrotz eignet sich Flask auch für größere und große Projekte. Die Dokumentation von Flask enthält ein [Tutorial]( https://flask.palletsprojects.com/en/3.0.x/tutorial/) in dem gezeigt wird, wie man eine Webapplikation mit Flask erstellt.
 
 Auch für Flask gibt es eine Vielzahl von [Erweiterungen]( https://flask.palletsprojects.com/en/3.0.x/extensions/), die sich in das eigene Projekt einbinden lassen.
+
+### FastAPI
+[FastAPI](https://fastapi.tiangolo.com/) ist ein Framework, was auf das Erstellen von web-basierten APIs fokussiert. FastAPI ist sehr performant und setzt im Hintergrund auf [Type Hints](https://docs.python.org/3/library/typing.html) sowie [Pydantic](https://docs.pydantic.dev/latest/) zur Datenvalidierung.
+
+Als Einstieg in FastAPI bietet sich das [First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/) Tutorial an.
 
 ## Systeminformationen
 Zum Ermitteln von Systeminformationen wie der Systemauslastung und laufenden Prozessen ist das Modul [psutil](https://github.com/giampaolo/psutil) geeignet. Das Modul unterstützt alle gängigen Betriebssysteme wie Windows, MacOS und Linux, läuft aber auch auf weiteren Plattformen wie diversen BSD-Varianten. psutil ist sehr umfangreich dokumentiert: [Startseite der Dokumentation](https://psutil.readthedocs.io/en/latest/).
@@ -47,6 +52,7 @@ Es gibt für Python für alle gängigen GUI-Frameworks Module, um eine GUI (GUI 
 Einige weitere gängige GUI-Framework sind:
  * [pyside](https://www.qt.io/qt-for-python) - Anbindung von Python an das [Qt Framework](https://www.qt.io/product/framework). Qt ist eines der umfangreichsten Frameworks mit einer breiten Unterstützung für viele Plattformen. Qt eignet sich für auch für große Anwendungen.
  * [python-gtk3](https://python-gtk-3-tutorial.readthedocs.io/en/latest/) - Anbindung von Python an das [GTK](https://docs.gtk.org/) Framework. Damit lassen sich ebenfalls komplexe grafische Benutzeroberflächen erzeugen, wobei man mehr GTK-basierte Anwendungen in der Linux-Welt als in der Windows-Welt vorfindet.
+ * [Flet](https://flet.dev/) - Flet ist ein Python GUI-Framework, welches auf das [Flutter Framework](https://flutter.dev/) aufsetzt. Mit Hilfe von Flet ist es grundsätzlich möglich, Desktop-, Web- und Mobile-Apps auf der gleichen Codebasis zu entwickeln.
  * [Kivy](https://kivy.org/) - Kivy ist ein GUI-Framework, welches speziell für Python entwickelt wird. Kivy bietet ebenfalls eine breite Plattformunterstützung und bietet auch direkte Unterstützung für Touchscreens und Toucheingaben.
 
 ## Datenbankanbindung
@@ -70,4 +76,4 @@ Will man eine webbasierte / HTTP-basierte API abfragen, dann ist DAS Modul dafü
 ***
 
  * Vorheriges Kapitel: [Tipps und Anmerkungen](remarks.md)
- * Zurück zur [Startseite](index.md) 
+ * Zurück zur [Startseite](index.md)

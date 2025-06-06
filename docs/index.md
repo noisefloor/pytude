@@ -17,13 +17,13 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
  13. [Was kommt als Nächstes?](whatnow.md): hilfreiche Links und weiterführende Webseiten
  14. [Tipps und Anmerkungen](remarks.md): ein paar Tipps und Anmerkungen zu den ersten Projekten, GUI-Programmierung, nebenläufiger Programmierung und alternativen Python-Implementierung
  15. [Externe Module](externallibs.md): ein kurzer Überblick über einige viel genutzte und populäre externe Python-Module
- 
+
 ## Weitere Informationen zu PyTuDe
 
  * Lizenz: [CC0 1.0 Universell](https://creativecommons.org/publicdomain/zero/1.0/deed.de)
  * Projektseite bei Github: [noisefloor/pytude](https://github.com/noisefloor/pytude)
  * Kontakt: [E-Mail](nsflr.bnt at gmail.com)
- 
+
 Fehlerkorrekturen u.ä. können gerne als Pull-Request über die Githubseite eingereicht werden!
 
 Das Tutorial orientiert sich stark am englischsprachigen, [offiziellen Tutorial](https://docs.python.org/3/tutorial/index.html) der [Python Software Foundation](https://www.python.org/psf-landing/).
@@ -31,5 +31,6 @@ Das Tutorial orientiert sich stark am englischsprachigen, [offiziellen Tutorial]
 ## Weitere Beitragende
 
  * [Hofei90](https://github.com/Hofei90)
+ * [Kebap](https://github.com/Kebap)
 
 Vielen Dank an alle, die mit Fehlerkorrekturen, Feedback etc. zu PyTuDe beitragen!

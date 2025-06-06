@@ -212,7 +212,7 @@ Found an odd number 9
 
 ## Pass-Anweisung
 
-Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass) bewirkt: nichts. 
+Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass) bewirkt: nichts.
 Sie kann verwendet werden, wenn eine Anweisung syntaktisch erforderlich ist, das Programm aber keine Aktion verlangt. Zum Beispiel:
 
 ```pycon
@@ -258,7 +258,7 @@ def http_error(status):
             return "Something's wrong with the internet"
 ```
 
-Zu beachten ist der letzte Block: Der "Variablenname" `_` fungiert als *Wildcard* und führt immer zu einer Übereinstimmung. Wenn kein Fall übereinstimmt, wird keine der Verzweigungen ausgeführt.
+Zu beachten ist der letzte Block: Der "Variablenname" `_` fungiert als *Wildcard* und führt immer zu einer Übereinstimmung. Wenn kein Fall übereinstimmt würde, würde keine der Verzweigungen ausgeführt. Was natürlich nur der Fall sein kann, wenn kein `case _` verwendet würde.
 
 Man kann mehrere Literale in einem einzigen Muster mit `|` ("oder") kombinieren:
 
@@ -846,7 +846,7 @@ Kleine anonyme Funktionen können mit dem Schlüsselwort [lambda](https://docs.p
 43
 ```
 
-Im obigen Beispiel wird ein Lambda-Ausdruck verwendet, um eine Funktion zurückzugeben. Eine andere Verwendung ist die Übergabe einer kleinen Funktion als Argument:
+Im obigen Beispiel wird ein Lambda-Ausdruck verwendet, um eine Funktion zurückzugeben. Eine andere Verwendung ist die Übergabe einer kleinen Funktion als Argument. Im folgenden Beispiel wird `list.sort` den Schlüssel, nachdem sortiert werden soll, als Lambda-Funktion übergeben:
 
 ```pycon
 >>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
@@ -920,4 +920,3 @@ Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-
  * Nächstes Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
  * Vorheriges Kapitel: [Eine lockere Einführung in Python](introduction.md)
  * Zurück zur [Startseite](index.md)
- 
