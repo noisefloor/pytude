@@ -89,7 +89,7 @@ Hello World
 <class 'demo.EmptyClass'>
 ```
 
-## mehr zu Modulen
+## Mehr zu Modulen
 
 Ein Modul kann sowohl ausführbare Anweisungen als auch Funktionsdefinitionen enthalten. Diese Anweisungen dienen der Initialisierung des Moduls. Sie werden nur beim *ersten* Auftreten des Modulnamens in einer Import-Anweisung ausgeführt. Sie werden immer ausgeführt, auch wenn die Datei als Skript ausgeführt wird (dazu später in diesem Kapitel mehr).
 
@@ -226,7 +226,7 @@ Weiterführende Informationen sind in der Python-Dokumentation unter [The initia
 
 Nach der Initialisierung können Python-Programme `sys.path` ändern. Das Verzeichnis, das das auszuführende Skript enthält, wird an den Anfang des Suchpfades gesetzt, noch vor dem Pfad der Standardbibliothek. Das bedeutet, dass Skripte in diesem Verzeichnis anstelle von gleichnamigen Modulen im Bibliotheksverzeichnis geladen würden. Das führt in der Regel zu verwirrenden Fehlermeldungen, gerade bei Einsteigern. Von daher sollte man seinen Skripten immer eigenständige Namen geben, die nicht identisch mit den Namen von Standardmodulen bzw. zu importierenden Modulen sind.
 
-### kompilierte Python Dateien
+### Kompilierte Pythondateien
 
 Um das Laden von Modulen zu beschleunigen, speichert Python ein zu Python Bytecode kompilierte Version jedes Moduls im `__pycache__` Verzeichnis unter dem Namen `module.{version}.pyc`, wobei die Version das Format der kompilierten Datei kodiert. Sie enthält im Allgemeinen die Python-Versionsnummer. Zum Beispiel würde in CPython 3.9 die kompilierte Version von spam.py als `__pycache__/spam.cpython-39.pyc` zwischengespeichert werden. Diese Namenskonvention ermöglicht die Koexistenz von kompilierten Modulen aus verschiedenen Releases und verschiedenen Python-Versionen.
 
@@ -241,7 +241,7 @@ Einige Expertentipps:
 * Das Modul [compileall](https://docs.python.org/3/library/compileall.html#module-compileall) kann .pyc Dateien für alle Module in einem Verzeichnis erstellen.
 * Es gibt mehr Details über diesen Prozess, einschließlich Entscheidungsbaums, in der [PEP3147](https://peps.python.org/pep-3147/).
 
-## Standard Module
+## Standardmodule
 
 Python wird mit einer relativ umfangreichen Bibliothek von Standardmodulen ausgeliefert, die in der [Python Library Reference](https://docs.python.org/3/library/index.html) beschrieben sind. Einige Module sind in dem Interpreter eingebaut. Diese ermöglichen den Zugriff auf Operationen, die nicht Teil des Kerns der Sprache sind, aber dennoch eingebaut sind, entweder aus Gründen der Effizienz oder um den Zugriff auf Betriebssystemprimitive wie Systemaufrufe zu ermöglichen.
 
@@ -266,7 +266,7 @@ Die Variable `sys.path` ist eine Liste von Strings, die den Suchpfad des Interpr
 >>> sys.path.append('/ufs/guido/lib/python')
 ```
 
-## die dir() Funktion
+## Die dir-Funktion
 
 Die eingebaute Funktion [dir](https://docs.python.org/3/library/functions.html#dir) wird verwendet, um herauszufinden, welche Namen ein Modul definiert. Sie gibt eine sortierte Liste von Namen innerhalb des Moduls zurück:
 
@@ -484,5 +484,7 @@ Obwohl diese Funktion nicht oft benötigt wird, kann sie verwendet werden, um di
 
 ***
 
-* nächstes Kapitel: [Eingabe und Ausgabe](inputoutput.md)
-* vorheriges Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
+ * Nächstes Kapitel: [Eingabe und Ausgabe](inputoutput.md)
+ * Vorheriges Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
+ * Zurück zur [Startseite](index.md)
+ 

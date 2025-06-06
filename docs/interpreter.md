@@ -1,4 +1,4 @@
-# der Python-Interpreter
+# Den Python-Interpreter nutzen
 
 ## Installation
 Je nach verwendetem Betriebssystem ist der Python-Interpreter bereits vorinstalliert und kann direkt verwendet werden. Ansonsten lässt dieser sich einfach für eine Vielzahl von Plattformen nachinstallieren.
@@ -94,7 +94,7 @@ Fortsetzungszeilen werden benötigt, wenn ein mehrzeiliges Konstrukt eingegeben 
 Be careful not to fall off!
 ```
 
-## der Interpreter und seine Umgebung
+## Der Interpreter und seine Umgebung
 
 ### Quellcode Encoding
 
@@ -125,5 +125,6 @@ Sofern es keinen trifftigen Grund gibt, eine andere Codierung als UTF-8 zu nutze
 
 ***
 
- * nächste Seite: [eine ungezwungene Einführung in Python](introduction.md)
- * vorherige Seite: [ein kleiner Appetitanreger auf Python](appetite.md)
+ * Nächstes Kapitel: [Eine lockere Einführung in Python](introduction.md)
+ * Vorheriges Kapitel: [Ein kleiner Appetitanreger auf Python](appetite.md)
+ * Zurück zur [Startseite](index.md)

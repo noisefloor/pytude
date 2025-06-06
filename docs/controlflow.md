@@ -1,8 +1,8 @@
-# weitere Werkzeuge zur Steuerung des Programmflusses
+# Weitere Werkzeuge zur Steuerung des Programmflusses
 
 Neben der im vorherigen Kapitel vorgestellten `while`-Anweisung gibt es Python noch einige weitere Anweisungen zur Steuerung des Programmflusses, die hier in diesem Kapitel erläutert werden.
 
-## if Bedingung
+## If-Bedingung
 
 Die vielleicht bekannteste und oft genutzte Anweisung ist die [if](https://docs.python.org/3/reference/compound_stmts.html#if) Bedingung. Beispiel:
 
@@ -28,7 +28,7 @@ Der Ausdruck hinter `if` und `elif` muss immer einen Wahrheitswert ergeben, also
 
 Wenn man denselben Wert mit mehreren Konstanten vergleichen oder nach bestimmten Typen oder Attributen suchen will, kann auch die Anweisung `match` nützlich sein, welche weiter unten noch erläutert wird.
 
-## for-Anweisung - Schleifen mit for
+## For-Anweisung - Schleifen mit for
 
 Die [for](https://docs.python.org/3/reference/compound_stmts.html#for) Anweisung von Python unterscheidet sich ein wenig von dem, was man vielleicht von anderen Programmiersprachen wie C oder Pascal gewohnt ist. Anstatt immer über eine arithmetische Folge von Zahlen zu iterieren (wie in Pascal) oder dem Benutzer die Möglichkeit zu geben, sowohl den Iterationsschritt als auch die Haltebedingung zu definieren (wie in C), iteriert Pythons `for` Anweisung über die Elemente einer beliebigen Sammlung (wie eine Liste oder eine Zeichenkette) in der Reihenfolge, in der sie in der Sammlung vorkommen. Zum Beispiel:
 
@@ -84,7 +84,7 @@ Das Iterieren über eine Sammlung, im Englischen auch als "iterable" bezeichnet,
 7
 ```
 
-## range-Funktion
+## Range-Funktion
 
 Wenn über eine Zahlenfolge iteriert werden muss, ist die eingebaute Funktion [range](https://docs.python.org/3/library/stdtypes.html#range) sehr nützlich. Sie erzeugt arithmetische Progressionen:
 
@@ -155,7 +155,7 @@ Ein solches Objekt ist "iterable", auf Deutsch: iterierbar, d.h. es eignet sich 
 
 Später werden noch mehr Funktionen zu sehen sein, die Iterables zurückgeben und Iterables als Argumente annehmen. Im Kapitel über Datenstrukturen wird z.B. ausführlicher über Listen gesprochen.
 
-## break und continue Anweisungen, else Klauseln in Schleifen
+## Break und continue Anweisungen, else Klauseln in Schleifen
 
 Die Anweisung [break](https://docs.python.org/3/reference/simple_stmts.html#break) bricht aus der innersten umschließenden `for` oder `while` Schleife aus.
 
@@ -210,7 +210,7 @@ Found an even number 8
 Found an odd number 9
 ```
 
-## pass Anweisung
+## Pass-Anweisung
 
 Die Anweisung [pass](https://docs.python.org/3/reference/simple_stmts.html#pass) bewirkt: nichts. 
 Sie kann verwendet werden, wenn eine Anweisung syntaktisch erforderlich ist, das Programm aber keine Aktion verlangt. Zum Beispiel:
@@ -237,7 +237,7 @@ Ein anderer Fall, an dem `pass` verwendet werden kann, ist als Platzhalter für 
 ...
 ```
 
-## match Anweisung
+## Match-Anweisung
 
 Eine [match](https://docs.python.org/3/reference/compound_stmts.html#match) Anweisung nimmt einen Ausdruck und vergleicht dessen Wert mit aufeinanderfolgenden Mustern, die als ein oder mehrere `case` Blöcke angegeben sind. Oberflächlich betrachtet ähnelt dies einer switch-Anweisung in C, Java oder JavaScript (und vielen anderen Sprachen), aber es ähnelt eher dem Mustervergleich in Sprachen wie Rust oder Haskell. Nur das erste Muster, das passt, wird ausgeführt, und es können auch Komponenten (Sequenzelemente oder Objektattribute) aus dem Wert in Variablen extrahiert werden.
 
@@ -491,7 +491,7 @@ SyntaxError: invalid syntax
 SyntaxError: invalid syntax
 ```
 
-## mehr zur Definition von Funktionen
+## Mehr zur Definition von Funktionen
 
 Es ist auch möglich, Funktionen mit einer variablen Anzahl von Argumenten zu definieren. Es gibt drei Formen, die miteinander kombiniert werden können.
 
@@ -646,7 +646,7 @@ sketch : Cheese Shop Sketch
 
 Zu beachten ist, dass die Reihenfolge, in der die Schlüsselwortargumente ausgegeben werden, garantiert der Reihenfolge entspricht, in der sie im Funktionsaufruf angegeben wurden.
 
-### spezielle Parameter
+### Spezielle Parameter
 
 Standardmäßig können Argumente an eine Python-Funktion entweder nach Position oder explizit nach Schlüsselwort übergeben werden. Aus Gründen der Lesbarkeit und der Leistung ist es sinnvoll, die Art und Weise, wie Argumente übergeben werden können, einzuschränken, sodass ein Entwickler nur einen Blick auf die Funktionsdefinition werfen muss, um festzustellen, ob Elemente per Position, per Position oder Schlüsselwort oder per Schlüsselwort übergeben werden.
 
@@ -671,7 +671,7 @@ Bei näherer Betrachtung ist es möglich, bestimmte Parameter als *positional-on
 
 Parameter, die dem `/` folgen, können *Positions- oder Schlüsselwort* oder *Nur-Schlüsselwort* sein.
 
-#### nur Schlüsselwortargumente
+#### Nur Schlüsselwortargumente
 
 Um Parameter als *keyword-only* zu kennzeichnen, was bedeutet, dass die Parameter per Schlüsselwortargument übergeben werden müssen, setzt man ein `*` in die Argumentenliste direkt vor den ersten *keyword-only* Parameter.
 
@@ -785,7 +785,7 @@ Als Richtlinie:
  * Man verwendet nur Schlüsselwörter, wenn die Namen eine Bedeutung haben und die Funktionsdefinition durch die explizite Angabe von Namen verständlicher ist oder man verhindern will, dass sich Benutzer auf die Position des übergebenen Arguments verlassen.
  * Für eine API sollte man nur Positionsangaben verwenden, um zu verhindern, dass die API kpautt ist, wenn der Name des Parameters in der Zukunft geändert werden sollte.
 
-### beliebige Argumentlisten
+### Beliebige Argumentlisten
 
 Die am seltensten verwendete Option ist schließlich die Angabe, dass eine Funktion mit einer beliebigen Anzahl von Argumenten aufgerufen werden kann. Diese Argumente werden in ein Tupel verpackt. Vor der variablen Anzahl von Argumenten können null oder mehr normale Argumente auftreten.
 
@@ -855,7 +855,7 @@ Im obigen Beispiel wird ein Lambda-Ausdruck verwendet, um eine Funktion zurückz
 [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
 ```
 
-### docstrings
+### Docstrings
 
 Im Folgenden werden einige Konventionen für den Inhalt und die Formatierung von docstrings (=Dokumentationsstrings) erläutert.
 
@@ -917,5 +917,7 @@ Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-
 
 ***
 
- * nächstes Kapitel: [Datentypen und -strukturen](datastructures.md)
- * vorheriges Kapitel: [eine lockere Einführung in Python](introduction.md)
+ * Nächstes Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
+ * Vorheriges Kapitel: [Eine lockere Einführung in Python](introduction.md)
+ * Zurück zur [Startseite](index.md)
+ 

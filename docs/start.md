@@ -24,4 +24,5 @@ Dieses Tutorial erhebt nicht den Anspruch, umfassend oder vollumfänglich zu sei
 
 ***
 
-Nächste Seite: [Ein kleiner Appetitanreger](appetite.md) für Python
+ * Nächstes Kapitel: [Ein kleiner Appetitanreger auf Python](appetite.md)
+ * Zurück zur [Startseite](index.md)

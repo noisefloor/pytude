@@ -1,4 +1,4 @@
-# eine (kurze) Tour durch die Standardbibliothek
+# Eine (kurze) Tour durch die Standardbibliothek
 
 Wie an anderer Stelle bereits erwähnt, bringt die Python Standardinstallation eine sehr große Anzahl an Modulen für alle möglichen Aufgaben mit. Eine Übersicht gruppiert nach Themengebieten ist auf der Dokumentationsseite [Library Index](https://docs.python.org/3/library/index.html) zu finden.
 
@@ -7,7 +7,7 @@ Im Folgenden werden einige Module aus der Standardbibliothek (sehr) kurz vorgest
 Man muss (und realistischer Weise kann) sicherlich nicht alle Module aus der Standardbibliothek in- und auswendig kennen. Und das ist auch nicht wirklich notwendig. Aber es ist durchaus hilfreich, wenn man sich mehr mit Python beschäftigt und mehr damit programmiert, eine Idee zu haben, für welche Aufgaben es bereits ein fertiges Modul in der Standardbibliothek gibt. Das reduziert den eigenen Programmieraufwand und man ist schneller mit der Erstellung seines Programms fertig.
 
 ## Kommandozeilenargumente
-### sys.argv
+### Sys.argv
 
 Skripte müssen häufig Befehlszeilenargumente verarbeiten. Diese Argumente werden im argv-Attribut des [sys](https://docs.python.org/3/library/sys.html#module-sys) Moduls als Liste gespeichert. Nimmt man zum Beispiel die folgende Datei "demo.py":
 
@@ -32,7 +32,7 @@ Die Liste `sys.argv` enthält an erster Position, also am Index Null, immer den 
 
 Die Verwendung von `sys.argv` ist für das schnelle Testen oder einfache Argumente gut genug. Alle Argumente werden als String in die Liste aufgenommen. Auch wenn es wie im Falle der 2 eigentlich ein Integerwert ist.
 
-### argparse
+### Argparse
 
 Das [argparse](https://docs.python.org/3/library/argparse.html#module-argparse) Modul bietet einen ausgefeilteren Mechanismus zur Verarbeitung von Befehlszeilenargumenten. Das folgende Skript extrahiert einen oder mehrere Dateinamen und eine optionale Anzahl von Zeilen, die angezeigt werden sollen:
 
@@ -53,7 +53,7 @@ Wenn das Skript auf der Kommandozeile mit `python3 top.py --lines=5 alpha.txt be
 
 Das argparse-Modul ist immer die bessere Wahl als `sys.argv`, wenn man ein paar mehr und nicht-trivial Argumente übergeben will. Außerdem bietet argparse noch viel mehr Möglichkeiten wie die Ausgabe von Hilfstexten, Beschränkungen von Argumenten auf bestimmte Werte, sich gegenseitig ausschließende Argumente und vieles mehr.
 
-## String Pattern Matching - reguläre Ausdrücke
+## Reguläre Ausdrücke - String Pattern Matching
 
 Das Modul [re](https://docs.python.org/3/library/re.html#module-re) bietet Werkzeuge für [reguläre Ausdrücke](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck) zur erweiterten Verarbeitung von Zeichenketten. Für komplexe Übereinstimmungen und Manipulationen bieten reguläre Ausdrücke prägnante und optimierte Lösungen:
 
@@ -68,7 +68,7 @@ Das Modul [re](https://docs.python.org/3/library/re.html#module-re) bietet Werkz
 Mit dem re-Modul lässt sich Text nach (Teil-) Ausdrücken auch mit (sehr) komplexen Suchmustern durchsuchen.
 
 ## Mathematik
-### math
+### Math
 
 Das Modul [math](https://docs.python.org/3/library/math.html) ermöglicht den Zugriff auf die zugrunde liegenden C-Bibliotheksfunktionen für Mathematik:
 
@@ -80,7 +80,7 @@ Das Modul [math](https://docs.python.org/3/library/math.html) ermöglicht den Zu
 10.0
 ```
 
-## random
+## Random
 Das Modul [random](https://docs.python.org/3/library/random.html) stellt Werkzeuge zur Verfügung, um Zufallsauswahlen zu generieren:
 
 ```pycon
@@ -95,7 +95,7 @@ Das Modul [random](https://docs.python.org/3/library/random.html) stellt Werkzeu
 4
 ```
 
-### statistics
+### Statistics
 
 Das Modul [statistics](https://docs.python.org/3/library/statistics.html) berechnet die grundlegenden statistischen Eigenschaften (Mittelwert, Median, Varianz, etc.) von numerischen Daten:
 
@@ -171,7 +171,7 @@ Hinweis: Das Modul heißt "datetime" und enthält ein Submodul mit dem Namen "da
 >>> now = datetime.now()
 ```
 
-## pathlib - Umgang mit Pfaden und Verzeichnissen
+## Pathlib - Umgang mit Pfaden und Verzeichnissen
 Das Modul [pathlib](https://docs.python.org/3/library/pathlib.html) bietet eine Reihe von Klassen und Methoden zum Umgang mit Dateipfaden. Eine zentralle Klasse ist `Path`, welche einen Dateipfad darstellt.
 
 Das Modul bietet unter anderem das Zusammensetzen von neuen Pfaden aus mehreren Path-Objekte, die Extraktion von Pfad, Dateiname und Dateiendung aus einem Path-Objekt sowie das Iterieren über den Inhalt eines Path-Ojekts, sofern es sich dabei um einen Verzeichnis handelt.
@@ -229,7 +229,7 @@ class TestStatisticalFunctions(unittest.TestCase):
 unittest.main()  # Calling from the command line invokes all tests
 ```
 
-## locale - lokale Einstellungen für Zahlen und Währung
+## Locale - lokale Einstellungen für Zahlen und Währung
 
 Das Modul [locale](https://docs.python.org/3/library/locale.html#module-locale) greift auf eine Datenbank mit kulturspezifischen Datenformaten zu. Das Attribut `grouping` der locale-Formatfunktion bietet eine direkte Möglichkeit, Zahlen mit Gruppentrennzeichen zu formatieren:
 
@@ -351,7 +351,7 @@ Diese Werkzeuge sind zwar sehr leistungsfähig, aber kleine Designfehler können
 
 *Hinweis*: Threads, über das threading Modul in einem Python-Skript gestartet werden, laufen im Interpreter von CPython (welches hier, wie ganz am Anfang des Tutorials gesagt, behandelt wird) nicht parallel, es kann nur ein Thread gleichzeitig laufen. Dies ist durch Interna des Python-Interpreter an sich bedingt, nämlich den [GIL](https://wiki.python.org/moin/GlobalInterpreterLock) (ausgeschrieben: great interpreter lock). Wer mehr zu dem Thema wissen möchte, kann z.B. im Internet nach "python gil" suchen.
 
-### weitere Module für nebenläufige Programmierung
+### Weitere Module für nebenläufige Programmierung
 
 Python hat standardmäßig noch drei weitere Module für nebenläufige Programmierung an Bord:
 
@@ -359,7 +359,8 @@ Python hat standardmäßig noch drei weitere Module für nebenläufige Programmi
  * [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html): Das Modul `concurrent.futures` bietet eine High-Level-Schnittstelle für die asynchrone Ausführung von Aufgaben. Die Schnittstell ist für Threads und Multiprocessing identisch. Zentrales Element des Moduls die die `Executer` Klasse, die sich um die Aufgabenverteilung kümmert.
  * [asyncio](https://docs.python.org/3/library/asyncio.html): Nebenläufigkeit mit `async`/`await` Syntax. Besonders geeignet für asyncio für I/O-lastigem und hochstrukturierten Netzwerkcode.
 
-## weitere Module
+## Weitere Module
+
  * [iterttools](https://docs.python.org/3/library/itertools.html): Das Modul `itertools` bietet eine größere Sammlung von Funktionen, die verschiedene Iterator zum Iterieren über Sequenzen bereitstellen
  * [SQLite Datenbank](https://docs.python.org/3/library/sqlite3.html): Das Modul `sqlite3` ist ein Wrapper für die SQLite-Datenbankbibliothek und stellt eine persistente Datenbank zur Verfügung, die aus Python heraus genutzt werden kann.
  * [email](https://docs.python.org/3/library/email.html#module-email): Das E-Mail-Paket ist eine Bibliothek zur Verwaltung von E-Mail-Nachrichten, einschließlich MIME- und anderer RFC 2822-basierter Nachrichtendokumente. Im Gegensatz zu smtplib und poplib, die tatsächlich Nachrichten senden und empfangen, verfügt das E-Mail-Paket über ein komplettes Toolset zum Erstellen oder Dekodieren komplexer Nachrichtenstrukturen (einschließlich Anhängen) und zur Implementierung von Internet-Kodierungs- und Header-Protokollen.
@@ -368,5 +369,6 @@ Python hat standardmäßig noch drei weitere Module für nebenläufige Programmi
 
 ***
 
- * nächstes Kapitel: [venv - virtuelle Umgebungen für Python](venv.md)
- * vorheriges Kapitel: [Klassen](classes.md)
+ * Nächstes Kapitel: [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
+ * Vorheriges Kapitel: [Klassen](classes.md)
+ * Zurück zur [Startseite](index.md)

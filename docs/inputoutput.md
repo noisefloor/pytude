@@ -62,7 +62,7 @@ The value of x is 32.5, and y is 40000...
 
 Das [string-Modul](https://docs.python.org/3/library/string.html#module-string) enthält eine [string.Template Klasse](https://docs.python.org/3/library/string.html#string.Template), die eine weitere Möglichkeit bietet, Werte in Strings zu ersetzen, indem sie Platzhalter wie `$x` verwendet und diese durch Werte aus einem Wörterbuch ersetzt, dafür aber viel weniger Kontrolle über die Formatierung bietet.
 
-### formatierte String-Literale - f-Strings
+### Formatierte String-Literale - f-Strings
 
 Formatierte String-Literale, kurz f-Strings genannt, erlauben es, den Wert von Python-Ausdrücken in eine Zeichenkette einzuschließen, indem man der Zeichenkette ein `f` oder `F` voranstellt und Ausdrücke als `{Ausdruck}` schreibt.
 
@@ -108,7 +108,7 @@ Debugging bugs='roaches' count=13 area='living room'
 
 Weitere Informationen über den `=` Spezifizierer sind [in der Python-Dokumentation](https://docs.python.org/3/whatsnew/3.8.html#bpo-36817-whatsnew) zu finden. Eine Referenz zu diesen Formatspezifikationen finden man im Referenzhandbuch unter [Format Specification Mini-Language](https://docs.python.org/3/library/string.html#formatspec).
 
-### die String format() Method
+### Die str.format-Methode
 
 Die grundsätzliche Nutzung der `str.format` Methode sieht wie folgt aus:
 
@@ -179,7 +179,7 @@ Dies ist besonders nützlich in Kombination mit der eingebauten Funktion [vars](
 
 Eine vollständige Übersicht über die `string.format` Methode ist in der Python-Dokumentation unter [Format String Syntax](https://docs.python.org/3/library/string.html#formatstrings) zu finden.
 
-### manuellele String Formattierung
+### Manuellele String-Formatierung
 
 Das folgende Beispiel ist identisch mit dem vorherigen, nutzt aber eine vollständig manuelle Formatierung:
 
@@ -216,7 +216,7 @@ Es gibt eine weitere Methode, `str.zfill`, die eine numerische Zeichenkette auf 
 '3.14159265359'
 ```
 
-### die alte String-Formatierung
+### Die alte String-Formatierung
 
 Der %-Operator (modulo) kann auch für die Formatierung von Zeichenketten verwendet werden. In `format % values` (wobei `format` ein String ist) werden Instanzen von `%` in `format` durch null oder mehr Elemente von `values` ersetzt. Diese Operation ist allgemein als String-Interpolation bekannt. Zum Beispiel:
 
@@ -378,7 +378,7 @@ JSON-Dateien sind standardmäßig Textdateien die mit UTF-8 kodiert sein müssen
 
 Diese einfache Serialisierungstechnik kann mit Listen und Wörterbüchern umgehen, aber die Serialisierung beliebiger Klasseninstanzen in JSON erfordert ein wenig zusätzlichen Aufwand. Die Referenz für das Modul `json` enthält eine Erklärung dazu.
 
-### weitere Methoden
+### Weitere Methoden
 
 Im Gegensatz zu JSON ist [pickle](https://docs.python.org/3/library/pickle.html) ein Protokoll, das die Serialisierung beliebig komplexer Python-Objekte ermöglicht. Als solches ist es spezifisch für Python und kann nicht für die Kommunikation mit Anwendungen verwendet werden, die in anderen Sprachen geschrieben sind. Außerdem ist es standardmäßig unsicher. Die Deserialisierung von Pickle-Daten, die aus einer nicht vertrauenswürdigen Quelle stammen, kann beliebiger Code ausgeführt werden, wenn die Daten von einem geschickten Angreifer manipuliert wurden.
 
@@ -386,5 +386,6 @@ CSV-Dateien erlauben es, Daten strukturiert abzulegen mit einer Struktur ähnlic
 
 ***
 
- * nächstes Kapitel: [Fehler und Ausnahmen](errors.md)
- * vorheriges Kapitel: [Module](modules.md)
+ * Nächstes Kapitel: [Fehler und Ausnahmen (Exceptions)](errors.md)
+ * Vorheriges Kapitel: [Module](modules.md)
+ * Zurück zur [Startseite](index.md)
