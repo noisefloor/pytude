@@ -2,7 +2,7 @@
 
 In diesem Kapitel werden einige Dinge, die bereits in vorherigen Kapiteln beschrieben wurden, ausführlicher erklärt. Und es kommen auch einige neue Datenstrukturen und ergänzende Informationen hinzu.
 
-## mehr zu Listen
+## Mehr zu Listen
 
 Der Datentyp Liste hat einige weitere Methoden. Im Folgenden alle Methoden von Listenobjekten:
 
@@ -183,7 +183,7 @@ List Comprehensions können komplexe Ausdrücke und verschachtelte Funktionen en
 
 List Comprehensions gelten im Allgemeinen als "pythonisch" und werden entsprechend häufig verwendet bzw. es gilt allgemein als empfehlenswert, List Comprehensions an passenden Stellen im Code zu verwenden.
 
-### verschachtelte List Comprehensions
+### Verschachtelte List Comprehensions
 
 Der Anfangsausdruck einer List Comprehension kann ein beliebiger Ausdruck sein, einschließlich einer anderen List Comprehension. Im folgenden Beispiel wird eine 3x4-Matrix, die als eine Liste von 3 Listen der Länge 4 implementiert ist, generiert:
 
@@ -234,7 +234,7 @@ In der realen Programmierwelt sollte man integrierte Funktionen komplexen Ablauf
 [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
 ```
 
-## die del Anweisung
+## Die del-Anweisung
 
 Es gibt eine Möglichkeit, ein Element aus einer Liste zu entfernen. Dazu dient die [del](https://docs.python.org/3/tutorial/datastructures.html) Anweisung in Kombination mit der Angabe des Indexes des Elements, das man entfernen möchte. `del` steht für `delete`, auf Deutsch: entfernen, löschen. Dies unterscheidet sich von der Methode `list.pop`, die einen Wert zurückgibt. Die Anweisung `del` kann auch verwendet werden, um Slices aus einer Liste zu entfernen oder die gesamte Liste zu löschen (was zuvor durch Zuweisung einer leeren Liste an den Slice gemacht wurde). Zum Beispiel:
 
@@ -421,7 +421,7 @@ Wenn die Schlüssel einfache Zeichenketten sind, ist es manchmal einfacher, Paar
 {'sape': 4139, 'guido': 4127, 'jack': 4098}
 ```
 
-### weitere Methoden von Wörterbüchern
+### Weitere Methoden von Wörterbüchern
 
 Iteriert man über ein Wörterbuch erhält man die Schlüssel als Rückgabewert. Um Schlüssel und Wert zu erhalten nutzt man die `dict.items()` Methode:
 
@@ -458,7 +458,7 @@ Gibt man bei `dict.get()` keinen Defaultwert an erhält man stattdessen `None` a
 
 Wörterbücher kennen noch eine ganze Reihe weiterer Optionen, welche [in der Dokumentation](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict) nachgelesen werden können.
 
-## mehr zur Iteration über Datenstrukturen
+## Mehr zur Iteration über Datenstrukturen
 
 Das Iterieren über Schlüssel-Wert Paare eines Wörterbuchs wurde bereits im vorherigen Abschnitt gezeigt.
 
@@ -541,7 +541,7 @@ Manchmal ist es verlockend, eine Liste zu ändern, während man sie in einer Sch
 [56.2, 51.7, 55.3, 52.5, 47.8]
 ```
 
-## mehr über Bedingungen für if und while
+## Mehr über Bedingungen für if und while
 
 Die in `while` und `if` Anweisungen verwendeten Bedingungen können beliebige Operatoren enthalten, nicht nur einfache Vergleiche.
 
@@ -599,5 +599,5 @@ Zu beachten ist, dass der Vergleich von Objekten unterschiedlichen Typs mit `<` 
 
 ***
 
- * nächstes Kapitel: [Module](modules.md)
- * vorheriges Kapitel: [weitere Werkzeuge zur Steuerung des Programmflusses](controlflow.md)
+ * Nächstes Kapitel: [Module](modules.md)
+ * Vorheriges Kapitel: [Weitere Werkzeuge zur Steuerung des Programmflusses](controlflow.md)

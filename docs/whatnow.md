@@ -1,4 +1,4 @@
-# Was kommt als nächstes?
+# Was kommt als Nächstes?
 
 Die Lektüre dieses Tutorials bis hierher hat hoffentlich das Interesse an der Verwendung von Python gestärkt - und die ersten Python-Programm und Projekte sind bereits in Planung.
 
@@ -9,7 +9,7 @@ Auf der Webseite der Python Software Foundation [www.python.org](https://www.pyt
 
 Außerdem gibt es noch das [Python Wiki](https://wiki.python.org/moin/), wo man auch viele Artikel rund um Python findet.
 
-## weitere Webseiten
+## Weitere Webseiten
 Es gibt auch sehr viele weitere Webseite, Blogeinträge, Tutorials, kostenfreien und kostenpflichtigen Kursen im Internet rund um das Thema Python. Eine kleine Auswahl an empfehlenswerten Seiten davon ist:
 
  * [das deutsche Python-Forum](https://www.python-forum.de): privat, seit 2002 betriebenes Supportforum für die deutsche Python-Community. Primäre Anlaufstelle bei Fragen rund um Python Programmierung, Codereviews etc.
@@ -20,7 +20,7 @@ Es gibt auch sehr viele weitere Webseite, Blogeinträge, Tutorials, kostenfreien
  * [Real Python](https://realpython.com/): Teils kostenlose, teils kostenpflichte Sammlung von Python-Tutorials zu allen möglichen Themenbereichen. Viele der textbasierten Tutorials sind kostenlos lesbar, Videotutorials sind kostenpflichtig. In der Regel sind die Tutorials gut ausgearbeitet und verständlich geschrieben.
  * [Pycoder's Weeksly](https://pycoders.com/latest): Wöchentlicher, kostenloser Newsletter rund im Python. Enthält viele Links zu Artikel und Blogbeiträgen zu News und allgemeinen Python-Themen
 
-### gute vs. schlechte Webseiten
+### Gute vs. schlechte Webseiten
 Wie oben bereits erwähnt gibt es Unmengen an Webseiten zum Thema Python. Dabei reicht das Qualitätsspektrum von "einwandfrei" über "war mal gut, ist aber heute veraltet" bis hin zu "quasi unbrauchbar".
 
 Das Problem dabei, wenn man neu in einem Thema (wie Python-Programmierung) ist tut man sich naturgemäß schwer beim Lesen einer Webseite zum Thema Python Programmierung zu beurteilen, ob das gesagt gut, brauchbar oder unbrauchbar ist. "unbrauchbar" ist hier gemeint im Sinne von "würde so laufen, programmiert man aber besser nicht so - weil z.B. unpythonisch, fragil oder viel zu umständlich etc.
@@ -38,5 +38,5 @@ Das heißt auch, dass man eher früher als später auch englischsprachige Dokume
 
 ***
 
- * nächste Seite: [Tipps und Anmerkungen](remarks.md)
- * vorherige Seite: [virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
+ * Nächste Seite: [Tipps und Anmerkungen](remarks.md)
+ * Vorherige Seite: [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)

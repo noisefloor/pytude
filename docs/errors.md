@@ -267,7 +267,7 @@ RuntimeError
 
 Mehr Information über Verkettungsmechanismen findet man in der Python-Dokumentation unter [Built-in Exceptions](https://docs.python.org/3/library/exceptions.html#bltin-exceptions)
 
-## benutzerdefinierte Ausnahmen
+## Benutzerdefinierte Ausnahmen
 
 Programme können ihre eigenen Ausnahmen definieren, indem sie eine neue Ausnahmeklasse erstellen (mehr zu Klassen ist im entsprechenden Kapitel dieses Tutorial zu finden). Ausnahmen sollten normalerweise von der Klasse `Exception` abgeleitet werden, entweder direkt oder indirekt.
 
@@ -345,7 +345,7 @@ Wie man sehen kann, wird die `finally` Klausel auf jeden Fall ausgeführt. Der `
 
 In realen Anwendungen ist die `finally` Klausel nützlich, um externe Ressourcen (wie Dateien oder Netzwerkverbindungen) freizugeben, unabhängig davon, ob die Verwendung der Ressource erfolgreich war.
 
-## vordefinierte Ausräumaktionen
+## Vordefinierte Aufräumaktionen
 
 Einige Objekte definieren standardmäßige Aufräumaktionen, die durchgeführt werden, wenn das Objekt nicht mehr benötigt wird, unabhängig davon, ob die Operation, die das Objekt verwendet, erfolgreich war oder nicht. Im folgenden Beispiel wird versucht, eine Datei zu öffnen und ihren Inhalt auf den Bildschirm auszugeben:
 
@@ -511,5 +511,5 @@ Wenn man zum Beispiel Ausnahmen in einer Ausnahmegruppe sammelt, möchten man vi
 
 ***
 
- * nächstes Kapitel: [Klassen](classes.md)
- * vorheriges Kapitel: [Eingabe und Ausgabe](inputoutput.md)
+ * Nächstes Kapitel: [Klassen](classes.md)
+ * Vorheriges Kapitel: [Eingabe und Ausgabe](inputoutput.md)

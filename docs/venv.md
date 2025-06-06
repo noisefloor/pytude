@@ -1,4 +1,4 @@
-# virtuelle Umgebungen und Paketverwaltung mit pip
+# Virtuelle Umgebungen und Paketverwaltung mit pip
 
 ## Einführung
 
@@ -14,7 +14,7 @@ Ein weiterer, damit einhergehender Vorteil ist, dass innerhalb einer virtuellen 
 
 Von daher gilt es im Allgemeinen als "best practice", in einer virtuellen Python-Umgebung zu arbeiten, sobald man Module aus externen Quellen nachinstallieren möchte oder muss. Außerdem kann es je nach verwendetem Betriebssystem und genutzter pip-Version (Informationen zu pip siehe Abschnitt *"Python Pakete mit pip verwalten"* weiter unten) vorkommen, dass pip die Nutzung einer virtuellen Umgebung forciert.
 
-## ein Virtual Environment anlegen
+## Ein Virtual Environment anlegen
 
 Das Modul, mit dem virtuelle Umgebungen erstellt und verwaltet werden, heißt [venv](https://docs.python.org/3/library/venv.html). `venv` ist normalerweise in der Python Standardinstallation enthalten. Bei manchen Linuxdistributionen kann es notwendig sein, das Paket **python3-venv** über die Paketverwaltung des Systems nachzuinstallieren.
 
@@ -175,5 +175,5 @@ Wenn man selber ein Python Modul im Python Packge Index veröffentlichen möchte
 
 ***
 
- * nächstes Kapitel: [Was kommt als nächstes?](whatnow.md)
- * vorheriges Kapitel: [eine (kurze) Tour durch die Standardbibliothek](stdlib.md)
+ * Nächstes Kapitel: [Was kommt als Nächstes?](whatnow.md)
+ * Vorheriges Kapitel: [Eine (kurze) Tour durch die Standardbibliothek](stdlib.md)

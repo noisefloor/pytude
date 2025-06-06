@@ -8,7 +8,7 @@ In der C++-Terminologie sind Klassenmitglieder (einschließlich der Datenmitglie
 
 In Ermangelung einer allgemeingültigen Terminologie für Klassen werden hier gelegentlich Begriffe aus Smalltalk und C++ verwendet. Genauer wäre es, man würde die Begriffe von Modula-3 verwenden, da dessen objektorientierte Semantik näher an der von Python als an der von C++ ist - aber [Modula-3](https://en.wikipedia.org/wiki/Modula-3) gehört zu den - zumindest heutzutage - unbekannten und wenig verwendeten Programmiersprachen.
 
-## ein paar Worte zu Namen und Klassen
+## Ein paar Worte zu Namen und Klassen
 
 Objekte haben Individualität, und mehrere Namen (in mehreren Bereichen) können an dasselbe Objekt gebunden werden. Dies ist in anderen Sprachen als "Aliasing" bekannt. Dies wird in der Regel nicht auf den ersten Blick in Python erkannt und kann beim Umgang mit unveränderlichen Grundtypen (Zahlen, Strings, Tupel) auch ignoriert werden. Das Aliasing hat jedoch eine möglicherweise überraschende Auswirkung auf die Semantik von Python-Code, der veränderliche Objekte wie z.B. Listen, Wörterbücher etc. enthält. Dies wird in der Regel zum Vorteil des Programms genutzt, da sich Aliase in mancher Hinsicht wie Zeiger verhalten. Zum Beispiel ist die Übergabe eines Objekts billig (billig im Sinne von mit minimalem Aufwand verbunden), da nur ein Zeiger von der Implementierung übergeben wird. Und wenn eine Funktion ein als Argument übergebenes Objekt ändert, sieht der Aufrufer die Änderung - dies eliminiert die Notwendigkeit für zwei verschiedene Mechanismen der Argumentübergabe wie in Pascal.
 
@@ -232,7 +232,7 @@ Des Weiteren muss für in `__init__` definierte Variablen nicht zwingend ein Wer
 
 Wie man `Demo.number` dann einen Wert zuweist wird im folgenden Abschnitt erklärt.
 
-### Instanz Objekte
+### Instanzobjekte
 
 Was kann man nun mit Instanzobjekten tun? Die einzigen Operationen, die von Instanzobjekten verstanden werden, sind Attributreferenzen. Es gibt zwei Arten von gültigen Attributnamen: Datenattribute und Methoden.
 
@@ -251,7 +251,7 @@ Die andere Art der Instanzattribut-Referenz ist eine *Methode*. Eine Methode ist
 
 Gültige Methodennamen eines Instanzobjekts hängen von seiner Klasse ab. Per Definition definieren alle Attribute einer Klasse, die Funktionsobjekte sind, entsprechende Methoden ihrer Instanzen. In dem Beispiel weiter oben mit der `SomethingSimple` Klasse ist also `x.f` eine gültige Methodenreferenz, da `SomethingSimple.f` eine Funktion ist, aber `x.i` ist keine, da `SomethingSimple.i` keine ist. Aber `x.f` ist nicht dasselbe wie `SomethingSimple.f` - es ist ein *Methodenobjekt*, kein Funktionsobjekt.
 
-### Methoden Objekte
+### Methodenobjekte
 
 Normalerweise wird eine Methode direkt nach ihrer Bindung aufgerufen:
 
@@ -339,7 +339,7 @@ Bei einem korrekten Entwurf der Klasse sollte stattdessen eine Instanzvariable v
 ['play dead']
 ```
 
-## zusätzliche Hinweise
+## Zusätzliche Hinweise
 
 Wenn derselbe Attributname sowohl in einer Instanz als auch in einer Klasse vorkommt, dann hat das Instanzattribut Vorrang vor dem der Klasse:
 
@@ -400,7 +400,7 @@ Methoden können auf globale Namen in der gleichen Weise verweisen wie normale F
 
 Jeder Wert ist ein Objekt und hat daher eine *Klasse*, auch *Typ* (auf Englisch: *type*) genannt. Sie wird als `Objekt.__Klasse__` gespeichert.
 
-### @property für Methoden
+### Methoden mit @property
 Es gibt Anwendungsfälle, wo man in Klassen eine Methode definiert, aber in den Instanzen der Klasse darauf lieber wie auf ein Datenattribut zugreifen würde. Beispiel:
 
 ```pycon
@@ -491,7 +491,7 @@ Python hat zwei eingebaute Funktionen, die mit Vererbung arbeiten:
  * `isinstance` wird verwendet, um den Typ einer Instanz zu prüfen: `isinstance(obj, int)` ist nur `True`, wenn `obj.__class__` `int` oder eine von `int` abgeleitete Klasse ist.
  * `issubclass` wird verwendet, um die Klassenvererbung zu prüfen: `issubclass(bool, int)` ist nur `True`, wenn `bool` eine Unterklasse von `int` ist. Aber `issubclass(float, int)` ist `False`, da `float` keine Unterklasse von `int` ist.
 
-### mehrfache Vererbung
+### Mehrfache Vererbung
 
 Python unterstützt auch Mehrfachvererbung. Eine Klassendefinition mit mehreren Basisklassen sieht wie folgt aus:
 
@@ -510,7 +510,7 @@ Tatsächlich ist es etwas komplexer als das. Die Reihenfolge der Methodenauflös
 
 Dynamische Ordnung ist notwendig, weil alle Fälle von Mehrfachvererbung eine oder mehrere rautenförmige Beziehungen aufweisen, bei denen auf mindestens eine der Elternklassen über mehrere Pfade von der untersten Klasse aus zugegriffen werden kann. Zum Beispiel erben alle Klassen von `object`, sodass jeder Fall von Mehrfachvererbung mehr als einen Pfad bietet, um `object` zu erreichen. Um zu verhindern, dass auf die Basisklassen mehr als einmal zugegriffen wird, linearisiert der dynamische Algorithmus die Suchreihenfolge so, dass die in jeder Klasse angegebene Reihenfolge von links nach rechts erhalten bleibt, jede übergeordnete Klasse nur einmal aufgerufen wird und der Algorithmus monoton ist (d. h., dass eine Klasse untergeordnet werden kann, ohne die Rangfolge ihrer übergeordneten Klassen zu verändern). Zusammengenommen ermöglichen diese Eigenschaften die Entwicklung zuverlässiger und erweiterbarer Klassen mit Mehrfachvererbung.
 
-## private Variablen
+## Private Variablen
 
 "Private" Instanzvariablen, auf die nur innerhalb eines Objekts zugegriffen werden kann, gibt es in Python nicht. Grundsätzlich kann man auf alles von außerhalb zugreifen. Es gibt jedoch eine Konvention, die von den meisten Python-Programmierern befolgt wird: Ein Name, dem ein Unterstrich vorangestellt ist (z.B. `_spam`), sollte als nicht-öffentlicher Teil einer Klasse / der API behandelt werden (egal ob es sich um eine Funktion, eine Methode oder ein Datenelement handelt). Es sollte als ein Implementierungsdetail betrachtet werden und könnte ohne Vorankündigung geändert werden oder auch verschwinden.
 
@@ -545,7 +545,7 @@ Zu beachten ist, dass die Mangling-Regeln hauptsächlich dazu gedacht sind, unge
 
 Außerdem ist zu beachten, dass Code, der an `exec()` oder `eval()` übergeben wird, den Klassennamen der aufrufenden Klasse nicht als die aktuelle Klasse betrachtet. Dies ist vergleichbar mit der Wirkung der `global` Anweisung, deren Auswirkung ebenfalls auf Code beschränkt ist, der zusammen zu Bytecode kompiliert wird. Die gleiche Einschränkung gilt für `getattr()`, `setattr()` und `delattr()`, sowie bei der direkten Referenzierung von `__dict__`.
 
-## andere Kleinigkeiten
+## Andere Kleinigkeiten
 
 Manchmal ist es nützlich, einen Datentyp ähnlich dem Pascal-"record" oder C-"struct" zu haben, der einige benannte Datenelemente zusammenfasst. Der idiomatische Ansatz ist die Verwendung des Moduls [dataclasses](https://docs.python.org/3/library/dataclasses.html) (welche mit Python 3.7 eingeführt wurden) für diesen Zweck:
 
@@ -681,5 +681,5 @@ Beispiele:
 
 ***
 
- * nächstes Kapitel: [kurze Tour durch die Standardbibliothek](stdlib.md)
- * vorheriges Kapitel: [Fehler und Ausnahmen](errors.md)
+ * Nächstes Kapitel: [Kurze Tour durch die Standardbibliothek](stdlib.md)
+ * Vorheriges Kapitel: [Fehler und Ausnahmen](errors.md)

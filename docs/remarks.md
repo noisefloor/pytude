@@ -76,5 +76,5 @@ Und es gibt noch diverse anderen Implementierung. Diese Unterscheiden sich in de
 
 ***
 
- * nächstes Kapitel: [externe Python Module](externallibs.md)
- * zurück zur [Startseite](index.md)
+ * Nächstes Kapitel: [Externe Python Module](externallibs.md)
+ * Zurück zur [Startseite](index.md)

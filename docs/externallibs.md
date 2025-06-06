@@ -1,4 +1,4 @@
-# externe Python Module
+# Externe Python Module
 
 Es gibt zehntausende externe Python-Module, die man für eigene Programmierprojekte nutzen kann. Die primäre Anlaufstelle ist der [Python Package Index](https://pypi.org/) (kurz: PyPI, aber auch als "Cheese Shop" bekannt). Es gibt Python-Module für alle möglichen Anwendungen.
 
@@ -60,7 +60,7 @@ SQLAlchemy gibt es schon sehr lange, es ist sehr populär und entsprechend viel 
 
 *Randnotiz*: SQLAlchemy ist zusammen mit dem Django ORM sicherlich das (mit Abstand) meistgenutzte ORM für Python. Da das Django ORM voll in Django integriert ist (und außerhalb von Django nicht wirklich nutzbar ist), wird das Django ORM beim Erstellen von Webanwendungen mit Django genutzt und für alles andere bietet sich SQLAlchemy an.
 
-## weitere Tools
+## Weitere Tools
 Wie schon Eingangs erwähnt gibt es noch unzählig mehr Python-Module. Zwei weitere, die relativ oft genutzt werden und nützlich sind, sollen hier noch Erwähnung finden.
 
 Will man eine webbasierte / HTTP-basierte API abfragen, dann ist DAS Modul dafür [Requests](https://requests.readthedocs.io/en/latest/). Requests bietet eine sehr komfortable und nutzerfreundliche API zum Erstellen von HTTP-Requests sowie zum Auswerten der vom Server erhaltenen Antwort.
@@ -72,6 +72,6 @@ Will man eine webbasierte / HTTP-basierte API abfragen, dann ist DAS Modul dafü
  * vorherige Seite: [Tipps und Anmerkungen](remarks.md)
 
 Weitere Links:
- * [eine (kurze) Tour durch die Standardbibliothek](stdlib.md) - Überblick über einige in der Standardbibliothek enthaltenen Module
+ * [Eine (kurze) Tour durch die Standardbibliothek](stdlib.md) - Überblick über einige in der Standardbibliothek enthaltenen Module
  * [Startseite](index.md) - Startseite des Tutorials
 
