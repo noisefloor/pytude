@@ -10,7 +10,7 @@ Es wird empfohlen das Tutorial chronologisch durchzuarbeiten. Die Reihenfolge de
 
  1. [Startseite](docs/start.md): Startseite des Tutorials
  2. [Ein kleiner Appetitanreger](docs/appetite.md) für Python
- 3. [den Python-Interprter nutzen](docs/interpreter.md): kurze Einführung in die Nutzung des interaktiven Python-Interpreters
+ 3. [Den Python-Interprter nutzen](docs/interpreter.md): kurze Einführung in die Nutzung des interaktiven Python-Interpreters
  4. [eine lockere Einführung in Python](docs/introduction.md): erste Schritte mit Python, Python als Taschenrechner benutzen, Einführung in die Datentypen int, str und list, die ersten Schritte zum ersten Programm
  5. [weitere Werkzeuge zur Steuerung des Programmflusses](docs/controlflow.md): if-Bedingen, Schleifen mit for, die range-Funktion, break, continue und else für Schleifen, Definition von und Umgang mit Funktionen, Lambda Ausdrücke, Doc Strings und Funktionsannotation
  6. [Datenstrukturen und Datentypen](docs/datastructures.md): mehr Informationen zu Datentypen und -strukturen: Listen und deren Methoden, List Comprehensions, Wörterbücher (Dictionaries), Tupel, Sets, mehr zur if-Bedingung und while-Schleifen
