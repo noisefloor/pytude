@@ -917,5 +917,7 @@ Für Python ist die [PEP8](https://peps.python.org/pep-0008/) der in der Python-
 
 ***
 
- * Nächstes Kapitel: [Datentypen und -strukturen](datastructures.md)
+ * Nächstes Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
  * Vorheriges Kapitel: [Eine lockere Einführung in Python](introduction.md)
+ * Zurück zur [Startseite](index.md)
+ 

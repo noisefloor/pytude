@@ -681,5 +681,6 @@ Beispiele:
 
 ***
 
- * Nächstes Kapitel: [Kurze Tour durch die Standardbibliothek](stdlib.md)
- * Vorheriges Kapitel: [Fehler und Ausnahmen](errors.md)
+ * Nächstes Kapitel: [Eine (kurze) Tour durch die Standardbibliothek](stdlib.md)
+ * Vorheriges Kapitel: [Fehler und Ausnahmen (Exceptions)](errors.md)
+ * Zurück zur [Startseite](index.md)

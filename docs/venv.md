@@ -177,3 +177,4 @@ Wenn man selber ein Python Modul im Python Packge Index veröffentlichen möchte
 
  * Nächstes Kapitel: [Was kommt als Nächstes?](whatnow.md)
  * Vorheriges Kapitel: [Eine (kurze) Tour durch die Standardbibliothek](stdlib.md)
+ * Zurück zur [Startseite](index.md)

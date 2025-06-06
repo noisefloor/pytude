@@ -38,5 +38,6 @@ Das heißt auch, dass man eher früher als später auch englischsprachige Dokume
 
 ***
 
- * Nächste Seite: [Tipps und Anmerkungen](remarks.md)
- * Vorherige Seite: [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
+ * Nächstes Kapitel: [Tipps und Anmerkungen](remarks.md)
+ * Vorheriges Kapitel: [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
+ * Zurück zur [Startseite](index.md)

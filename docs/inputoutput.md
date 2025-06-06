@@ -386,5 +386,6 @@ CSV-Dateien erlauben es, Daten strukturiert abzulegen mit einer Struktur ähnlic
 
 ***
 
- * Nächstes Kapitel: [Fehler und Ausnahmen](errors.md)
+ * Nächstes Kapitel: [Fehler und Ausnahmen (Exceptions)](errors.md)
  * Vorheriges Kapitel: [Module](modules.md)
+ * Zurück zur [Startseite](index.md)

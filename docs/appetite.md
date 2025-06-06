@@ -32,5 +32,6 @@ Im weiteren Verlauf des Tutorials werden verschiedene Funktionen der Sprache und
 
 ***
 
- * Nächste Seite: [Den Python-Interpreter nutzen](interpreter.md)
- * Vorherige Seite: [Startseite](start.md)
+ * Nächstes Kapitel: [Den Python-Interpreter nutzen](interpreter.md)
+ * Vorheriges Kapitel: [Startseite](start.md)
+ * Zurück zur [Startseite](index.md)

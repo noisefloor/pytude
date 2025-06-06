@@ -369,5 +369,6 @@ Python hat standardmäßig noch drei weitere Module für nebenläufige Programmi
 
 ***
 
- * Nächstes Kapitel: [Venv - virtuelle Umgebungen für Python](venv.md)
+ * Nächstes Kapitel: [Virtuelle Umgebungen und Paketverwaltung mit pip](venv.md)
  * Vorheriges Kapitel: [Klassen](classes.md)
+ * Zurück zur [Startseite](index.md)

@@ -484,5 +484,7 @@ Obwohl diese Funktion nicht oft benötigt wird, kann sie verwendet werden, um di
 
 ***
 
-* Nächstes Kapitel: [Eingabe und Ausgabe](inputoutput.md)
-* Vorheriges Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
+ * Nächstes Kapitel: [Eingabe und Ausgabe](inputoutput.md)
+ * Vorheriges Kapitel: [Datenstrukturen und Datentypen](datastructures.md)
+ * Zurück zur [Startseite](index.md)
+ 

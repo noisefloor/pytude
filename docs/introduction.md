@@ -510,3 +510,4 @@ Das Schlüsselwortargument *end* kann verwendet werden, um den Zeilenumbruch nac
 
  * Nächstes Kapitel: [Weitere Werkzeuge zur Steuerung des Programmflusses](controlflow.md)
  * Vorheriges Kapitel: [Den Python-Interpreter nutzen](interpreter.md)
+ * Zurück zur [Startseite](index.md)

@@ -69,9 +69,5 @@ Will man eine webbasierte / HTTP-basierte API abfragen, dann ist DAS Modul dafü
 
 ***
 
- * vorherige Seite: [Tipps und Anmerkungen](remarks.md)
-
-Weitere Links:
- * [Eine (kurze) Tour durch die Standardbibliothek](stdlib.md) - Überblick über einige in der Standardbibliothek enthaltenen Module
- * [Startseite](index.md) - Startseite des Tutorials
-
+ * Vorheriges Kapitel: [Tipps und Anmerkungen](remarks.md)
+ * Zurück zur [Startseite](index.md) 

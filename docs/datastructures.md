@@ -601,3 +601,5 @@ Zu beachten ist, dass der Vergleich von Objekten unterschiedlichen Typs mit `<` 
 
  * Nächstes Kapitel: [Module](modules.md)
  * Vorheriges Kapitel: [Weitere Werkzeuge zur Steuerung des Programmflusses](controlflow.md)
+ * Zurück zur [Startseite](index.md)
+ 

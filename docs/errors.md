@@ -513,3 +513,4 @@ Wenn man zum Beispiel Ausnahmen in einer Ausnahmegruppe sammelt, möchten man vi
 
  * Nächstes Kapitel: [Klassen](classes.md)
  * Vorheriges Kapitel: [Eingabe und Ausgabe](inputoutput.md)
+ * Zurück zur [Startseite](index.md)
